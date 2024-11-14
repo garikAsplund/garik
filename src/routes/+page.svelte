@@ -1,2 +1,23 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+</script>
+
+<div class="container flex h-[70vh] w-full items-center justify-center">
+	<div class="max-w-4xl sm:space-y-3 md:space-y-5 lg:space-y-8">
+		<h2 class="md:mx-4 lg:mx-8 lg:text-4xl">Building simple, elegant websites</h2>
+		<p class="md:mx-8 md:text-lg lg:mx-16 lg:text-xl">
+			I'm an independent full-stack developer who focuses on creating websites for small businesses
+			in need of a glow up.
+		</p>
+		<ul class="md:mx-16 md:space-y-1 lg:mx-24 lg:space-y-2 lg:text-lg">
+			<li>
+				<code class="code lg:text-lg">Minimal code</code> - the less code the better
+			</li>
+			<li>
+				<code class="code lg:text-lg">Mobile first</code> - because everyone's on their phone
+			</li>
+			<li>
+				<code class="code lg:text-lg">Intuitive design</code> - sites that are easy to interact with
+			</li>
+		</ul>
+	</div>
+</div>
