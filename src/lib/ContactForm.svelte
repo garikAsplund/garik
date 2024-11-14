@@ -57,6 +57,7 @@
 						type="text"
 						id="name"
 						bind:value={$form.name}
+						placeholder="Name"
 						{...$constraints.name}
 						class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						class:border-red-500={$errors.name}
@@ -74,6 +75,7 @@
 					type="email"
 					id="email"
 					bind:value={$form.email}
+					placeholder="Email"
 					{...$constraints.email}
 					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 					class:border-red-500={$errors.email}
@@ -89,6 +91,7 @@
 					type="tel"
 					id="phone"
 					bind:value={$form.phone}
+					placeholder="Phone"
 					{...$constraints.phone}
 					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 					class:border-red-500={$errors.phone}
@@ -105,6 +108,7 @@
 			<textarea
 				id="inquiry"
 				bind:value={$form.inquiry}
+				placeholder="Tell me about what kind of project you have in mind"
 				{...$constraints.inquiry}
 				rows="4"
 				class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -141,8 +145,38 @@
 				class="w-full max-w-sm rounded-md bg-[#FF6B6B] py-2 font-semibold text-white transition duration-300 hover:saturate-[1.25] disabled:cursor-not-allowed disabled:bg-blue-400"
 				aria-disabled={isSubmitting}
 			>
-				{isSubmitting ? 'Sending...' : 'Reach Out'}
+				{#if isSubmitting}
+					<span class="inline-flex min-w-[90px] justify-center">
+						Sending<span class="dots"></span>
+					</span>
+				{:else}
+					Reach Out
+				{/if}
 			</button>
 		</div>
 	</form>
 </section>
+
+<style>
+	.dots::after {
+		content: '';
+		animation: dots 1.5s steps(4, jump-none) infinite;
+	}
+	@keyframes dots {
+		0% {
+			content: '\00a0\00a0\00a0'; /* Three non-breaking spaces */
+		}
+		25% {
+			content: '.\00a0\00a0'; /* Dot + two spaces */
+		}
+		50% {
+			content: '..\00a0'; /* Two dots + space */
+		}
+		75% {
+			content: '...'; /* Three dots */
+		}
+		100% {
+			content: '\00a0\00a0\00a0';
+		}
+	}
+</style>

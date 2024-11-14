@@ -34,10 +34,10 @@ export async function POST({ request }) {
 	const customerMailOptions = {
 		from: 'garik.asplund@gmail.com',
 		to: 'garik.asplund@gmail.com', // email
-		subject: 'Your Garik Codes inquiry',
+		subject: 'Your Garik Codes Inquiry',
 		html: `
             <h2>Thanks for your interest in working with me, ${name.split(' ')[0]}!</h2>
-            <p>I've received your message and will get back with you shortly :)</p>
+            <p>I've received your message and will get back to you shortly :)</p>
             <p>Garik</p>
         `
 	};

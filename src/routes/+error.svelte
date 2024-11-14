@@ -14,7 +14,7 @@
           <img 
               src="https://http.cat/images/500.jpg" 
               alt="Oh no"
-              class="max-w-full h-auto shadow-lg rounded-lg" 
+              class="max-w-full h-auto" 
           />
       {/if}
   </div>
