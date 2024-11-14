@@ -4,7 +4,7 @@
 
 </script>
 
-<footer class="fixed bottom-0 w-full flex justify-center items-center space-x-4 pb-8">
+<footer class="relative bottom-0 w-full flex justify-center items-center space-x-4 py-8 z-40 mt-auto" id="footer">
     <a 
     href="https://github.com/garikAsplund" 
     target="_blank"

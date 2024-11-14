@@ -1,0 +1,148 @@
+<script lang="ts">
+	import { superForm } from 'sveltekit-superforms';
+	import { schema } from '$lib/schema';
+	import { zod } from 'sveltekit-superforms/adapters';
+	import { dev } from '$app/environment';
+	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+
+	let { data } = $props();
+	let isSubmitting = $state(false);
+
+	const { form, errors, enhance, reset, constraints, message } = superForm(data.form, {
+		validators: zod(schema),
+		resetForm: true,
+		dataType: 'json',
+		taintedMessage: null,
+		onResult: ({ result }) => {
+			isSubmitting = false;
+			// Handle successful submission
+			if (result.type === 'success') {
+				reset();
+			}
+		},
+		onError: ({ result }) => {
+			isSubmitting = false;
+			// Handle error
+			console.error('Form submission error:', result);
+		}
+	});
+
+	async function handleSubmit(event: SubmitEvent) {
+		event.preventDefault();
+		try {
+			isSubmitting = true;
+		} catch (error) {
+			console.error('Error submitting form:', error);
+		}
+	}
+</script>
+
+<section
+	class="relative mx-auto my-8 flex w-full max-w-4xl flex-col items-center rounded-lg bg-gray-50 p-4 py-8 shadow-lg"
+	aria-labelledby="contact-form-title"
+>
+	<h1 id="contact-form-title" class="mb-6 text-2xl font-semibold text-gray-700">Get in touch</h1>
+
+	<!-- {#if dev}
+	  <SuperDebug data={$form} />
+	{/if} -->
+
+	<form method="POST" class="w-full space-y-6" onsubmit={handleSubmit} use:enhance novalidate>
+		<div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+			<!-- Name Fields -->
+			<div class="grid grid-cols-1 gap-6">
+				<div class="flex flex-col">
+					<label for="name" class="mb-1 text-sm font-medium text-gray-700"> Name * </label>
+					<input
+						type="text"
+						id="name"
+						bind:value={$form.name}
+						{...$constraints.name}
+						class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class:border-red-500={$errors.name}
+					/>
+					{#if $errors.name}
+						<span class="mt-1 text-sm text-red-500">{$errors.name}</span>
+					{/if}
+				</div>
+			</div>
+
+			<!-- Contact Info -->
+			<div class="flex flex-col">
+				<label for="email" class="mb-1 text-sm font-medium text-gray-700"> Email * </label>
+				<input
+					type="email"
+					id="email"
+					bind:value={$form.email}
+					{...$constraints.email}
+					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+					class:border-red-500={$errors.email}
+				/>
+				{#if $errors.email}
+					<span class="mt-1 text-sm text-red-500">{$errors.email}</span>
+				{/if}
+			</div>
+
+			<div class="flex flex-col">
+				<label for="phone" class="mb-1 text-sm font-medium text-gray-700"> Phone </label>
+				<input
+					type="tel"
+					id="phone"
+					bind:value={$form.phone}
+					{...$constraints.phone}
+					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+					class:border-red-500={$errors.phone}
+				/>
+				{#if $errors.phone}
+					<span class="mt-1 text-sm text-red-500">{$errors.phone}</span>
+				{/if}
+			</div>
+		</div>
+
+		<!-- Message -->
+		<div class="flex flex-col">
+			<label for="inquiry" class="mb-1 text-sm font-medium text-gray-700"> Message * </label>
+			<textarea
+				id="inquiry"
+				bind:value={$form.inquiry}
+				{...$constraints.inquiry}
+				rows="4"
+				class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+				class:border-red-500={$errors.inquiry}
+			></textarea>
+			{#if $errors.inquiry}
+				<span class="mt-1 text-sm text-red-500">{$errors.inquiry}</span>
+			{/if}
+		</div>
+
+		<!-- Form Message -->
+		{#if $message}
+			<div
+				class="rounded-md p-4"
+				class:bg-green-50={$message.type === 'success'}
+				class:bg-red-50={$message.type === 'error'}
+				role="alert"
+			>
+				<p
+					class="text-sm"
+					class:text-green-700={$message.type === 'success'}
+					class:text-red-700={$message.type === 'error'}
+				>
+					{$message.text}
+				</p>
+			</div>
+		{/if}
+
+		<!-- Submit Button -->
+		<div class="flex items-center justify-center">
+			<button
+				type="submit"
+				disabled={isSubmitting}
+				class="w-full max-w-sm rounded-md bg-[#FF6B6B] py-2 font-semibold text-white transition duration-300 hover:saturate-[1.25] disabled:cursor-not-allowed disabled:bg-blue-400"
+				aria-disabled={isSubmitting}
+			>
+				{isSubmitting ? 'Sending...' : 'Reach Out'}
+			</button>
+		</div>
+	</form>
+</section>

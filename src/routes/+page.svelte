@@ -1,23 +1,30 @@
 <script lang="ts">
+	import ContactForm from '$lib/ContactForm.svelte';
+
+	let { data } = $props();
 </script>
 
-<div class="container flex h-[70vh] w-full items-center justify-center">
-	<div class="max-w-4xl space-y-4 lg:space-y-8 px-8">
-		<h2 class="px-4 lg:px-8 text-4xl">Building simple, elegant websites</h2>
+<div class="relative flex w-full flex-col items-center">
+	<div class="flex max-w-4xl flex-col justify-center space-y-4 px-8 pt-32 lg:space-y-8">
+		<h2 class="px-4 text-4xl lg:px-8">Building simple, elegant websites</h2>
 		<p class="px-8 md:text-lg lg:px-16 lg:text-xl">
-			I'm an independent full-stack software engineer who focuses on creating websites for <b>small businesses
-			in need of a glow up</b>.
+			I'm an independent full-stack software engineer who focuses on creating websites for <b
+				>small businesses in need of a glow up</b
+			>.
 		</p>
-		<ul class="px-16 md:space-y-1 lg:px-24 space-y-2 lg:text-lg">
+		<ul class="space-y-2 px-16 md:space-y-1 lg:px-24 lg:text-lg">
 			<li>
 				<code class="code lg:text-lg">Minimal code</code> - the less code the better
 			</li>
 			<li>
-				<code class="code lg:text-lg">Mobile first</code> - because everyone's on their phone
+				<code class="code lg:text-lg">Responsive layouts</code> - made for every device
 			</li>
 			<li>
 				<code class="code lg:text-lg">Intuitive design</code> - sites should be easy to interact with
 			</li>
 		</ul>
+	</div>
+	<div class="py-16 w-full">
+		<ContactForm {data} />
 	</div>
 </div>
