@@ -9,7 +9,9 @@
 <div class="flex min-h-screen w-full flex-col">
 	<Nav />
 
-	{@render children()}
+	<main class="">
+		{@render children()}
+	</main>
 
 	<Footer />
 </div>

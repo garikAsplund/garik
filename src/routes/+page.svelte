@@ -24,7 +24,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="py-16 w-full">
+	<div class="py-16 w-full px-4">
 		<ContactForm {data} />
 	</div>
 </div>
