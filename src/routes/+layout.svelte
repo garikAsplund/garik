@@ -6,7 +6,7 @@
 	let { children } = $props();
 </script>
 
-<div class="container flex flex-col h-full w-full items-center">
+<div class="min-h-screen flex flex-col">
 	<Nav />
 
 	{@render children()}
