@@ -6,12 +6,10 @@
 	let { children } = $props();
 </script>
 
-<div class="flex min-h-screen w-full flex-col">
+<div class="flex min-h-screen w-full flex-col bg-slate-100 dark:invert">
 	<Nav />
 
-	<main class="">
 		{@render children()}
-	</main>
 
 	<Footer />
 </div>

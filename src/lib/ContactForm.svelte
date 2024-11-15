@@ -38,7 +38,7 @@
 </script>
 
 <section
-	class="relative flex w-full max-w-4xl flex-col items-center rounded-lg bg-gray-50 p-4 py-8 shadow-lg"
+	class="relative flex w-full max-w-4xl flex-col items-center rounded-lg bg-gray-150 p-4 py-8 shadow-lg dark:shadow-red-500/50"
 	aria-labelledby="contact-form-title"
 >
 	<h1 id="contact-form-title" class="mb-6 text-2xl font-semibold text-gray-700">Get in touch</h1>
