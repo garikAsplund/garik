@@ -124,8 +124,8 @@
 				</div>
 
 				<!-- Project Screenshots -->
-				<div class="space-y-6">
-					<div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+				<div class="space-y-4">
+					<div class="grid grid-cols-1 gap-8 lg:grid-cols-3 items-center">
 						<!-- Desktop Screenshot - Takes up 2 columns -->
 						<div class="overflow-hidden lg:col-span-2">
 							<a
@@ -139,7 +139,7 @@
 									src={images.desktop}
 									alt="{title} desktop view"
 									title="{title} on desktop"
-									class="h-[400px] w-full object-contain"
+									class="h-auto w-full object-contain"
 								/>
 							</a>
 						</div>
@@ -164,7 +164,7 @@
 					</div>
 
 					<!-- Performance Score - Full width below -->
-					<div class="flex w-full justify-center">
+					<div class="flex w-full justify-center pt-4">
 						<a
 							href={insightsUrl}
 							class="block overflow-hidden"

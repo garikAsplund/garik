@@ -53,7 +53,7 @@
 
 		let frame = 0;
 		const animate = () => {
-            if (!enableAnimation) return;
+            if (!enableAnimation) return; // Stop animation if disabled
 
 			ctx.clearRect(0, 0, width, height);
 
