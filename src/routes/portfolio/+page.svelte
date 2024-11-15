@@ -139,7 +139,7 @@
 									src={images.desktop}
 									alt="{title} desktop view"
 									title="{title} on desktop"
-									class="h-[400px] w-full object-contain dark:invert"
+									class="h-[400px] w-full object-contain"
 								/>
 							</a>
 						</div>
@@ -157,7 +157,7 @@
 									src={images.mobile}
 									alt="{title} mobile view"
 									title="{title} on mobile"
-									class="mx-auto h-[400px] w-auto object-contain dark:invert"
+									class="mx-auto h-[400px] w-auto object-contain"
 								/>
 							</a>
 						</div>
@@ -176,7 +176,7 @@
 								src={images.performance}
 								alt="{title} performance scores"
 								title="{title} performance scores"
-								class="h-24 w-full object-contain hover:opacity-75 dark:invert"
+								class="h-24 w-full object-contain hover:opacity-75"
 							/>
 						</a>
 					</div>

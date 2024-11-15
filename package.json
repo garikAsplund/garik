@@ -39,6 +39,7 @@
 	},
 	"dependencies": {
 		"@vercel/analytics": "^1.4.0",
+		"canvas-sketch-util": "^1.10.0",
 		"lucide-svelte": "^0.456.0",
 		"mdsvex-enhanced-images": "^0.2.3",
 		"nodemailer": "^6.9.16"

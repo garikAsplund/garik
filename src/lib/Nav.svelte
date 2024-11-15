@@ -59,7 +59,7 @@
 <svelte:window on:scroll={handleScroll} />
 
 <header
-	class="sticky top-0 z-10 flex w-full {isNavbarVisible
+	class="sticky top-0 z-20 flex w-full {isNavbarVisible
 		? 'translate-y-0'
 		: '-translate-y-full'} md:py-4 text-gray-800 {isNavigating
 		? 'transition-none'
