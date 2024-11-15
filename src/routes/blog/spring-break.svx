@@ -109,8 +109,6 @@ Rust's compiler will include a bunch of unused code from your crates. It doesn't
 
 In my fruitful chat with the kind and prolific [Nick Cosentino](https://www.linkedin.com/in/nickcosentino) of [Dev Leader](https://www.devleader.ca/), he explained that the project he's currently managing is involved in [routing and proxying for Microsoft 365](https://youtu.be/Zf0YWgNbKnQ?si=ezs0Nw_mDX-4igjO&t=264) and they're doing it in Rust.
 
-[![Listen to Nick](https://i.ytimg.com/an_webp/Zf0YWgNbKnQ/mqdefault_6s.webp?du=3000&sqp=CITOiLAG&rs=AOn4CLBhpyN-nbFbMZdADRCG-6K4O0w6NQ)](https://youtu.be/Zf0YWgNbKnQ?si=ezs0Nw_mDX-4igjO&t=264)
-
 He doesn't know Rust. The 10 other engineers on the team don't know Rust.
 
 Heck, there's an engineer on the team without fluency in C# or C++.

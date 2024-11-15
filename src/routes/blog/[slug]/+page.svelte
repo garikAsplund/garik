@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChevronLeft, ChevronRight, MoveLeft } from 'lucide-svelte';
+	import { BookOpenCheck, ChevronLeft, ChevronRight, MoveLeft } from 'lucide-svelte';
 
 	let { data } = $props();
 </script>
@@ -32,13 +32,21 @@
 		<data.content />
 	</div>
 
+	<div class="flex w-full items-center justify-center py-8">
+		<div class="flex w-full max-w-2xl items-center justify-center space-x-4">
+			<div class="h-px w-full bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+			<BookOpenCheck size={36}/>
+			<div class="h-px w-full bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+		</div>
+	</div>
+
 	<div class="mt-8 flex items-center justify-between">
 		{#if data.prevPost}
 			<a
 				href={`/blog/${data.prevPost.path.split('/')[1]}`}
 				class="flex items-center gap-2 hover:underline hover:underline-offset-4"
 			>
-				<ChevronLeft size={20} />
+				<ChevronLeft size={24} />
 				<span>Previous: {data.prevPost.meta.title}</span>
 			</a>
 		{:else}
@@ -51,7 +59,7 @@
 				class="flex items-center gap-2 hover:underline hover:underline-offset-4"
 			>
 				<span>Next: {data.nextPost.meta.title}</span>
-				<ChevronRight size={20} />
+				<ChevronRight size={24} />
 			</a>
 		{:else}
 			<div></div>
