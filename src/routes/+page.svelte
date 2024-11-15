@@ -34,6 +34,12 @@
 			</div>
 		</a>
 	</div>
+	<!-- <div class="flex w-full justify-center px-4 py-8">
+		Go from this
+		<enhanced:img src="/static/amgc-old.png" alt="Old website"/>
+		to this
+		<enhanced:img src="$lib/portfolio/amgc/desktop.png" alt="New website"/>
+	</div> -->
 	<div class="flex w-full justify-center px-4 py-16">
 		<ContactForm {data} />
 	</div>

@@ -20,8 +20,8 @@ Python is used most widely in data, analytics, and machine learning, with a lot 
 
 It **should** be, but most definitely *isn't*.
 
-![Slow](../python2.png "Oh nooooo")
-![Fast](../python1.png "Oh yeaaaaaah")
+![Slow](../blog/python2.png "Oh nooooo")
+![Fast](../blog/python1.png "Oh yeaaaaaah")
 
 # 🐍 == 🐌
 

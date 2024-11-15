@@ -5,7 +5,7 @@
       {
         title: "Standard",
         description: "Perfect for small business websites",
-        price: "957",
+        price: "857",
         features: [
           "Custom Design",
           "Responsive Layout",
@@ -32,9 +32,10 @@
       {
         title: "E-Commerce",
         description: "Full-featured online store",
-        price: "2209",
+        price: "2219",
         features: [
           "Custom Design",
+          "Responsive Layout",
           "Product Management",
           "Shopping Cart",
           "Payment Integration",
@@ -58,7 +59,6 @@
           
           <div class="mb-6">
             <span class="text-3xl font-bold">${plan.price}</span>
-            <span class="text-gray-600">+</span>
           </div>
           
           <ul class="space-y-3 mb-8">

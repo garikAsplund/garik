@@ -9,13 +9,13 @@ I've had my fun as a ski bum who juggled many menial jobs just to get by for a d
 
 So when I was visiting NYC in April 2022 and caught up with an old roommate of mine from college, he, along with everybody else, heard my frustrations and responded with "Just learn to code."
 
-![NYC](../nyc.jpg "Learn to code, bro")
+![NYC](../blog/nyc.jpg "Learn to code, bro")
 
 Seemed to make sense: remote work was very quickly normalized, learning resources were plentiful, and my dad had been a software architect his whole career.
 
 I launched headlong into programming--I bought a subscription to Starlink so I could code with my cats in my trailer or in my hammock up on the slopes of [Chief Joseph Mountain](https://en.wikipedia.org/wiki/Chief_Joseph_Mountain). I switched my schedule around at [the pizza shop](https://www.oregonlive.com/travel/2022/08/the-gold-room-beloved-pizza-place-in-joseph-will-close-after-3-years.html) where I was slinging salads so that I could attend classes in JavaScript and prepare for a bootcamp later in the fall or winter. Surprisingly I passed my entrance exam on the first go.
 
-![#Winning](../hammock_cat.jpg "Yes")
+![#Winning](../blog/hammock_cat.jpg "Yes")
 
 It was all going according to plan.
 
@@ -23,7 +23,7 @@ It was all going according to plan.
 
 Tech moves fast. ChatGPT was introduced in November 2022, days before my bootcamp started in December. Tech layoffs started to increase earlier in the year with attention-grabbing headlines appearing week after week.
 
-[![This doesn't look good](../layoffs_2.png "Bad news")](https://techcrunch.com/2024/03/06/tech-layoffs-2023-list/)
+[![This doesn't look good](../blog/layoffs_2.png "Bad news")](https://techcrunch.com/2024/03/06/tech-layoffs-2023-list/)
 
 January 2023 was horrible. February was terrible. March was bad. And that's when I hit the job market. You could say it was *not* good timing.
 
@@ -45,7 +45,7 @@ I got a part-time gig writing videos about Rust. Now that I had an angle, things
 
 Now I'm at an awkward place where I know a little bit more about the landscape that's out there and have some projects under my belt, but I'm still struggling to find a full-time role and grappling with if this whole career change was actually a huge mistake.
 
-[![Jensen says](../nvidia.png "Ooopsies")](https://www.instagram.com/p/C3-fUm8t-us/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+[![Jensen says](../blog/nvidia.png "Ooopsies")](https://www.instagram.com/p/C3-fUm8t-us/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
 
 Do I want to be in devOps, technical writing, embedded systems, or network architecture? Is there room for me in any of these domains? I really don't know.
 
@@ -59,4 +59,4 @@ Plus, being remote means that you are simultaneously the smartest and dumbest pe
 
 Still, I'm happy that I'm able to sit at home with a cat in my lap and a dog at my feet while scheduling talks with people who do know way more than me. It's not all that bad.
 
-![Coding done right](../hammock_dog.jpg "Hammock code cracked")
+![Coding done right](../blog/hammock_dog.jpg "Hammock code cracked")

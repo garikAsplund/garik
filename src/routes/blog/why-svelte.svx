@@ -9,7 +9,7 @@ When it comes to JavaScript <del>frameworks</del> libraries, **React** is king, 
 
 However, it's 2023 and React is **bloated, complicated, and slow**.
 
-![React on top](../svelte.png "React wins the popularity contest")
+![React on top](../blog/svelte.png "React wins the popularity contest")
 
 That's not really a secret, and it feels like over the last few years React has become a punching bag. Fortunately, there are other--[arguably too many](https://krausest.github.io/js-framework-benchmark/2023/table_chrome_116.0.5845.82.html)--frameworks and libraries that are seeking solutions. Some of these solutions are super slick, others not so much. Frameworks written in Rust, like Yew, can be just as bad as React. Others, written in TypeScript, like Solid, *kill* when it comes to speed. So, which framework is best?
 
@@ -90,7 +90,7 @@ We had dispatchers and actions everywhere, and even though we were just updating
 
 This chart only looks at memory usage, but other metrics end up being very similar. Plus, this is for Svelte 3, now out of date, and Svelte 5 won't be too far off with even more gains.
 
-[![Green is good](../svelte_memory.png "Green is good")](https://blog.logrocket.com/should-you-use-svelte-production/)
+[![Green is good](../blog/svelte_memory.png "Green is good")](https://blog.logrocket.com/should-you-use-svelte-production/)
 
 With SvelteKit, you can adapt your website for static use or deployment to any number of targets. Within the website, you can opt in or opt out of SSR and CSR to best suit your needs, and you can also prerender pages on different events for even better performance. As mentioned in their docs:
 

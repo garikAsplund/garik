@@ -10,7 +10,7 @@ date: "2023-08-20"
 It began with a basic request from my brother to take an experiment he had run a few years back and make it into a website. Previously his research team used [Qualtrics](https://www.qualtrics.com/), a survey company, combined with a large collection of pre-made video files to present a bunch of letters and track participants' reaction times whenever they saw a target letter appear in a different color. It looked something like this:
 
 <video controls width="500">
-  <source src="../letters.mp4" type="video/mp4" />
+  <source src="../blog/letters.mp4" type="video/mp4" />
 </video>
 
 So I started with the smallest achievable goal possible of making a box with a border, filling it with random letters, and changing one of the letters' color. There were a few design specs taken from [this paper](https://psyarxiv.com/cznh9/), and I was happy that it was easy to get up and running.

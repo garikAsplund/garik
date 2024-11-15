@@ -150,7 +150,7 @@ The last thing to do is to hold down the button on the Pico when plugging it in 
 
 ## Wrapping it up
 
-<video src="../blinky.mp4" width="320" height="240" controls></video>
+<video src="../blog/blinky.mp4" width="320" height="240" controls></video>
 
 But why did I go with a blue LED? I'm glad you asked.
 

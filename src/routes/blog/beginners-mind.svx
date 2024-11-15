@@ -42,7 +42,7 @@ Then you need to have all the supporting tools in place. The number of tools is 
 
 A few years ago you had to use NPM, and as we all know, [Theo's computer maxed out](https://youtu.be/ZIKDJBrk56k?si=HbOcg26X0tZ_XUT7) because of all the Node modules. A couple years ago you were excited about YARN--Yet Another Resource Negotiator--because it was faster, safer, and more reliable! Last year you probably switched to PNPM and were stoked that it had a single store and cached everything, then just referenced that cache with links. So. Speedy. And last month you heard about Bun and questioned everything you knew about life. Can you really install all your dependencies in under half a second?! Kind of--it won't check if the "latest" flag is being honored :( though it's still impressive!
 
-![Run Bun](../Bun.png "Run Bun")
+![Run Bun](../blog/Bun.png "Run Bun")
 
 But Bun isn't *just* a package manager. It's also a fast runtime, test runner, and bundler. It tries to simplify the small mess of JavaScript tooling. And unlike Deno, it wants to be a drop in replacement for Node, Jest, Webpack, et al.
 

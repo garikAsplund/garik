@@ -29,7 +29,7 @@ Sure, I've heard of Wasm. It's a cool idea--run any code in the browser, not *ju
 
 Little did I know that Wasm is exploding in serverless contexts. Like, it's a really big deal.
 
-[![Wasm is a big deal](../docker.png "Wasm is a big deal")](https://twitter.com/solomonstre/status/1111004913222324225?lang=en)
+[![Wasm is a big deal](../blog/docker.png "Wasm is a big deal")](https://twitter.com/solomonstre/status/1111004913222324225?lang=en)
 
 Long story short, Wasm enables **super small, super secure, super fast** containers. It's as if a bunch of people designed the perfect container from the ground up. But they didn't. It was a happy accident.
 
