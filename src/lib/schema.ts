@@ -18,7 +18,7 @@ export const schema = z.object({
 		.default(''),
 	inquiry: z
 		.string()
-		.min(1, 'Inquiry is required')
+		.min(1, 'A message is required')
 		.max(5000, 'Additional comments must be 5000 characters or less')
 		.default('')
 });

@@ -23,7 +23,7 @@
 		{
 			title: 'Minimal Cookies',
 			description:
-				"Cookies are rarely needed, and I only add them when absolutely necessary. Privacy matters, and data won't be collected needlessly.",
+				"Cookies are rarely required, and I only add them when absolutely necessary. Privacy matters, and data won't be collected needlessly.",
 			Icon: Cookie
 		},
 		{
@@ -41,9 +41,9 @@
 	];
 </script>
 
-<section class="flex w-full flex-col items-center space-y-8 px-8 pt-12 md:px-16">
+<section class="flex max-w-5xl w-full flex-col items-center space-y-8 px-8 pt-12 md:px-16">
 	<h1 class="text-4xl font-semibold">Philosophy</h1>
-	<article class="max-w-4xl text-left">
+	<article class=" text-left">
 		<div class="md:pl-16">
 			<p class="pb-4 text-lg">The web doesn't need to be complicated.</p>
 			<p class="pb-8 text-base leading-relaxed text-gray-700">
@@ -56,7 +56,7 @@
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 			{#each philosophySections as { title, description, Icon }}
 				<div
-					class="w-full space-y-4 rounded-lg bg-white p-6 text-left shadow-lg dark:shadow-red-500/50"
+					class="w-full space-y-4 rounded-lg bg-white p-6 text-left shadow-lg dark:shadow-red-500/25 shadow-purple-500/10"
 				>
 					<div class="flex items-center gap-2">
 						<Icon class="h-6 w-6" />

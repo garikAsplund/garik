@@ -8,7 +8,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="max-w-screen-lg mx-auto mt-12">
+<article class="max-w-screen-lg mx-auto py-12">
 	<hgroup>
 		<h1 class="capitalize text-3xl font-semibold">{data.meta.title}</h1>
 	</hgroup>

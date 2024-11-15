@@ -59,11 +59,10 @@
 						bind:value={$form.name}
 						placeholder="Name"
 						{...$constraints.name}
-						class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-						class:border-red-500={$errors.name}
+						class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 { $errors.name ? 'border-red-500 dark:border-teal-400' : '' }"
 					/>
 					{#if $errors.name}
-						<span class="mt-1 text-sm text-red-500">{$errors.name}</span>
+						<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.name}</span>
 					{/if}
 				</div>
 			</div>
@@ -77,11 +76,10 @@
 					bind:value={$form.email}
 					placeholder="Email"
 					{...$constraints.email}
-					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-					class:border-red-500={$errors.email}
+					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 { $errors.email ? 'border-red-500 dark:border-teal-400' : '' }"
 				/>
 				{#if $errors.email}
-					<span class="mt-1 text-sm text-red-500">{$errors.email}</span>
+					<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.email}</span>
 				{/if}
 			</div>
 
@@ -93,11 +91,10 @@
 					bind:value={$form.phone}
 					placeholder="Phone"
 					{...$constraints.phone}
-					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-					class:border-red-500={$errors.phone}
+					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 { $errors.phone ? 'border-red-500 dark:border-teal-400' : '' }"
 				/>
 				{#if $errors.phone}
-					<span class="mt-1 text-sm text-red-500">{$errors.phone}</span>
+					<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.phone}</span>
 				{/if}
 			</div>
 		</div>
@@ -111,11 +108,10 @@
 				placeholder="Tell me about what kind of project you have in mind"
 				{...$constraints.inquiry}
 				rows="4"
-				class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-				class:border-red-500={$errors.inquiry}
+				class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 { $errors.inquiry ? 'border-red-500 dark:border-teal-400' : '' }"
 			></textarea>
 			{#if $errors.inquiry}
-				<span class="mt-1 text-sm text-red-500">{$errors.inquiry}</span>
+				<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.inquiry}</span>
 			{/if}
 		</div>
 
