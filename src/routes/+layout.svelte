@@ -8,8 +8,8 @@
 
 <div class="flex min-h-screen w-full flex-col bg-slate-100 dark:invert">
 	<Nav />
-
+	<main class=" flex flex-col items-center">
 		{@render children()}
-
+	</main>
 	<Footer />
 </div>
