@@ -56,7 +56,7 @@
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 			{#each philosophySections as { title, description, Icon }}
 				<div
-					class="w-full space-y-4 rounded-lg bg-white p-6 text-left shadow-lg dark:shadow-red-500/25 shadow-purple-500/10"
+					class="w-full space-y-4 rounded-lg bg-white p-6 text-left shadow-lg dark:shadow-red-500/25 shadow-purple-500/5"
 				>
 					<div class="flex items-center gap-2">
 						<Icon class="h-6 w-6" />
