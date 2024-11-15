@@ -39,6 +39,7 @@
 	},
 	"dependencies": {
 		"lucide-svelte": "^0.456.0",
+		"mdsvex-enhanced-images": "^0.2.3",
 		"nodemailer": "^6.9.16"
 	}
 }

@@ -44,13 +44,15 @@
 <section class="flex w-full flex-col items-center space-y-8 px-8 pt-12 md:px-16">
 	<h1 class="text-4xl font-semibold">Philosophy</h1>
 	<article class="max-w-4xl text-left">
-		<p class="pb-4 text-lg">The web doesn't need to be complicated.</p>
-		<p class="pb-8 text-base leading-relaxed text-gray-700">
-			I believe in creating web experiences that feel effortless and are aesthetically pleasing.<br
-			/>
-			My approach emphasizes
-			<strong>fast loading times, intuitive navigation, and minimal distractions</strong>.
-		</p>
+		<div class="md:pl-16">
+			<p class="pb-4 text-lg">The web doesn't need to be complicated.</p>
+			<p class="pb-8 text-base leading-relaxed text-gray-700">
+				I believe in creating web experiences that feel effortless and are aesthetically pleasing.<br
+				/>
+				My approach emphasizes
+				<strong>fast loading times, intuitive navigation, and minimal distractions</strong>.
+			</p>
+		</div>
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 			{#each philosophySections as { title, description, Icon }}
 				<div
