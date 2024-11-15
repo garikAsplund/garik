@@ -6,7 +6,7 @@
 </script>
 
 <div class="relative flex w-full flex-col items-center">
-	<HeroArt />
+	<!-- <HeroArt /> -->
 	<div class="z-20">
 		<div class="flex max-w-4xl flex-col justify-center space-y-4 px-8 pt-32 lg:space-y-8">
 			<h2 class="px-4 text-4xl lg:px-8">Building simple, elegant websites</h2>

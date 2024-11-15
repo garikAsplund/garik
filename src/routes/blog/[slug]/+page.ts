@@ -5,7 +5,6 @@ export async function load({ params }) {
 	try {
 		const post = await import(`../${params.slug}.svx`);
 		const allPosts = await fetchMarkdownPosts();
-		console.log({ allPosts });
 		const sortedPosts = allPosts.sort((a, b) => {
 			return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
 		});
@@ -13,8 +12,6 @@ export async function load({ params }) {
 
 		const prevPost = allPosts[currentPostIndex - 1] || null;
 		const nextPost = allPosts[currentPostIndex + 1] || null;
-
-		console.log({ prevPost }, { nextPost });
 
 		return {
 			content: post.default,

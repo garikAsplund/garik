@@ -7,50 +7,51 @@
 	}
 </script>
 
-<ul class="flex flex-col items-center gap-6 text-xl md:flex-row md:items-end">
-	<li>
+<ul class="flex flex-col items-center gap-6 text-xl md:flex-row md:items-end md:justify-end w-full">
+	<li class="w-full md:w-fit ">
 		<a
 			href="/philosophy"
 			onclick={closeMenu}
-			class="hover:opacity-70 {$page.url.pathname === '/philosophy'
+			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/philosophy'
 				? 'underline underline-offset-8'
 				: ''}">Philosophy</a
 		>
 	</li>
-	<li>
+	<li class="w-full md:w-fit ">
 		<a
 			href="/portfolio"
 			onclick={closeMenu}
-			class="hover:opacity-70 {$page.url.pathname === '/portfolio'
+			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/portfolio'
 				? 'underline underline-offset-8'
 				: ''}">Portfolio</a
 		>
 	</li>
-	<li>
+	<li class="w-full md:w-fit ">
 		<a
 			href="/pricing"
 			onclick={closeMenu}
-			class="hover:opacity-70 {$page.url.pathname === '/pricing'
+			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/pricing'
 				? 'underline underline-offset-8'
 				: ''}">Pricing</a
 		>
 	</li>
-	<li>
+	<li class="w-full md:w-fit ">
 		<a
 			href="/blog"
 			onclick={closeMenu}
-			class="hover:opacity-70 {$page.url.pathname === '/blog'
+			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/blog'
 				? 'underline underline-offset-8'
 				: ''}">Blog</a
 		>
 	</li>
-	<li>
+	<li class="w-full md:w-fit ">
 		<a
 			href="/contact"
 			onclick={closeMenu}
-			class="hover:opacity-70 {$page.url.pathname === '/contact'
+			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/contact'
 				? 'underline underline-offset-8'
 				: ''}">Contact</a
 		>
 	</li>
 </ul>
+
