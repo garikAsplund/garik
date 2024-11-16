@@ -58,7 +58,7 @@
 		{
 			title: 'Cuyama Oaks Ranch',
 			description: "Reimagined the ranch's web presence with a mobile-first approach, replacing a problematic Square Space design. Optimized for iOS users who comprise 75% of visitors, ensuring fast access to essential information.",
-			siteUrl: 'https://cuyoma-oaks.vercel.app',
+			siteUrl: 'https://cuyama-oaks.vercel.app',
 			images: {
 				desktop: corDesktop,
 				mobile: corMobile,
