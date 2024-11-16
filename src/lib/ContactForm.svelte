@@ -13,9 +13,9 @@
 		resetForm: true,
 		dataType: 'json',
 		taintedMessage: null,
-		// onResult: ({ result }) => {
-		// 	isSubmitting = false;
-		// },
+		onResult: ({ result }) => {
+			isSubmitting = false;
+		},
 		onError: ({ result }) => {
 			isSubmitting = false;
 			// Handle error
@@ -56,9 +56,11 @@
 							bind:value={$form.name}
 							placeholder="Name"
 							{...$constraints.name}
-							class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 {$errors.name
-								? 'border-red-500 dark:border-teal-400'
-								: ''}"
+							class="rounded-md border border-gray-300 p-2
+							focus:border-[#8864c8]/90
+							focus:outline-none
+							focus:ring-1
+							focus:ring-[#8864c8]/90 {$errors.name ? 'border-red-500 dark:border-teal-400' : ''}"
 						/>
 						{#if $errors.name}
 							<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.name}</span>
@@ -75,9 +77,11 @@
 						bind:value={$form.email}
 						placeholder="Email"
 						{...$constraints.email}
-						class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 {$errors.email
-							? 'border-red-500 dark:border-teal-400'
-							: ''}"
+						class="rounded-md border border-gray-300 p-2
+						focus:border-[#8864c8]/90
+						focus:outline-none
+						focus:ring-1
+						focus:ring-[#8864c8]/90 {$errors.email ? 'border-red-500 dark:border-teal-400' : ''}"
 					/>
 					{#if $errors.email}
 						<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.email}</span>
@@ -92,9 +96,11 @@
 						bind:value={$form.phone}
 						placeholder="Phone"
 						{...$constraints.phone}
-						class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 {$errors.phone
-							? 'border-red-500 dark:border-teal-400'
-							: ''}"
+						class="rounded-md border border-gray-300 p-2
+						focus:border-[#8864c8]/90
+						focus:outline-none
+						focus:ring-1
+						focus:ring-[#8864c8]/90 {$errors.phone ? 'border-red-500 dark:border-teal-400' : ''}"
 					/>
 					{#if $errors.phone}
 						<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.phone}</span>
@@ -111,9 +117,11 @@
 					placeholder="Tell me about what kind of project you have in mind"
 					{...$constraints.inquiry}
 					rows="4"
-					class="rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 {$errors.inquiry
-						? 'border-red-500 dark:border-teal-400'
-						: ''}"
+					class="rounded-md border border-gray-300 p-2
+					focus:border-[#8864c8]/90
+					focus:outline-none
+					focus:ring-1
+					focus:ring-[#8864c8]/90 {$errors.inquiry ? 'border-red-500 dark:border-teal-400' : ''}"
 				></textarea>
 				{#if $errors.inquiry}
 					<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.inquiry}</span>
@@ -125,7 +133,7 @@
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					class="w-full max-w-sm rounded-md bg-[#FF6B6B] py-2 font-semibold transition duration-300 hover:saturate-[1.25] disabled:cursor-not-allowed disabled:bg-blue-400"
+					class="w-full max-w-sm rounded-md bg-gray-800 py-2 font-semibold text-white transition-all duration-300 hover:opacity-90 disabled:cursor-not-allowed disabled:bg-blue-400 dark:bg-[#FF6B6B]/90 dark:hover:opacity-100 dark:hover:saturate-150"
 					aria-disabled={isSubmitting}
 				>
 					{#if isSubmitting}
@@ -147,25 +155,39 @@
 </section>
 
 <style>
+	.dots {
+		font-family: monospace;
+		display: inline-block;
+		min-width: 3ch;
+		text-align: left;
+		position: relative;
+		line-height: normal;
+		vertical-align: baseline;
+	}
+
 	.dots::after {
 		content: '';
 		animation: dots 1.5s steps(4, jump-none) infinite;
+		position: absolute;
+		left: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
 	}
+
 	@keyframes dots {
-		0% {
-			content: '\00a0\00a0\00a0'; /* Three non-breaking spaces */
-		}
-		25% {
-			content: '.\00a0\00a0'; /* Dot + two spaces */
-		}
-		50% {
-			content: '..\00a0'; /* Two dots + space */
-		}
-		75% {
-			content: '...'; /* Three dots */
-		}
+		0%,
 		100% {
 			content: '\00a0\00a0\00a0';
+		}
+		25% {
+			content: '.\00a0\00a0';
+		}
+		50% {
+			content: '..\00a0';
+		}
+		75% {
+			content: '...';
 		}
 	}
 </style>

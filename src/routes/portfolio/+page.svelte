@@ -128,7 +128,7 @@
 						<div class="overflow-hidden lg:col-span-2">
 							<a
 								href={siteUrl}
-								class="block overflow-hidden hover:opacity-75"
+								class="block overflow-hidden hover:opacity-95"
 								target="_blank"
 								aria-label="Desktop site {title}"
 								rel="noopener noreferrer"
@@ -146,7 +146,7 @@
 						<div class="overflow-hidden">
 							<a
 								href="http://www.responsinator.com/?url={siteUrl}"
-								class="block overflow-hidden hover:opacity-75"
+								class="block overflow-hidden hover:opacity-95"
 								target="_blank"
 								aria-label="Mobile site {title}"
 								rel="noopener noreferrer"
