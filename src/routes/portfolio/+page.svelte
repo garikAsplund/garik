@@ -56,7 +56,7 @@
 				'https://pagespeed.web.dev/analysis/https-www-apcv2024-com/bspekc1xkm?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
 		{
-			title: 'Cuyoma Oaks Ranch',
+			title: 'Cuyama Oaks Ranch',
 			description: "Reimagined the ranch's web presence with a mobile-first approach, replacing a problematic Square Space design. Optimized for iOS users who comprise 75% of visitors, ensuring fast access to essential information.",
 			siteUrl: 'https://cuyoma-oaks.vercel.app',
 			images: {
