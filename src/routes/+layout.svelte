@@ -5,7 +5,6 @@
 	import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { page } from '$app/stores';
-	import { replaceState } from '$app/navigation';
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
