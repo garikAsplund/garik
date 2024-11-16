@@ -5,16 +5,16 @@
 	import apcvDesktop from '$lib/portfolio/apcv/desktop.png?enhanced';
 	import apcvMobile from '$lib/portfolio/apcv/mobile.png?enhanced';
 	import apcvScores from '$lib/portfolio/apcv/scores.png?enhanced';
-  import amgcDesktop from '$lib/portfolio/amgc/desktop.png?enhanced';
+	import amgcDesktop from '$lib/portfolio/amgc/desktop.png?enhanced';
 	import amgcMobile from '$lib/portfolio/amgc/mobile.png?enhanced';
 	import amgcScores from '$lib/portfolio/amgc/scores.png?enhanced';
-  import corDesktop from '$lib/portfolio/cor/desktop.png?enhanced';
+	import corDesktop from '$lib/portfolio/cor/desktop.png?enhanced';
 	import corMobile from '$lib/portfolio/cor/mobile.png?enhanced';
 	import corScores from '$lib/portfolio/cor/scores.png?enhanced';
-  import reddSaunaDesktop from '$lib/portfolio/redd-sauna/desktop.png?enhanced';
+	import reddSaunaDesktop from '$lib/portfolio/redd-sauna/desktop.png?enhanced';
 	import reddSaunaMobile from '$lib/portfolio/redd-sauna/mobile.png?enhanced';
 	import reddSaunaScores from '$lib/portfolio/redd-sauna/scores.png?enhanced';
-  import toskaBearDesktop from '$lib/portfolio/toska-bear/desktop.png?enhanced';
+	import toskaBearDesktop from '$lib/portfolio/toska-bear/desktop.png?enhanced';
 	import toskaBearMobile from '$lib/portfolio/toska-bear/mobile.png?enhanced';
 	import toskaBearScores from '$lib/portfolio/toska-bear/scores.png?enhanced';
 
@@ -33,20 +33,19 @@
 	const projects: Project[] = [
 		{
 			title: 'Alpine Meadows Golf Course',
-			description:
-				"Wallowa County's only golf course hadn't had their website updated for some time. This refresh brought them into the 21st century.",
+			description: "Transformed an outdated website into a modern, responsive platform to showcase Wallowa County's only golf course. Integrated with Stripe for online membership payments.",
 			siteUrl: 'https://golfalpinemeadows.vercel.app',
 			images: {
 				desktop: amgcDesktop,
 				mobile: amgcMobile,
 				performance: amgcScores
 			},
-			insightsUrl: 'https://pagespeed.web.dev/analysis/https-golfalpinemeadows-vercel-app/4st6ws88tz?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-golfalpinemeadows-vercel-app/4st6ws88tz?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
-    {
+		{
 			title: 'Asia Pacific Conference on Vision 2024',
-			description:
-				"A straightforward and informative website for a conference in Singapore.",
+			description: "Developed a clean, accessible website for a vision science conference in Singapore. Prioritized clear navigation and easy access to conference information for international attendees.",
 			siteUrl: 'https://www.apcv2024.com',
 			images: {
 				desktop: apcvDesktop,
@@ -58,20 +57,19 @@
 		},
 		{
 			title: 'Cuyoma Oaks Ranch',
-			description:
-				"Over 75% of users for this site are on iOS and the old Square Space design had many issues. This redo addresses mobile first and getting info to the user quickly.",
+			description: "Reimagined the ranch's web presence with a mobile-first approach, replacing a problematic Square Space design. Optimized for iOS users who comprise 75% of visitors, ensuring fast access to essential information.",
 			siteUrl: 'https://cuyoma-oaks.vercel.app',
 			images: {
 				desktop: corDesktop,
 				mobile: corMobile,
 				performance: corScores
 			},
-			insightsUrl: 'https://pagespeed.web.dev/analysis/https-cuyama-oaks-vercel-app/9qy89rjcur?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-cuyama-oaks-vercel-app/9qy89rjcur?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
 		{
 			title: 'Range Rider',
-			description:
-				"The old site was cluttered and confusing. With this makeover there's an HTML menu, better SEO, and up-to-date info.",
+			description: "Streamlined the user experience with a complete redesign that fits Range Rider's vibe and added a HTML-base food menu, enhanced SEO optimization, and dynamic open sign.",
 			siteUrl: 'https://rangerider.netlify.app',
 			images: {
 				desktop: rangeRider,
@@ -82,27 +80,27 @@
 		},
 		{
 			title: 'Redd Sauna',
-			description:
-				"This clone has better validation for forms and sends out a booking confirmation email automatically.",
+			description: "Enhanced the booking experience with robust form validation and automated confirmation emails. This thoughtful rebuild improves customer communication while maintaining the brand's aesthetic.",
 			siteUrl: 'https://redd-sauna.vercel.app',
 			images: {
 				desktop: reddSaunaDesktop,
 				mobile: reddSaunaMobile,
 				performance: reddSaunaScores
 			},
-			insightsUrl: 'https://pagespeed.web.dev/analysis/https-redd-sauna-vercel-app/t8702lm7ho?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-redd-sauna-vercel-app/t8702lm7ho?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
 		{
 			title: 'Toska Bear',
-			description:
-				"Previously just a link tree, this new site adds a little depth and flair.",
+			description: "Elevated a simple link tree into an engaging artist presence. The new design adds depth and personality while maintaining quick access to essential links and videos.",
 			siteUrl: 'https://www.toskabear.com',
 			images: {
 				desktop: toskaBearDesktop,
 				mobile: toskaBearMobile,
 				performance: toskaBearScores
 			},
-			insightsUrl: 'https://pagespeed.web.dev/analysis/https-www-toskabear-com/e4cyzhdur2?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-www-toskabear-com/e4cyzhdur2?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		}
 	];
 </script>
@@ -125,7 +123,7 @@
 
 				<!-- Project Screenshots -->
 				<div class="space-y-4">
-					<div class="grid grid-cols-1 gap-8 lg:grid-cols-3 items-center">
+					<div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
 						<!-- Desktop Screenshot - Takes up 2 columns -->
 						<div class="overflow-hidden lg:col-span-2">
 							<a

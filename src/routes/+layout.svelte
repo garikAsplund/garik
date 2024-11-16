@@ -15,7 +15,7 @@
 	<title>GAR1K.C0DES {$page.url.pathname === '/' ? '' : '| '} {($page.url.pathname.replace('/', '').charAt(0).toUpperCase()) + $page.url.pathname.slice(2).split('/')[0]}</title>
 </svelte:head>
 
-<div class="flex min-h-screen w-full flex-col bg-slate-100 dark:invert">
+<div class="flex min-h-screen w-full flex-col bg-slate-100 dark:invert text-gray-800">
 	<Nav />
 	<main class=" flex flex-col items-center">
 		{@render children()}
