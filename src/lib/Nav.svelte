@@ -26,6 +26,13 @@
 	function handleScroll() {
 		const currentScrollY = window.scrollY;
 
+		if (Math.abs(currentScrollY - lastScrollY) > 200) {
+			isNavigating = true;
+			setTimeout(() => {
+				isNavigating = false;
+			}, 0);
+		}
+
 		if (Math.abs(currentScrollY - lastScrollY) > 10) {
 			isNavbarVisible = currentScrollY < lastScrollY;
 			lastScrollY = currentScrollY;
@@ -34,11 +41,7 @@
 
 			scrollTimeout = setTimeout(() => {
 				isNavbarVisible = true;
-			}, 1500);
-		}
-
-		if (currentScrollY < 100) {
-			isNavbarVisible = true;
+			}, 1000);
 		}
 	}
 
@@ -69,7 +72,12 @@
 >
 	<!-- Home link and logo -->
 	<div class="">
-		<a href="/" class="hover:opacity-70" aria-label="Home" onclick={() => isMenuOpen.button = false}>
+		<a
+			href="/"
+			class="hover:opacity-70"
+			aria-label="Home"
+			onclick={() => (isMenuOpen.button = false)}
+		>
 			<GarikCodes />
 		</a>
 	</div>
