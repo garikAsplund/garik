@@ -49,6 +49,7 @@
   
   <section class="flex w-full flex-col items-center space-y-8 pt-12 md:px-16 px-8 max-w-7xl">
 	<h1 class="text-4xl font-semibold text-center">Pricing</h1>
+  <p class="text-center text-lg text-gray-700">Choose the plan that best fits your needs.</p>
     <div class="grid md:grid-cols-3 gap-8 pt-12">
       {#each plans as plan}
         <div class="flex flex-col p-6 bg-white border rounded-lg">
