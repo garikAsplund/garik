@@ -5,6 +5,10 @@
 	let { data } = $props();
 </script>
 
+<svelte:head>
+	<title>GAR1K.C0DES</title>
+</svelte:head>
+
 <div class="relative flex w-full flex-col items-center">
 	<!-- <HeroArt /> -->
 	<div class="z-20">
