@@ -7,7 +7,9 @@ date: "2024-11-17"
 
 A long while back I was watching a YouTube video on the simplest dark mode implementation ever. It was about how you can literally just invert your page with a single line of CSS*.
 
-Sadly, as with most videos, I didn't really take any action afterward and instead used Skeleton and Tailwind for doing dark mode on a project I was working on at the time. Scattered all throughout my code are `dark:this` and `dark:that` which began to really add up.
+Sadly, as with most videos, I didn't really take any action afterward and instead used Skeleton and Tailwind for doing dark mode on a project I was working on at the time. 
+
+Scattered all throughout my code are `dark:this` and `dark:that` which began to really add up and became a hassle to manage.
 
 For my recent redo of my personal site, I thought, "What the heck," and gave the one-liner a try. In my outermost HTML element I added this Tailwind class: `dark:invert`. 
 
