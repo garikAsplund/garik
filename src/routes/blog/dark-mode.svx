@@ -1,6 +1,7 @@
 ---
 title: The easiest dark mode
 date: "2024-11-17"
+og_image: "https://about.fb.com/wp-content/uploads/2020/03/NRP-Dark_Mode_is_Here_banner_FINAL.jpg"
 ---	
 
 ![Dark mode](https://about.fb.com/wp-content/uploads/2020/03/NRP-Dark_Mode_is_Here_banner_FINAL.jpg "Dark mode is here")

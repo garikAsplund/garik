@@ -8,6 +8,7 @@
 	<title>GAR1K.C0DES | {data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:image" content={data.meta.og_image} />
 </svelte:head>
 
 <a href="/blog" class="mt-4 flex items-center gap-2 hover:underline hover:underline-offset-4">
