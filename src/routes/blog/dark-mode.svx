@@ -1,0 +1,31 @@
+---
+title: The easiest dark mode
+date: "2024-11-17"
+---	
+
+![Dark mode](https://about.fb.com/wp-content/uploads/2020/03/NRP-Dark_Mode_is_Here_banner_FINAL.jpg "Dark mode is here")
+
+A long while back I was watching a YouTube video on the simplest dark mode implementation ever. It was about how you can literally just invert your page with a single line of CSS*.
+
+Sadly, as with most videos, I didn't really take any action afterward and instead used Skeleton and Tailwind for doing dark mode on a project I was working on at the time. Scattered all throughout my code are `dark:this` and `dark:that` which began to really add up.
+
+For my recent redo of my personal site, I thought, "What the heck," and gave the one-liner a try. In my outermost HTML element I added this Tailwind class: `dark:invert`. 
+
+The only issue with this is that all images, videos, as well as code blocks are then inverted, but that is an easy fix. All you have to do is add a rule to your CSS file.
+
+```css
+/* src/app.css */
+@layer utilities {
+	img, video, pre {
+		@apply dark:invert;
+	}
+}
+```
+
+And voilà! No more searching for and editing dozens of classes repeatedly.
+
+Of course, this works best for white or near white backgrounds with dark texts--some color combos would definitely be a little whack with this approach.
+
+Overall I'm really happy with the ease of going this route and will likely use it again where it makes sense in the future.
+
+Check it out for yourself and let me know what you think!

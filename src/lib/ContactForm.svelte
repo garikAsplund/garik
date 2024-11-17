@@ -133,7 +133,7 @@
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					class="w-full max-w-sm rounded-md bg-gray-800 py-2 font-semibold text-white dark:text-black transition-all duration-300 hover:opacity-90 disabled:cursor-not-allowed disabled:bg-blue-400 dark:bg-[#FF6B6B]/90 dark:hover:opacity-100 dark:hover:saturate-150"
+					class="w-full max-w-sm rounded-md bg-gray-800 py-2 font-semibold text-white dark:text-black duration-300 hover:opacity-90 disabled:cursor-not-allowed disabled:bg-blue-400 dark:bg-[#FF6B6B]/90 dark:hover:opacity-100 dark:hover:saturate-150 transition-[opacity,filter] "
 					aria-disabled={isSubmitting}
 				>
 					{#if isSubmitting}
