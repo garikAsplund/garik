@@ -32,9 +32,9 @@
 		<div class="flex w-full justify-center px-4 py-4">
 			<a
 				href="/portfolio"
-				class="mt-8 inline-flex items-center space-x-3 border-2 border-black bg-white/80 px-4 py-2 text-xl backdrop-blur-sm transition-all hover:opacity-75 md:mt-16"
+				class="relative mt-8 inline-flex items-center space-x-3 border-2 border-black bg-white/80 px-4 py-2 text-xl backdrop-blur-sm transition-all hover:opacity-75 md:mt-16"
 			>
-				<div class="flex items-center">
+				<div class="fancy relative flex items-center">
 					<p>See my work</p>
 				</div>
 			</a>
@@ -44,3 +44,43 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.fancy {
+	  position: relative;
+	  width: auto;
+	  height: auto;
+	  margin: auto;
+	  cursor: pointer;
+	}
+  
+	.fancy::before,
+	.fancy::after {
+	  content: '';
+	  position: absolute;
+	  width: 20px;
+	  height: 20px;
+	  transition: 0.3s ease-in-out;
+	}
+  
+	.fancy::before {
+	  top: -15px;
+	  left: -22px;
+	  border-top: 2px solid #000;
+	  border-left: 2px solid #000;
+	}
+  
+	.fancy::after {
+	  right: -22px;
+	  bottom: -15px;
+	  border-bottom: 2px solid #000;
+	  border-right: 2px solid #000;
+	}
+  
+	.fancy:hover::before,
+	.fancy:hover::after {
+	  width: calc(100% + 44px);
+	  height: calc(100% + 28px);
+	}
+  </style>
+  
