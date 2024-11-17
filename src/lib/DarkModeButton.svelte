@@ -4,11 +4,21 @@
     
     let dark: boolean | null = $state(null);
     let hidden = $state(true);
-    
+
     onMount(() => {
-        dark = document.documentElement.classList.contains('dark');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            dark = true;
+        } else if (savedTheme === 'light') {
+            dark = false;
+        } else {
+            dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+
+        setMode(dark);
+
         hidden = false;
-        
+
         const matcher = window.matchMedia('(prefers-color-scheme: dark)');
         matcher.addEventListener('change', handleChange);
         return () => matcher.removeEventListener('change', handleChange);
@@ -29,16 +39,16 @@
         
         if (dark) {
             document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark';
+            localStorage.setItem('theme', 'dark');
         } else {
             document.documentElement.classList.remove('dark');
-            localStorage.theme = 'light';
+            localStorage.setItem('theme', 'light');
         }
         
-        // Only remove theme if we're matching system preference
+        const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (
-            (value && window.matchMedia('(prefers-color-scheme: dark)').matches) ||
-            (!value && window.matchMedia('(prefers-color-scheme: light)').matches)
+            (value && systemPreference) ||
+            (!value && !systemPreference)
         ) {
             localStorage.removeItem('theme');
         }
