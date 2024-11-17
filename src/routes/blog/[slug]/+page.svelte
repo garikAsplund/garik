@@ -2,12 +2,15 @@
 	import { BookOpenCheck, ChevronLeft, ChevronRight, MoveLeft } from 'lucide-svelte';
 
 	let { data } = $props();
+
+	const ogImage = data.meta.og_image || './blog/blogging.jpeg';
 </script>
 
 <svelte:head>
 	<title>GAR1K.C0DES | {data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:description" content="Tech thoughts from a n00b+" />
 	<meta property="og:image" content={data.meta.og_image} />
 </svelte:head>
 

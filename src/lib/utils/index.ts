@@ -9,6 +9,8 @@ export const fetchMarkdownPosts = async () => {
         const postPath = path
           .replace('/src/routes/', '') // Remove directory
           .replace(/\.(md|svx)$/, ''); // Remove extension
+        
+        console.log({ metadata });
   
         return {
           meta: metadata,
