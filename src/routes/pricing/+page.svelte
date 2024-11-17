@@ -75,7 +75,7 @@
             <p class="text-xs text-gray-500 mb-4 italic">
               Plus $74/per additional page
             </p>
-            <a href="/contact" class="w-full border-gray-900 border py-2 px-4 rounded hover:opacity-75 transition duration-300 flex items-center justify-center gap-2">
+            <a href="/contact" class=" w-full border-gray-900 border py-2 px-4 rounded hover:opacity-75 transition duration-300 flex items-center justify-center gap-2">
               Get Started
               <ArrowRight size={16} />
             </a>
@@ -84,3 +84,4 @@
       {/each}
     </div>
 </section>
+
