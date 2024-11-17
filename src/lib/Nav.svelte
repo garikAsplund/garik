@@ -5,6 +5,7 @@
 	import { ChevronDown, X } from 'lucide-svelte';
 	import NavItems from '$lib/NavItems.svelte';
 	import { isMenuOpen } from '$lib/isMenuOpen.svelte';
+	import DarkModeButton from './DarkModeButton.svelte';
 
 	let lastScrollY = $state(0);
 	let isNavbarVisible = $state(true);
@@ -83,8 +84,9 @@
 	</div>
 
 	<!-- Nav bar -->
-	<nav class="hidden w-full justify-end md:flex">
+	<nav class="hidden w-full items-center justify-end md:flex">
 		<NavItems />
+		<DarkModeButton />
 	</nav>
 
 	<!-- Mobile nav -->
