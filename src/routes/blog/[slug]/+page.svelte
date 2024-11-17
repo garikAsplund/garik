@@ -11,7 +11,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content="Tech thoughts from a n00b+" />
-	<meta property="og:image" content={data.meta.og_image} />
+	<meta property="og:image" content={ogImage} />
 </svelte:head>
 
 <a href="/blog" class="mt-4 flex items-center gap-2 hover:underline hover:underline-offset-4">
