@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import 'prismjs/themes/prism-tomorrow.css'; /* or any other theme */
+@import 'prismjs/themes/prism-tomorrow.css';
 
 @layer utilities {
 	img, video, pre {

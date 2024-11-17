@@ -15,7 +15,7 @@
     });
 
     function handleChange(event: MediaQueryListEvent) {
-        if (localStorage.theme === undefined) {
+        if (!localStorage.theme) {  // Changed from undefined check
             setMode(event.matches);
         }
     }
@@ -29,15 +29,18 @@
         
         if (dark) {
             document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
         } else {
             document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
         }
         
-        localStorage.theme = dark ? 'dark' : 'light';
-
-        if (window.matchMedia(`(prefers-color-scheme: ${localStorage.theme})`).matches) {
+        // Only remove theme if we're matching system preference
+        if (
+            (value && window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+            (!value && window.matchMedia('(prefers-color-scheme: light)').matches)
+        ) {
             localStorage.removeItem('theme');
-            console.log('Removed localStorage theme - matching system');
         }
     }
 </script>
