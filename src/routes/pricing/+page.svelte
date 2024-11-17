@@ -75,7 +75,7 @@
             <p class="text-xs text-gray-500 mb-4 italic">
               Plus domain purchase and $10/month hosting fee
             </p>
-            <a href="/contact" class="conic w-full border-gray-900 border py-2 px-4 rounded hover:shadow-lg dark:hover:shadow-red-500/50 transition duration-300 flex items-center justify-center gap-2">
+            <a href="/contact" class="conic w-full border-gray-900 border py-2 px-4 rounded hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-red-500/50 transition duration-300 flex items-center justify-center gap-2">
               Get Started
               <ArrowRight size={16} />
             </a>
