@@ -3,7 +3,8 @@
 
 	let { data } = $props();
 
-	const ogImage = data.meta.og_image || './blog/blogging.jpeg';
+	const ogImage = data.meta.og_image || './blogging.jpeg';
+	console.log(ogImage);
 </script>
 
 <svelte:head>
