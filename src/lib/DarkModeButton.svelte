@@ -15,7 +15,7 @@
     });
 
     function handleChange(event: MediaQueryListEvent) {
-        if (!localStorage.theme) {  // Changed from undefined check
+        if (localStorage.theme === undefined) {
             setMode(event.matches);
         }
     }
