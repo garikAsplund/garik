@@ -44,7 +44,7 @@
 
 <button 
     onclick={toggleDarkMode} 
-    class="ml-4 p-2 hover:opacity-75"
+    class="ml-4 p-2 pb-1 hover:opacity-75"
     aria-label="Toggle theme"
 >
     {#if dark}
