@@ -6,14 +6,6 @@
     let hidden = $state(true);
     
     onMount(() => {
-        // Debug logging
-        console.log({
-            mediaQuery: window.matchMedia('(prefers-color-scheme: dark)').matches,
-            localStorage: localStorage.theme,
-            currentClass: document.documentElement.classList.contains('dark')
-        });
-
-        // Set initial state based on class (which should have been set by app.html)
         dark = document.documentElement.classList.contains('dark');
         hidden = false;
         
@@ -23,8 +15,7 @@
     });
 
     function handleChange(event: MediaQueryListEvent) {
-        console.log('OS theme changed:', event.matches);
-        if (!localStorage.theme) {
+        if (localStorage.theme === undefined) {
             setMode(event.matches);
         }
     }
@@ -43,13 +34,6 @@
         }
         
         localStorage.theme = dark ? 'dark' : 'light';
-        
-        // Debug logging
-        console.log('Theme set to:', {
-            dark,
-            localStorage: localStorage.theme,
-            matchesSystem: window.matchMedia(`(prefers-color-scheme: ${localStorage.theme})`).matches
-        });
 
         if (window.matchMedia(`(prefers-color-scheme: ${localStorage.theme})`).matches) {
             localStorage.removeItem('theme');

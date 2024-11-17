@@ -5,25 +5,14 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
-            // Debug logging
-            console.log('Initial load:', {
-                localStorage: localStorage.theme,
-                systemDark: window.matchMedia('(prefers-color-scheme: dark)').matches
-            });
-
 			if (
 				localStorage.theme === 'dark' ||
-				window.matchMedia('(prefers-color-scheme: dark)').matches
+				(localStorage.theme === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches)
 			) {
 				document.documentElement.classList.add('dark');
 			} else {
 				document.documentElement.classList.remove('dark');
 			}
-
-            // Verify what happened
-            console.log('After theme setup:', {
-                darkClass: document.documentElement.classList.contains('dark')
-            });
 		</script>
 		<!-- HTML Meta Tags -->
 		<title>GAR1K.C0DES</title>
