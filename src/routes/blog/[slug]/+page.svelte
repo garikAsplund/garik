@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { BookOpenCheck, ChevronLeft, ChevronRight, MoveLeft } from 'lucide-svelte';
+	import altImage from '$lib/blogging.jpeg'
 
 	let { data } = $props();
 
-	const ogImage = data.meta.og_image || '../blog/blogging.jpeg';
+	const ogImage = data.meta.og_image || altImage;
 	const currentUrl = typeof window !== 'undefined' 
 		? window.location.href 
 		: 'https://garik.codes';
