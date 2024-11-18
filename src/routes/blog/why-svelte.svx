@@ -1,6 +1,7 @@
 ---
 title: Why Svelte?
 date: "2023-08-14"
+og_image: "https://i.redd.it/zoz9jdjga0g21.jpg"
 ---
 
 ## Simplicity > Popularity

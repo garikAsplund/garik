@@ -1,6 +1,7 @@
 ---
 title: Computers...in space! part 1
 date: "2024-01-29"
+og_image: "https://hips.hearstapps.com/hmg-prod/images/pop-marshelicopter-labels-battery-1613514029.png"
 ---
 
 I admittedly have a problem--I love, love, love space. I spend too much time geeking out on all the space missions, new and old alike. While humans still go to space and we dream of going back to the moon and beyond to Mars, a lot of that hope is probably misplaced because we simply aren't adapted to space.

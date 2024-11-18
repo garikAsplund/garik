@@ -1,6 +1,7 @@
 ---
 title: Hello, world!
 date: "2023-08-11"
+og_image: "https://media.tenor.com/_HwQHDixHnMAAAAC/kitten-cat.gif"
 ---
 ```js
 console.log("Hi, I'm Garik 👋");

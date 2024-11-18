@@ -1,6 +1,7 @@
 ---
 title: Ad blockers as master keys 
 date: "2024-01-19"
+og_image: "https://i.pinimg.com/originals/bc/90/eb/bc90ebd65c9987cf2e5758348d4dc234.jpg"
 ---	
 
 The Internet can be an ugly space, especially if you're not using an ad blocker. The clutter, the inconvenience, the distraction can be too much to bear. I know *someone* has to pay the bills to keep the lights on, but I will gladly have my ad blocker up every where I go online. But my favorite feature might not even be fewer ads.
