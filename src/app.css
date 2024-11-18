@@ -5,7 +5,7 @@
 @import 'prismjs/themes/prism-tomorrow.css';
 
 @layer utilities {
-	img, video, pre {
+	img, video, pre, .emoji {
 		@apply dark:invert;
 	}
 }

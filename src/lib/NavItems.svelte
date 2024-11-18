@@ -39,7 +39,7 @@
 		<a
 			href="/blog"
 			onclick={closeMenu}
-			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/blog'
+			class="hover:opacity-70 w-full block text-center {$page.url.pathname.split('/')[1] === 'blog'
 				? 'underline underline-offset-8'
 				: ''}">Blog</a
 		>

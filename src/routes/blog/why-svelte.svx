@@ -74,7 +74,7 @@ SvelteKit also has quick, easy-to-use transitions, effects, and animations out o
 
 ## Small bundle sizes
 
-While React will ship over 40 kB of <del>BS</del> JS right out the gate, Svelte will compile all that JS down and only ship what is needed, which is usually around 2 kB 😮. Furthermore, Svelte does away with the Virtual DOM and all its diffing algorithms, instead relying on direct updates to the DOM. This highly optimized method helps speed things along, saving time and money.
+While React will ship over 40 kB of <del>BS</del> JS right out the gate, Svelte will compile all that JS down and only ship what is needed, which is usually around 2 kB <span class="emoji">😮</span> Furthermore, Svelte does away with the Virtual DOM and all its diffing algorithms, instead relying on direct updates to the DOM. This highly optimized method helps speed things along, saving time and money.
 
 ## Straightforward state management
 
@@ -84,7 +84,7 @@ I remember in my coding bootcamp when we went over Redux, they said it was hell 
 
 We had dispatchers and actions everywhere, and even though we were just updating some credit card info, we had files and files to navigate through just to change a couple numbers. Thankfully, Svelte has simplified state management with built-in, reactive stores and this shorthand for subscribing to them: $. Easy as that.
 
-[Here](https://joyofcode.xyz/svelte-state-management) is a much more detailed look at how state management is implemented in Svelte, but suffice it to say that it is much, much simpler than in React, Redux, Zustand, or any other system. **And it comes *built-in*** 🤯.
+[Here](https://joyofcode.xyz/svelte-state-management) is a much more detailed look at how state management is implemented in Svelte, but suffice it to say that it is much, much simpler than in React, Redux, Zustand, or any other system. **And it comes *built-in*** <span class="emoji">🤯</span>
 
 ## Amazing performance and adaptability
 

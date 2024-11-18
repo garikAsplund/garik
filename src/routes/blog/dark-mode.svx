@@ -19,7 +19,7 @@ The only issue with this is that all images, videos, as well as code blocks are 
 ```css
 /* src/app.css */
 @layer utilities {
-	img, video, pre {
+	img, video, pre, .emoji {
 		@apply dark:invert;
 	}
 }
