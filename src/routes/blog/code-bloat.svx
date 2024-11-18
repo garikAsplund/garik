@@ -1,6 +1,7 @@
 ---
 title: Code bloat
 date: "2023-08-20"
+og_image: "https://www.ogdenclinic.com/images/blog/Bloat-1.jpg"
 ---
 
 ![Feeling bloated?](https://www.ogdenclinic.com/images/blog/Bloat-1.jpg "A bad case of code bloat")
