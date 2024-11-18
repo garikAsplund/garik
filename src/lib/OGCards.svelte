@@ -20,7 +20,7 @@
 
   let pageTitle = $derived(type === 'article' 
     ? `GAR1K.C0DES | ${title}`
-    : `${title} | ${subPage}`);
+    : `${title}${$page.url.pathname === '/' ? '' :' | '}${subPage}`);
 
   $effect(() => {
     url = browser 
