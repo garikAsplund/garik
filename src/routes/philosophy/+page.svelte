@@ -1,5 +1,5 @@
 <script lang="ts">
-	import OgCards from '$lib/OGCards.svelte';
+	import OGCards from '$lib/OGCards.svelte';
 	import { Image, Code, Navigation, Cookie, Layout, Search } from 'lucide-svelte';
 
 	const philosophySections = [
@@ -42,11 +42,7 @@
 	];
 </script>
 
-<OgCards
-	title="Garik Asplund | Software Engineer"
-	description="Need a fresh website? I've got you :)"
-	image="https://media.licdn.com/dms/image/v2/D5616AQFDLZGPXiZ-QA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1687973966708?e=1736985600&v=beta&t=IOnuEVPLdtSOSenBSgW6z9ZkbtBcj5Bbj3k9xDz3DJY"
-/>
+<OGCards />
 
 <section class="flex w-full max-w-5xl flex-col items-center space-y-8 px-8 pt-12 md:px-16">
 	<h1 class="text-4xl font-semibold">Philosophy</h1>

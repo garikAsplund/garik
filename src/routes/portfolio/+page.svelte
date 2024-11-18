@@ -17,6 +17,7 @@
 	import toskaBearDesktop from '$lib/portfolio/toska-bear/desktop.png?enhanced';
 	import toskaBearMobile from '$lib/portfolio/toska-bear/mobile.png?enhanced';
 	import toskaBearScores from '$lib/portfolio/toska-bear/scores.png?enhanced';
+	import OGCards from '$lib/OGCards.svelte';
 
 	type Project = {
 		title: string;
@@ -33,7 +34,8 @@
 	const projects: Project[] = [
 		{
 			title: 'Alpine Meadows Golf Course',
-			description: "Transformed an outdated website into a modern, responsive platform to showcase Wallowa County's only golf course. Integrated with Stripe for online membership payments.",
+			description:
+				"Transformed an outdated website into a modern, responsive platform to showcase Wallowa County's only golf course. Integrated with Stripe for online membership payments.",
 			siteUrl: 'https://golfalpinemeadows.vercel.app',
 			images: {
 				desktop: amgcDesktop,
@@ -45,7 +47,8 @@
 		},
 		{
 			title: 'Asia Pacific Conference on Vision 2024',
-			description: "Developed a clean, accessible website for a vision science conference in Singapore. Prioritized clear navigation and easy access to conference information for international attendees.",
+			description:
+				'Developed a clean, accessible website for a vision science conference in Singapore. Prioritized clear navigation and easy access to conference information for international attendees.',
 			siteUrl: 'https://www.apcv2024.com',
 			images: {
 				desktop: apcvDesktop,
@@ -57,7 +60,8 @@
 		},
 		{
 			title: 'Cuyama Oaks Ranch',
-			description: "Reimagined the ranch's web presence with a mobile-first approach, replacing a problematic Square Space design. Optimized for iOS users who comprise 75% of visitors, ensuring fast access to essential information.",
+			description:
+				"Reimagined the ranch's web presence with a mobile-first approach, replacing a problematic Square Space design. Optimized for iOS users who comprise 75% of visitors, ensuring fast access to essential information.",
 			siteUrl: 'https://cuyama-oaks.vercel.app',
 			images: {
 				desktop: corDesktop,
@@ -69,7 +73,8 @@
 		},
 		{
 			title: 'Range Rider',
-			description: "Streamlined the user experience with a complete redesign that fits Range Rider's vibe and added a HTML-base food menu, enhanced SEO optimization, and dynamic open sign.",
+			description:
+				"Streamlined the user experience with a complete redesign that fits Range Rider's vibe and added a HTML-base food menu, enhanced SEO optimization, and dynamic open sign.",
 			siteUrl: 'https://rangerider.netlify.app',
 			images: {
 				desktop: rangeRider,
@@ -80,7 +85,8 @@
 		},
 		{
 			title: 'Redd Sauna',
-			description: "Enhanced the booking experience with robust form validation and automated confirmation emails. This thoughtful rebuild improves customer communication while maintaining the brand's aesthetic.",
+			description:
+				"Enhanced the booking experience with robust form validation and automated confirmation emails. This thoughtful rebuild improves customer communication while maintaining the brand's aesthetic.",
 			siteUrl: 'https://redd-sauna.vercel.app',
 			images: {
 				desktop: reddSaunaDesktop,
@@ -92,7 +98,8 @@
 		},
 		{
 			title: 'Toska Bear',
-			description: "Elevated a simple link tree into an engaging artist presence. The new design adds depth and personality while maintaining quick access to essential links and videos.",
+			description:
+				'Elevated a simple link tree into an engaging artist presence. The new design adds depth and personality while maintaining quick access to essential links and videos.',
 			siteUrl: 'https://www.toskabear.com',
 			images: {
 				desktop: toskaBearDesktop,
@@ -104,6 +111,8 @@
 		}
 	];
 </script>
+
+<OGCards />
 
 <section class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
 	<div class="mb-16 space-y-2 text-center">
