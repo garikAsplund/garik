@@ -27,15 +27,6 @@
 	<meta name="twitter:url" content={currentUrl} data-sveltekit-reload />
 </svelte:head>
 
-<div class="mt-8">
-	<p>Debug - Current image path: {ogImage}</p>
-	<img 
-		src={ogImage} 
-		alt={data.meta.title}
-		class="mt-4 w-full rounded-lg object-cover"
-	/>
-</div>
-
 <a href="/blog" class="mt-4 flex items-center gap-2 hover:underline hover:underline-offset-4">
 	<MoveLeft />
 	Back to Blog
