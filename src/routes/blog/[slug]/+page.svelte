@@ -4,16 +4,37 @@
 	let { data } = $props();
 
 	const ogImage = data.meta.og_image || '../blog/blogging.jpeg';
-	console.log(ogImage);
+	const currentUrl = typeof window !== 'undefined' 
+		? window.location.href 
+		: 'https://garik.codes';
 </script>
 
 <svelte:head>
 	<title>GAR1K.C0DES | {data.meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-	<meta property="og:description" content="Tech thoughts from a n00b" />
-	<meta property="og:image" content={ogImage} />
+
+    <!-- Open Graph tags -->
+	<meta property="og:type" content="article" data-sveltekit-reload />
+	<meta property="og:title" content={data.meta.title} data-sveltekit-reload />
+	<meta property="og:url" content={currentUrl} data-sveltekit-reload />
+	<meta property="og:description" content="Tech thoughts from a n00b" data-sveltekit-reload />
+	<meta property="og:image" content={data.meta.og_image} data-sveltekit-reload />
+	
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary_large_image" data-sveltekit-reload />
+	<meta name="twitter:title" content={data.meta.title} data-sveltekit-reload />
+	<meta name="twitter:description" content="Tech thoughts from a n00b" data-sveltekit-reload />
+	<meta name="twitter:image" content={data.meta.og_image} data-sveltekit-reload />
+	<meta name="twitter:url" content={currentUrl} data-sveltekit-reload />
 </svelte:head>
+
+<div class="mt-8">
+	<p>Debug - Current image path: {ogImage}</p>
+	<img 
+		src={ogImage} 
+		alt={data.meta.title}
+		class="mt-4 w-full rounded-lg object-cover"
+	/>
+</div>
 
 <a href="/blog" class="mt-4 flex items-center gap-2 hover:underline hover:underline-offset-4">
 	<MoveLeft />
