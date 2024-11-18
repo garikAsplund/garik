@@ -1,32 +1,19 @@
 <script lang="ts">
 	import { BookOpenCheck, ChevronLeft, ChevronRight, MoveLeft } from 'lucide-svelte';
-	import altImage from '$lib/blogging.jpeg'
+	import altImage from '$lib/blogging.jpeg';
+	import OGCards from '$lib/OGCards.svelte';
 
 	let { data } = $props();
 
 	const ogImage = data.meta.og_image || altImage;
-	const currentUrl = typeof window !== 'undefined' 
-		? window.location.href 
-		: 'https://garik.codes';
 </script>
 
-<svelte:head>
-	<title>GAR1K.C0DES | {data.meta.title}</title>
-
-    <!-- Open Graph tags -->
-	<meta property="og:type" content="article" data-sveltekit-reload />
-	<meta property="og:title" content={data.meta.title} data-sveltekit-reload />
-	<meta property="og:url" content={currentUrl} data-sveltekit-reload />
-	<meta property="og:description" content="Tech thoughts from a n00b" data-sveltekit-reload />
-	<meta property="og:image" content={ogImage} data-sveltekit-reload />
-	
-	<!-- Twitter tags -->
-	<meta name="twitter:card" content="summary_large_image" data-sveltekit-reload />
-	<meta name="twitter:title" content={data.meta.title} data-sveltekit-reload />
-	<meta name="twitter:description" content="Tech thoughts from a n00b" data-sveltekit-reload />
-	<meta name="twitter:image" content={ogImage} data-sveltekit-reload />
-	<meta name="twitter:url" content={currentUrl} data-sveltekit-reload />
-</svelte:head>
+<OGCards 
+  title={data.meta.title}
+  description="Tech thoughts from a n00b"
+  image={ogImage}
+  type="article"
+/>
 
 <a href="/blog" class="mt-4 flex items-center gap-2 hover:underline hover:underline-offset-4">
 	<MoveLeft />

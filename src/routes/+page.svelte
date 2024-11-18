@@ -2,9 +2,16 @@
 	import ContactForm from '$lib/ContactForm.svelte';
 	import HeroArt from '$lib/HeroArt.svelte';
 	import Blob from '$lib/Blob.svelte';
+	import OGCards from '$lib/OGCards.svelte';
 
 	let { data } = $props();
 </script>
+
+<OGCards 
+  title="Garik Asplund | Software Engineer"
+  description="Need a fresh website? I've got you :)"
+  image="https://media.licdn.com/dms/image/v2/D5616AQFDLZGPXiZ-QA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1687973966708?e=1736985600&v=beta&t=IOnuEVPLdtSOSenBSgW6z9ZkbtBcj5Bbj3k9xDz3DJY"
+/>
 
 <div class="relative flex min-h-screen w-full flex-col items-center overflow-hidden">
 	<Blob />
