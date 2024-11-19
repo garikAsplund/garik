@@ -47,6 +47,7 @@
 		"mdsvex-enhanced-images": "^0.2.3",
 		"nodemailer": "^6.9.16",
 		"prism-svelte": "^0.5.0",
-		"prismjs": "^1.29.0"
+		"prismjs": "^1.29.0",
+		"rehype-highlight": "^7.0.1"
 	}
 }

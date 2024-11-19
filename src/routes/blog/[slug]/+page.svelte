@@ -8,13 +8,16 @@
 	const ogImage = data.meta.og_image || altImage;
 </script>
 
-<OGCards 
-  title={data.meta.title}
-  description="Tech thoughts from a n00b"
-  image={ogImage}
-  type="article"
+<OGCards
+	title={data.meta.title}
+	description="Tech thoughts from a n00b"
+	image={ogImage}
+	type="article"
 />
-<a href="/blog" class="mt-4 flex justify-center items-center gap-2 hover:underline hover:underline-offset-4">
+<a
+	href="/blog"
+	class="mt-4 flex items-center justify-center gap-2 hover:underline hover:underline-offset-4"
+>
 	<MoveLeft />
 	Back to Blog
 </a>
@@ -39,7 +42,7 @@
 	<div class="flex w-full items-center justify-center py-8">
 		<div class="flex w-full max-w-2xl items-center justify-center space-x-4">
 			<div class="h-px w-full bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
-			<BookOpenCheck size={36}/>
+			<BookOpenCheck size={36} />
 			<div class="h-px w-full bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
 		</div>
 	</div>
@@ -70,3 +73,13 @@
 		{/if}
 	</div>
 </article>
+
+<style>
+	.code-block-wrapper {
+		@apply mb-4 w-full max-w-full overflow-x-auto rounded-lg bg-gray-800 p-4 text-white;
+	}
+
+	.code-block {
+		@apply whitespace-pre-wrap break-words font-mono text-sm;
+	}
+</style>

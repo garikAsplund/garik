@@ -9,3 +9,24 @@
 		@apply dark:invert;
 	}
 }
+
+pre {
+	overflow-x: auto !important; 
+	white-space: pre-wrap !important; 
+	word-wrap: break-word !important;
+	padding: 1rem !important;
+	margin-bottom: 1rem !important;
+	border-radius: 0.5rem;
+	background: #2d2d2d;
+	color: #f8f8f2;
+  }
+  
+  code {
+	font-family: 'Fira Code', monospace;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	white-space: pre-wrap !important;
+	word-break: break-word !important;
+  }
+  
+  
