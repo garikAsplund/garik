@@ -1,0 +1,121 @@
+---
+title: Linktree+
+date: "2024-11-18"
+og_image: "../blog/toska-bear.png"
+---	
+
+[![Toska Bear](../blog/toska-bear.png "toskabear.com")](https://www.toskabear.com)
+
+## The need
+
+I'm not much of a marketer, and selling myself is famously something I'm bad at. It has made me extremely uncomfortable for various reasons. Nonetheless, desperate times call for desperate measures, so I've begun speaking up and trying to get a start with building websites for any and all takers.
+
+![Me trying to get a job](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm50NnBwc3IxODY3eDRxbHE1OHYxOWdvN3hneWwwMm9qbTQyeXN4aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HsPiykS357iuY/giphy.gif "This job market tho")
+
+One such taker is an old buddy of mine, Jason, who also happens to be an amazing musician--a musician without a proper website. He has a web presence on Instagram, YouTube, and elsewhere, but no central hub to call his own other than a [Linktree](https://linktr.ee/toskabear).
+
+Last month we hung out at our friend's ranch in California's Hidden Valley of Enchantment for a high school reunion. I asked him if I could make him a website and he said yes.
+
+## The idea
+
+The plan was to centralize the content he already had on his Linktree and make it more visually appealing. I wanted to make it easier for his fans to find his music, videos, and social media accounts.
+
+Basically this meant adding some photos and a bio. Sadly, most photos these days still aren't optimized. Happily, the somehow still experimental [`enhanced:img` feature](https://svelte.dev/docs/kit/images#sveltejs-enhanced-img) in SvelteKit is a piece of cake to use. 
+
+Install the package, update your config, and then for almost any image all you need to do is just wrap it in an `enhanced:img` tag in order for AVIF and WebP formats with different sizes to be rendered. That's the SvelteKit magic <span class="emoji">🪄✨</span>
+
+```svelte
+// svelte.config.js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [
+		enhancedImages(),
+		sveltekit()
+	]
+});
+```
+
+```svelte
+<enhanced:img src="../blog/toska-bear.png" alt="Toska Bear" />
+```
+
+As an example of the power adding this one word gives you, here's a screenshot of the hero image's info:
+
+![Hero image info](../blog/toska-bear-hero.png "Hero image info")
+
+Not ever 80 kB for a 1920x1080 image? That's pretty good. The full size PNG weighed over 6 MB!
+
+## The Thumb Zone
+
+[![The Thumb Zone](https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/496f7bc0-4c6c-4159-b731-ec3adcf91105/thumb-zone-mapping-opt.png "The Thumb Zone")](https://www.smashingmagazine.com/2016/09/the-thumb-zone-designing-for-mobile-users/)
+
+Let's be honest, a lot of mobile layouts are kinda gross. Hamburger menus are used everywhere, but they kinda miss out on the Thumb Zone. 
+
+Knowing this, I put the nav menu on mobile on the side as a button that pops out a full-page drawer for hopefully easier navigation. This is a little edgy and all, but Jason's an artist, so it fits. 
+
+![Mobile Menu](../blog/toska-bear-mobile.png "Mobile Menu")
+
+## YouTube embeds <span class="emoji">🙄</span>
+
+Jason also makes music videos for most of his songs, and I wanted a way to highlight that within his website without having to go to YouTube. Will it actually be beneficial? I don't know. What I do know, though, is that embeds are costly.
+
+Here's the network tab for all of his videos with YouTube embeds as `<iframes />`:
+
+![Network tab showing YouTube embeds](../blog/toska-bear-embeds.png "YouTube embeds are costly")
+
+Almost **800 requests, nearly 3 minutes, and loads of data**.
+
+On desktops that's probably fine, and I chose not to worry about it for better or worse. On mobile, though, that would be pretty rude to keep around. 
+
+![Don't be rude](https://media.giphy.com/media/ejRo0le6WWLvy9OSOe/giphy.gif?cid=ecf05e474iq4h6yt2azk9nxydi656i7ny4y69isudda0yvi3&ep=v1_gifs_search&rid=giphy.gif&ct=g "How rude!")
+
+There's a pretty neat trick you can do with most embeds like this, whether they be YouTube videos or Google Maps or something else. 
+
+What you do is have a small, static image that you replace with the iframe on click. I stole [this version](https://www.labnol.org/internet/light-youtube-embeds/27941/), although when writing this article it looks like someone made a [small library for Svelte projects](https://github.com/radiofrance/svelte-youtube-lite?tab=readme-ov-file) too! Great minds think alike.
+
+```javascript
+<script>
+  function labnolIframe(div) {
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowfullscreen', '1');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+    div.parentNode.replaceChild(iframe, div);
+  }
+
+  function initYouTubeVideos() {
+    var playerElements = document.querySelectorAll('.youtube-player');
+    for (var n = 0; n < playerElements.length; n++) {
+      var videoId = playerElements[n].dataset.id;
+      var div = document.createElement('div');
+      div.setAttribute('data-id', videoId);
+      var thumbNode = document.createElement('img');
+      thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
+      div.appendChild(thumbNode);
+      var playButton = document.createElement('div');
+      playButton.setAttribute('class', 'play');
+      div.appendChild(playButton);
+      div.onclick = function () {
+        labnolIframe(this);
+      };
+      playerElements[n].appendChild(div);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initYouTubeVideos);
+</script>
+```
+
+This way only the thumbnails of videos are loaded initially, and then the video is loaded dynamically after the user wants to watch it. This is much more efficient than the alternative and isn't that hard to implement.
+
+## In conclusion
+
+All in all, this was a quick project without too many complications--it's just a pretty, static site with a few tweaks to make it purr.
+
+![Go fast](https://media.giphy.com/media/uzOSCSVYB4Vz2oO77M/giphy.gif?cid=ecf05e47ejxn0f2yenhjp8qgyifp2et1hnn5f3msntf6x5ca&ep=v1_gifs_search&rid=giphy.gif&ct=g "Go fast")
+
+
