@@ -48,8 +48,8 @@
 	<h1 class="text-4xl font-semibold">Philosophy</h1>
 	<article class=" text-left">
 		<div class="md:pl-16">
-			<p class="pb-4 text-lg">The web doesn't need to be complicated.</p>
-			<p class="pb-8 text-base leading-relaxed text-gray-700">
+			<p class="pb-4 text-lg"><code class="code lg:text-lg">The web doesn't need to be complicated.</code></p>
+			<p class="pb-8 text-lg leading-relaxed text-gray-700">
 				I believe in creating web experiences that feel effortless and are aesthetically pleasing.<br
 				/>
 				My approach emphasizes

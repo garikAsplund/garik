@@ -7,7 +7,7 @@
 	}
 </script>
 
-<ul class="flex flex-col items-center gap-6 text-2xl md:flex-row md:items-end md:justify-end w-full">
+<ul class="flex flex-col items-center gap-6 text-2xl md:text-xl md:flex-row md:items-end md:justify-end w-full">
 	<li class="w-full md:w-fit">
 		<a
 			href="/philosophy"
