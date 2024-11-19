@@ -24,18 +24,10 @@
 
 <article class="mx-auto max-w-screen-lg px-8 py-12">
 	<hgroup>
-		<h1 class="text-3xl font-semibold capitalize">{data.meta.title}</h1>
+		<h1 class="text-4xl font-semibold capitalize">{data.meta.title}</h1>
 	</hgroup>
 
-	<div class="mt-7 flex gap-3">
-		{#each data.meta.categories as category}
-			<span class="rounded-full bg-gray-200 px-4 py-2 text-sm text-gray-800">
-				&num;{category}
-			</span>
-		{/each}
-	</div>
-
-	<div class="prose mt-8">
+	<div class="prose mt-8 text-lg">
 		<data.content />
 	</div>
 
@@ -73,13 +65,3 @@
 		{/if}
 	</div>
 </article>
-
-<style>
-	.code-block-wrapper {
-		@apply mb-4 w-full max-w-full overflow-x-auto rounded-lg bg-gray-800 p-4 text-white;
-	}
-
-	.code-block {
-		@apply whitespace-pre-wrap break-words font-mono text-sm;
-	}
-</style>

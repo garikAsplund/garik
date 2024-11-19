@@ -7,8 +7,8 @@
 	}
 </script>
 
-<ul class="flex flex-col items-center gap-6 text-xl md:flex-row md:items-end md:justify-end w-full">
-	<li class="w-full md:w-fit ">
+<ul class="flex flex-col items-center gap-6 text-2xl md:flex-row md:items-end md:justify-end w-full">
+	<li class="w-full md:w-fit">
 		<a
 			href="/philosophy"
 			onclick={closeMenu}
