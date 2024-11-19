@@ -14,8 +14,7 @@
   image={ogImage}
   type="article"
 />
-
-<a href="/blog" class="mt-4 flex items-center gap-2 hover:underline hover:underline-offset-4">
+<a href="/blog" class="mt-4 flex justify-center items-center gap-2 hover:underline hover:underline-offset-4">
 	<MoveLeft />
 	Back to Blog
 </a>

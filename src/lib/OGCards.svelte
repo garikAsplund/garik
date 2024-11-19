@@ -27,7 +27,6 @@
       ? window.location.href 
       : `https://garik.codes${$page.url.pathname}`;
   });
-  $inspect(url);
 </script>
 
 <svelte:head>

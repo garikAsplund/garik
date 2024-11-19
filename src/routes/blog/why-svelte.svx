@@ -58,7 +58,7 @@ export default () => {
 
 And this is the same thing, but in Svelte:
 
-```svelte
+```js
 <script>
   let a = 1;
   let b = 2;

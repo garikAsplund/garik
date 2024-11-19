@@ -9,10 +9,9 @@ import mdsvexConfig from './mdsvex.config.js';
 const config = {
 	preprocess: [
 		vitePreprocess(),
-		mdsvex({
-			// remarkPlugins: [[enhancedImages]]
+		mdsvex(
 			mdsvexConfig
-		}),
+		),
 	],
 	kit: {
 		adapter: adapter()

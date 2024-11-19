@@ -24,7 +24,7 @@ Basically this meant adding some photos and a bio. Sadly, most photos these days
 
 Install the package, update your config, and then for almost any image all you need to do is just wrap it in an `enhanced:img` tag in order to serve AVIF and WebP formats in different sizes. That's the SvelteKit magic <span class="emoji">🪄✨</span>
 
-```svelte
+```js
 // svelte.config.js
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
@@ -46,7 +46,7 @@ As an example of the power adding this one word gives you, here's a screenshot o
 
 ![Hero image info](../blog/toska-bear-hero.png "Hero image info")
 
-Not ever 80 kB for a 1920x1080 image? That's pretty good. The original PNG weighed over 6 MB!
+Not even 80 kB for a 1920x1080 image? That's pretty good. The original PNG weighed over 6 MB!
 
 ## The Thumb Zone
 
@@ -76,7 +76,7 @@ There's a pretty neat trick you can do with most embeds like this, whether they'
 
 What you do is have a small, static image that you replace with the iframe on click. I stole [this version](https://www.labnol.org/internet/light-youtube-embeds/27941/), although when writing this article it looks like someone made a [small library for Svelte projects](https://github.com/radiofrance/svelte-youtube-lite?tab=readme-ov-file) too! Great minds think alike.
 
-```javascript
+```js
 <script>
   function labnolIframe(div) {
     var iframe = document.createElement('iframe');
