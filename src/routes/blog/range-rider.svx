@@ -1,0 +1,62 @@
+---
+title: On restaurant websites
+date: "2024-11-19"
+og_image: "/blog/range-rider/old-sign.jpg"
+draft: true
+---	
+
+![The Range Rider](../blog/range-rider/old-sign.jpg "The Range Rider")
+
+## In a past life
+
+I've bounced around a lot in my life, and rarely have I held a job for more than a year. This meant cooking gigs were a good fit because I could take them or leave them without any remorse or hard feelings. That's just the way the industry is. It suited me well in my 20s, but oddly enough, there was one restaurant where I kept coming back to and ended up spending years cooking at. The Range Rider.
+
+The other week I was down there grabbing an IPNA and shooting the breeze with the barflies. For some reason I thought, "I should see what the Range's website looks like." Once upon a time I was also a male model and feautured on their homepage alongside my friend Aimee.
+
+## What they have
+
+So their old website is pretty bad. 
+
+![Old website](../blog/range-rider/old-site.png "Stylistic choices were made")
+
+Part of it is so tacky as to be charming, but I'm still at a loss with the odd mix of redundancy, bad quality of images, hand-written fonts, layout shifts, search (?!), and the lack of follow through on "Coming soon..." We all know it's not.
+
+I'm reminded of The Oatmeal comic that rags on restaurant websites:
+
+![The Oatmeal](https://s3.amazonaws.com/theoatmeal-img/comics/restaurant_website/1.png "Too true")
+![The Oatmeal](https://s3.amazonaws.com/theoatmeal-img/comics/restaurant_website/2.jpg "Too true")
+
+PDF menu? Guilty as charged. The hours are kinda small and confusing--like, just tell me the hours. There's no need for a 4 years post-Covid reminder that there is inside dining before getting to the actual hours!
+
+Also to be found are broken links to X and Instagram, an RSS feed, and floating footers.
+
+Long story short, there's a lot to pick apart here.
+
+## What I did
+
+The Range Rider definitely has a vibe, but the website currently doesn't reflect it at all. The first step, then, was to pick up on that and leave the kitsch behind. So that's **the style**.
+
+Then there's **the info**. Are you open? Yes. Or no. Google has had very helpful open, closes soon, and closed indicators next to businesses for a looooong time. Why don't actual business websites have that, too? It takes a few lines of JavaScript to get going. It's embarrassingly simple.
+
+```js
+export function checkIfOpen(): boolean {
+  const pstDate = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+  const day = pstDate.getDay();
+  const hour = pstDate.getHours();
+
+  return day !== 0 && 
+         hour >= 11 && 
+         hour < 22;
+}
+```
+
+Stick that on the server, put it in a component, then style it however you want. So. Helpful.
+
+## Mobile, always mobile
+
+Chances are if you're looking at a restaurant website, you're very hungry and either in a car or walking around town in a daze. If a website doesn't get at what a hangry tourist is looking for within 2 seconds, they're gone.
+
+That's why I decided to have the navigation menu front and center on mobile. Everything is either presented to the user immediately or is just one click away. On first look they get to know if The Range Rider is open, where it is, who to call, and they can order food or see who's playing music in under a second.
+
+No one needs to read a poem or hear about how you struggled to get started as a business. They want hours, location, a menu, events, and specials. Probably in that order, even.
+

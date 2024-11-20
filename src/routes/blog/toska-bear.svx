@@ -1,10 +1,10 @@
 ---
 title: Linktree+
 date: "2024-11-18"
-og_image: "/blog/toska-bear.png"
+og_image: "/blog/toska-bear/toska-bear.png"
 ---	
 
-[![Toska Bear](../blog/toska-bear.png "toskabear.com")](https://www.toskabear.com)
+[![Toska Bear](../blog/toska-bear/toska-bear.png "toskabear.com")](https://www.toskabear.com)
 
 ## The need
 
@@ -44,7 +44,7 @@ export default defineConfig({
 
 As an example of the power adding this one word gives you, here's a screenshot of the hero image's info:
 
-![Hero image info](../blog/toska-bear-hero.png "Hero image info")
+![Hero image info](../blog/toska-bear/toska-bear-hero.png "Hero image info")
 
 Not even 80 kB for a 1920x1080 image? That's pretty good. The original PNG weighed over 6 MB!
 
@@ -56,7 +56,7 @@ Let's be honest, a lot of mobile layouts are kinda gross. Hamburger menus are us
 
 Knowing this, I put the nav menu on mobile on the side as a button that pops out a full-page drawer for hopefully easier navigation. This is a little edgy and all, but Jason's an artist, so it fits. 
 
-![Mobile Menu](../blog/toska-bear-mobile.png "Mobile Menu")
+![Mobile Menu](../blog/toska-bear/toska-bear-mobile.png "Mobile Menu")
 
 ## YouTube embeds <span class="emoji">🙄</span>
 
@@ -64,7 +64,7 @@ Jason also makes music videos for most of his songs, and I wanted a way to highl
 
 Here's the network tab for all of his videos with YouTube embeds as `<iframes />`:
 
-![Network tab showing YouTube embeds](../blog/toska-bear-embeds.png "YouTube embeds are costly")
+![Network tab showing YouTube embeds](../blog/toska-bear/toska-bear-embeds.png "YouTube embeds are costly")
 
 Almost **800 requests, nearly 3 minutes, and loads of data**.
 

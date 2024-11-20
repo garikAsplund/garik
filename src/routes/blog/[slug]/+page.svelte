@@ -65,10 +65,3 @@
 		{/if}
 	</div>
 </article>
-
-<style>
-	img {
-	  display: block;
-	  margin: 0 auto;
-	}
-  </style>
