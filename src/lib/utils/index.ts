@@ -5,14 +5,13 @@ export const fetchMarkdownPosts = async () => {
     const allPosts = await Promise.all(
       iterablePostFiles.map(async ([path, resolver]) => {
         const { metadata } = await resolver();
-        // Normalize path to slug
         const postPath = path
-          .replace('/src/routes/', '') // Remove directory
-          .replace(/\.(md|svx)$/, ''); // Remove extension
+          .replace('/src/routes/', '') 
+          .replace(/\.(md|svx)$/, ''); 
           
         return {
           meta: metadata,
-          path: postPath, // Use this in links
+          path: postPath,
         };
       })
     );

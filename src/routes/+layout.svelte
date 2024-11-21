@@ -14,7 +14,7 @@
 
 <div class="flex min-h-screen w-full flex-col bg-slate-100 text-gray-800 dark:invert">
 	<Nav />
-	<main class=" flex flex-col items-center">
+	<main class="flex w-full flex-col items-center">
 		{@render children()}
 	</main>
 	<Footer />
