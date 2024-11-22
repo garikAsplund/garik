@@ -8,20 +8,23 @@
 	let { data } = $props();
 	let isSubmitting = $state(false);
 
-	const { form, errors, enhance, reset, constraints, message } = superForm(data.form, {
-		validators: zod(schema),
-		resetForm: true,
-		dataType: 'json',
-		taintedMessage: null,
-		onResult: ({ result }) => {
-			isSubmitting = false;
-		},
-		onError: ({ result }) => {
-			isSubmitting = false;
-			// Handle error
-			console.error('Form submission error:', result);
+	const { form, errors, enhance, reset, constraints, message, validateForm } = superForm(
+		data.form,
+		{
+			validators: zod(schema),
+			resetForm: true,
+			dataType: 'json',
+			taintedMessage: null,
+			onResult: ({ result }) => {
+				isSubmitting = false;
+			},
+			onError: ({ result }) => {
+				isSubmitting = false;
+				// Handle error
+				console.error('Form submission error:', result);
+			}
 		}
-	});
+	);
 
 	async function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
@@ -101,6 +104,19 @@
 						focus:outline-none
 						focus:ring-1
 						focus:ring-[#8864c8]/90 {$errors.phone ? 'border-red-500 dark:border-teal-400' : ''}"
+						autocomplete="tel"
+						pattern="^(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$"
+						maxlength="15"
+						oninput={(e) => {
+							e.target.value = e.target.value.replace(/[^0-9().-\s]/g, '');
+							$form.phone = e.target.value;
+						}}
+						onpaste={(e) => {
+							e.preventDefault();
+							const pastedContent = e.clipboardData.getData('text');
+							const formattedValue = pastedContent.replace(/[^0-9().-\s]/g, '');
+							$form.phone = formattedValue;
+						}}
 					/>
 					{#if $errors.phone}
 						<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.phone}</span>
@@ -133,7 +149,7 @@
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					class="w-full max-w-sm rounded-md bg-gray-800 py-2 font-semibold text-white dark:text-black duration-300 hover:opacity-90 disabled:cursor-not-allowed disabled:bg-blue-400 dark:bg-[#FF6B6B]/90 dark:hover:opacity-100 dark:hover:saturate-150 transition-[opacity,filter] "
+					class="w-full max-w-sm rounded-md bg-gray-800 py-2 font-semibold text-white transition-[opacity,filter] duration-300 hover:opacity-90 disabled:cursor-not-allowed dark:bg-[#FF6B6B]/90 dark:text-black dark:hover:opacity-100 dark:hover:saturate-150"
 					aria-disabled={isSubmitting}
 				>
 					{#if isSubmitting}
