@@ -4,40 +4,34 @@
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { dev } from '$app/environment';
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
-
+	import FormInput from './FormInput.svelte';
+  
 	let { data } = $props();
 	let isSubmitting = $state(false);
-
+  
 	const { form, errors, enhance, reset, constraints, message, validateForm } = superForm(
-		data.form,
-		{
-			validators: zod(schema),
-			resetForm: true,
-			dataType: 'json',
-			taintedMessage: null,
-			onResult: ({ result }) => {
-				isSubmitting = false;
-			},
-			onError: ({ result }) => {
-				isSubmitting = false;
-				// Handle error
-				console.error('Form submission error:', result);
-			}
+	  data.form,
+	  {
+		validators: zod(schema),
+		resetForm: false,
+		dataType: 'json',
+		taintedMessage: null,
+		onSubmit: () => {
+		  isSubmitting = true;
+		},
+		onResult: ({ result }) => {
+		  isSubmitting = false;
+		},
+		onError: ({ result }) => {
+		  isSubmitting = false;
+		  console.error('Form submission error:', result);
 		}
+	  }
 	);
-
-	async function handleSubmit(event: SubmitEvent) {
-		event.preventDefault();
-		try {
-			isSubmitting = true;
-		} catch (error) {
-			console.error('Error submitting form:', error);
-		}
-	}
-</script>
+  </script>
 
 <section
-	class="relative flex w-full max-w-4xl flex-col items-center rounded-lg bg-slate-50 p-4 py-8 shadow-lg dark:shadow-red-500/50"
+	class="relative flex w-full max-w-xl flex-col items-center rounded-lg bg-slate-50 p-4 py-8 shadow-lg dark:shadow-red-500/50"
 	aria-labelledby="contact-form-title"
 >
 	{#if !$message}
@@ -47,101 +41,66 @@
 	  <SuperDebug data={$form} />
 	{/if} -->
 
-		<form method="POST" class="w-full space-y-6" onsubmit={handleSubmit} use:enhance novalidate>
-			<div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-				<!-- Name Fields -->
-				<div class="grid grid-cols-1 gap-6">
-					<div class="flex flex-col">
-						<label for="name" class="mb-1 text-sm font-medium text-gray-700"> Name * </label>
-						<input
-							type="text"
-							id="name"
-							bind:value={$form.name}
-							placeholder="Name"
-							{...$constraints.name}
-							class="rounded-md border border-gray-300 p-2
-							focus:border-[#8864c8]/90
-							focus:outline-none
-							focus:ring-1
-							focus:ring-[#8864c8]/90 {$errors.name ? 'border-red-500 dark:border-teal-400' : ''}"
-						/>
-						{#if $errors.name}
-							<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.name}</span>
-						{/if}
-					</div>
-				</div>
+		<form method="POST" class="w-full space-y-6" use:enhance novalidate>
+			<div class="grid grid-cols-1 gap-6">
+				<FormInput
+					label="Name"
+					id="name"
+					type="text"
+					bind:value={$form.name}
+					error={$errors.name}
+					constraints={$constraints.name}
+				/>
 
-				<!-- Contact Info -->
-				<div class="flex flex-col">
-					<label for="email" class="mb-1 text-sm font-medium text-gray-700"> Email * </label>
-					<input
-						type="email"
-						id="email"
-						bind:value={$form.email}
-						placeholder="Email"
-						{...$constraints.email}
-						class="rounded-md border border-gray-300 p-2
-						focus:border-[#8864c8]/90
-						focus:outline-none
-						focus:ring-1
-						focus:ring-[#8864c8]/90 {$errors.email ? 'border-red-500 dark:border-teal-400' : ''}"
-					/>
-					{#if $errors.email}
-						<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.email}</span>
-					{/if}
-				</div>
-
-				<div class="flex flex-col">
-					<label for="phone" class="mb-1 text-sm font-medium text-gray-700"> Phone </label>
-					<input
-						type="tel"
-						id="phone"
-						bind:value={$form.phone}
-						placeholder="Phone"
-						{...$constraints.phone}
-						class="rounded-md border border-gray-300 p-2
-						focus:border-[#8864c8]/90
-						focus:outline-none
-						focus:ring-1
-						focus:ring-[#8864c8]/90 {$errors.phone ? 'border-red-500 dark:border-teal-400' : ''}"
-						autocomplete="tel"
-						pattern="^(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$"
-						maxlength="15"
-						oninput={(e) => {
-							e.target.value = e.target.value.replace(/[^0-9().-\s]/g, '');
-							$form.phone = e.target.value;
-						}}
-						onpaste={(e) => {
-							e.preventDefault();
-							const pastedContent = e.clipboardData.getData('text');
-							const formattedValue = pastedContent.replace(/[^0-9().-\s]/g, '');
-							$form.phone = formattedValue;
-						}}
-					/>
-					{#if $errors.phone}
-						<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.phone}</span>
-					{/if}
-				</div>
+				<FormInput
+					label="Email"
+					id="email"
+					type="email"
+					bind:value={$form.email}
+					error={$errors.email}
+					constraints={$constraints.email}
+				/>
 			</div>
 
-			<!-- Message -->
-			<div class="flex flex-col">
-				<label for="inquiry" class="mb-1 text-sm font-medium text-gray-700"> Message * </label>
-				<textarea
-					id="inquiry"
-					bind:value={$form.inquiry}
-					placeholder="Tell me about what kind of project you have in mind"
-					{...$constraints.inquiry}
-					rows="4"
-					class="rounded-md border border-gray-300 p-2
-					focus:border-[#8864c8]/90
-					focus:outline-none
-					focus:ring-1
-					focus:ring-[#8864c8]/90 {$errors.inquiry ? 'border-red-500 dark:border-teal-400' : ''}"
-				></textarea>
-				{#if $errors.inquiry}
-					<span class="mt-1 text-sm text-red-500 dark:invert">{$errors.inquiry}</span>
-				{/if}
+			<!-- Textarea component -->
+			<div class="flex flex-col space-y-1">
+				<label for="inquiry" class=" text-sm font-medium text-gray-700"> Message </label>
+				<div class="" id="inquiry-error" role={$errors.inquiry ? 'alert' : undefined}>
+					{#if $errors.inquiry}
+						<span class="field-error my-1 flex items-center gap-1 text-sm text-red-600 dark:invert">
+							<svg
+								class="h-4 w-4"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+								/>
+							</svg>
+							{$errors.inquiry}
+						</span>
+					{/if}
+				</div>
+				<div class="relative">
+					<textarea
+						id="inquiry"
+						bind:value={$form.inquiry}
+						{...$constraints.inquiry}
+						rows="4"
+						class="w-full rounded-md border p-2
+				{$errors.inquiry ? 'border-red-500 dark:border-red-400' : 'border-gray-300'}
+				focus:border-[#8864c8]/90
+				focus:outline-none
+				focus:ring-1
+				focus:ring-[#8864c8]/90"
+						aria-invalid={!!$errors.inquiry}
+						aria-describedby={$errors.inquiry ? 'inquiry-error' : undefined}
+					></textarea>
+				</div>
 			</div>
 
 			<!-- Submit Button -->

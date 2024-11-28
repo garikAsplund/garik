@@ -11,12 +11,6 @@ export const schema = z.object({
         .email('Please enter a valid email address')
         .max(255, 'Email must be 255 characters or less')
         .default(''),
-    phone: z
-        .string()
-        .optional() 
-        .refine((val) => val === undefined || val === '' || /^(\+1\s?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/.test(val), 
-            { message: 'Please enter a valid phone number' })
-        .default(''),
     inquiry: z
         .string()
         .min(1, 'A message is required')
