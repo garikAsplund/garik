@@ -1,5 +1,5 @@
 ---
-title: What does a website do?
+title: 'The digital front porch: a case study'
 date: "2024-11-30"
 og_image: "/blog/cuyama-oaks/entry.webp"
 ---	

@@ -17,6 +17,9 @@
 	import toskaBearDesktop from '$lib/portfolio/toska-bear/desktop.png?enhanced';
 	import toskaBearMobile from '$lib/portfolio/toska-bear/mobile.png?enhanced';
 	import toskaBearScores from '$lib/portfolio/toska-bear/scores.png?enhanced';
+	import ecncDesktop from '$lib/portfolio/ecnc/desktop.png?enhanced';
+	import ecncMobile from '$lib/portfolio/ecnc/mobile.png?enhanced';
+	import ecncScores from '$lib/portfolio/ecnc/scores.png?enhanced';
 	import OGCards from '$lib/OGCards.svelte';
 
 	type Project = {
@@ -32,6 +35,19 @@
 	};
 
 	const projects: Project[] = [
+		{
+			title: 'Eagle Cap Nordic Club',
+			description:
+				'Made a club website to give up-to-date info on plowing status, events, and accept donations.',
+			siteUrl: 'https://www.eaglecapnordic.org',
+			images: {
+				desktop: ecncDesktop,
+				mobile: ecncMobile,
+				performance: ecncScores
+			},
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-www-eaglecapnordic-org/yflnq4g3xz?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+		},
 		{
 			title: 'Alpine Meadows Golf Course',
 			description:
