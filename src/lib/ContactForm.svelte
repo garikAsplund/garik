@@ -50,6 +50,7 @@
 					bind:value={$form.name}
 					error={$errors.name}
 					constraints={$constraints.name}
+					autocomplete="name"
 				/>
 
 				<FormInput
@@ -59,6 +60,7 @@
 					bind:value={$form.email}
 					error={$errors.email}
 					constraints={$constraints.email}
+					autocomplete="email"
 				/>
 			</div>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { label, id, error, type, value = $bindable(), constraints = {} } = $props();
+	let { label, id, error, type, value = $bindable(), constraints = {}, autocomplete } = $props();
 </script>
 
 <div class="field">
@@ -39,5 +39,6 @@
         focus:ring-[#8864c8]/90"
       aria-invalid={!!error}
       aria-describedby={error ? `${id}-error` : undefined}
+      autocomplete={autocomplete}
     />
   </div>
