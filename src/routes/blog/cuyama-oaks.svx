@@ -78,7 +78,7 @@ On scroll, the CTA button will appear on desktop in the navbar. For mobile users
 
 Every section of the website is a fun, bold color that maintains the vibe of the ranch and has good contrast. Section dividers are themselves high quality hero images.
 
-Photos are curated to fit the color scheme as well as the content. There's also a standalone gallery that works great on mobile and desktop alike. Adding a srcset was probably a good idea, though the way I did it may not have been the best. I likely have too many sizes and formats left over from the defaults :( My build time went from under a minute to over 10! But, the end user is the beneficiary and I won't be rebuilding too often anymore.
+Photos are curated to fit the color scheme as well as the content. There's also a standalone gallery that works great on mobile and desktop alike. Adding a srcset was probably a good idea, though the way I did it may not have been the best. I likely have too many sizes and formats left over from the defaults :( My build time went from about 30 seconds to over 10 minutes! But, the end user is the beneficiary and I won't be rebuilding too often anymore, and when I do all the images will be cached so even then it's a one off loss.
 
 The intent here was to focus on what really matters--content and clicking through to booking--while also having a cleaner appearance. I think I succeeded.
 
