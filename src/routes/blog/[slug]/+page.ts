@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { fetchMarkdownPosts } from '$lib/utils';
+import { dev } from '$app/environment';
 
 export async function load({ params }) {
 	try {
