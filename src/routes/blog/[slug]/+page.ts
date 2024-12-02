@@ -5,7 +5,8 @@ export async function load({ params }) {
 	try {
 		const post = await import(`../${params.slug}.svx`);
 		const allPosts = await fetchMarkdownPosts();
-		const sortedPosts = allPosts.sort((a, b) => {
+		const publishedPosts = dev ? allPosts : allPosts.filter(post => !post.meta.draft);
+		const sortedPosts = publishedPosts.sort((a, b) => {
 			return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
 		});
 		const currentPostIndex = sortedPosts.findIndex((p) => p.path === `blog/${params.slug}`);
