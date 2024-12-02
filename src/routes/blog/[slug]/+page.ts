@@ -12,8 +12,8 @@ export async function load({ params }) {
 		});
 		const currentPostIndex = sortedPosts.findIndex((p) => p.path === `blog/${params.slug}`);
 
-		const prevPost = allPosts[currentPostIndex - 1] || null;
-		const nextPost = allPosts[currentPostIndex + 1] || null;
+		const prevPost = sortedPosts[currentPostIndex - 1] || null;
+		const nextPost = sortedPosts[currentPostIndex + 1] || null;
 
 		return {
 			content: post.default,
