@@ -97,7 +97,7 @@
 				mobile: rangeRiderMobile,
 				performance: rangeRiderScores
 			},
-			insightsUrl: 'https://pagespeed.web.dev/analysis/https-rangerider-netlify-app/5vgya50dxj'
+			insightsUrl: 'https://pagespeed.web.dev/analysis/https-rangerider-netlify-app/nsw0f7do8w?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
 		{
 			title: 'Redd Sauna',
