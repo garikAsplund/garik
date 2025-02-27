@@ -5,7 +5,7 @@ og_image: "/blog/range-rider/old-sign.jpg"
 draft: true
 ---	
 
-![The Range Rider](../blog/range-rider/old-sign.jpg "The Range Rider")
+![The Range Rider](images/range-rider/old-sign.jpg "The Range Rider")
 
 ## In a past life
 
@@ -17,7 +17,7 @@ The other week I was down there grabbing an IPNA and shooting the breeze with th
 
 So their old website is pretty bad. 
 
-![Old website](../blog/range-rider/old-site.png "Stylistic choices were made")
+![Old website](images/range-rider/old-site.png "Stylistic choices were made")
 
 Part of it is so tacky as to be charming, but I'm still at a loss with the odd mix of redundancy, bad quality of images, hand-written fonts, layout shifts, search (?!), and the lack of follow through on "Coming soon..." We all know it's not.
 

@@ -1,7 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { enhancedImages } from 'mdsvex-enhanced-images';
 import mdsvexConfig from './mdsvex.config.js';
 
 

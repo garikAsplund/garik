@@ -11,7 +11,7 @@ In November 2022 I went to Mt. Hood for some early season skiing and Portland to
 
 In April 2023, right after finishing said bootcamp, I left for the Eastern Sierra to ski the epic snow and venture farther south to peep some superblooms. My radiator melted. Then I found out it was actually a blown head gasket that caused the radiator to go. I was stranded for 2 weeks and out thousands of dollars, cash.
 
-![Flower Noodle](../blog/noodle.jpg "Flower Noodle")
+![Flower Noodle](images/noodle.jpg "Flower Noodle")
 
 In June 2023 I met with my cousin at Snoqualmie Pass to go backpacking and talk software engineering since he just received his Ph. D. in computer science. We got turned around because of high snow and returned to my car where there was shattered glass all around on the ground. My car was ransacked and my one and only computer that I was working on during the roadtrip was gone.
 

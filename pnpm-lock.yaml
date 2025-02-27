@@ -21,8 +21,8 @@ importers:
         specifier: ^0.456.0
         version: 0.456.0(svelte@5.1.16)
       mdsvex-enhanced-images:
-        specifier: ^0.2.3
-        version: 0.2.3(@sveltejs/enhanced-img@0.4.1(rollup@4.26.0)(svelte@5.1.16)(vite@5.4.11))(mdsvex@0.11.2(svelte@5.1.16))
+        specifier: ^0.3.3
+        version: 0.3.3(@sveltejs/enhanced-img@0.4.1(rollup@4.26.0)(svelte@5.1.16)(vite@5.4.11))(mdsvex@0.11.2(svelte@5.1.16))
       nodemailer:
         specifier: ^6.9.16
         version: 6.9.16
@@ -140,6 +140,7 @@ packages:
 
   '@effect/schema@0.75.5':
     resolution: {integrity: sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw==}
+    deprecated: this package has been merged into the main effect package
     peerDependencies:
       effect: ^3.9.2
 
@@ -1597,10 +1598,10 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdsvex-enhanced-images@0.2.3:
-    resolution: {integrity: sha512-T5aiYk9YeaM9X4xDYRecSw8PHngIvWSJuDN6Pgt4uktg/Uoqzo1fMXt1unk9ZhWMckYi1vAQtGWpnlI1CAhHqA==}
+  mdsvex-enhanced-images@0.3.3:
+    resolution: {integrity: sha512-mWkwpT6649DI7hpx1g++4QO7d339n1z2WKWbCln0hXDED+A9kOOXHbAISGsT2bYJm9HPRUz7piVZHWxPtesFZg==}
     peerDependencies:
-      '@sveltejs/enhanced-img': ^0.3.8
+      '@sveltejs/enhanced-img': ^0.4.4
       mdsvex: ^0.12.3
 
   mdsvex@0.11.2:
@@ -3989,7 +3990,7 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdsvex-enhanced-images@0.2.3(@sveltejs/enhanced-img@0.4.1(rollup@4.26.0)(svelte@5.1.16)(vite@5.4.11))(mdsvex@0.11.2(svelte@5.1.16)):
+  mdsvex-enhanced-images@0.3.3(@sveltejs/enhanced-img@0.4.1(rollup@4.26.0)(svelte@5.1.16)(vite@5.4.11))(mdsvex@0.11.2(svelte@5.1.16)):
     dependencies:
       '@sveltejs/enhanced-img': 0.4.1(rollup@4.26.0)(svelte@5.1.16)(vite@5.4.11)
       mdsvex: 0.11.2(svelte@5.1.16)

@@ -7,7 +7,7 @@ date: "2023-10-14"
 
 In the beginning there was just one big mystery made up of one infinitesimally small point which contained it all. **The singularity**. No, not *that* singularity.
 
-![The Singularity is near](https://blogs.voanews.com/digital-frontiers/files/2011/03/SingularityIsNear.jpg "Maybe")
+![The Singularity is near](https://www.vice.com/wp-content/uploads/sites/2/2024/07/SingularityIsNear.jpg "Maybe")
 
 But since then, to put it simply, things have evolved. In place of one *thing* we now have protons and neutrons and electrons, atoms, molecules, proteins, amino acids, DNA and RNA, cells, tissues, organisms, superorganisms, ecosystems, planets, solar systems, galaxies, galactic clusters, superclusters, and so on and so forth. **Many things**.
 
@@ -42,7 +42,7 @@ Then you need to have all the supporting tools in place. The number of tools is 
 
 A few years ago you had to use NPM, and as we all know, [Theo's computer maxed out](https://youtu.be/ZIKDJBrk56k?si=HbOcg26X0tZ_XUT7) because of all the Node modules. A couple years ago you were excited about YARN--Yet Another Resource Negotiator--because it was faster, safer, and more reliable! Last year you probably switched to PNPM and were stoked that it had a single store and cached everything, then just referenced that cache with links. So. Speedy. And last month you heard about Bun and questioned everything you knew about life. Can you really install all your dependencies in under half a second?! Kind of--it won't check if the "latest" flag is being honored :( though it's still impressive!
 
-![Run Bun](../blog/Bun.png "Run Bun")
+![Run Bun](images/Bun.png "Run Bun")
 
 But Bun isn't *just* a package manager. It's also a fast runtime, test runner, and bundler. It tries to simplify the small mess of JavaScript tooling. And unlike Deno, it wants to be a drop in replacement for Node, Jest, Webpack, et al.
 

@@ -3,7 +3,7 @@ title: 'The digital front porch: a case study'
 date: "2024-11-30"
 og_image: "/blog/cuyama-oaks/entry.webp"
 ---	
-![The ranch](../blog/cuyama-oaks/entry.webp "The ranch")
+![The ranch](images/cuyama-oaks/entry.webp "The ranch")
 
 Back in October, I was in the odd position of meeting up with my main group of friends from high school--exactly half a lifetime ago for me--while still being in the middle of a career change that hasn't fully happened yet. It was slightly uncomfortable, but at least some folks who worked in tech or tech adjacent jobs knew the struggle is real. 
 
@@ -26,8 +26,8 @@ You know almost immediately when you land on a good website, and you also know w
   - Alignment was off for parts of the 'Explore' page
   - The footer had an '|' that was out of place and the info didn't feel centered
 
-![Old footer](../blog/cuyama-oaks/footer.png "Old footer")
-![Too many photos](../blog/cuyama-oaks/photos.png "Too many photos")
+![Old footer](images/cuyama-oaks/footer.png "Old footer")
+![Too many photos](images/cuyama-oaks/photos.png "Too many photos")
 
 
 Overall there was a feeling that this site wasn't maintained, calling into question the validity of the business itself. Not good.
@@ -64,7 +64,7 @@ What that translates to is that the site needed to be mobile friendly, informati
 
 Hopefully [this glow up](https://www.cuyamaoaksranch.com) does just that.
 
-![The result](../blog/cuyama-oaks/cor.png "The result")
+![The result](images/cuyama-oaks/cor.png "The result")
 
 There's a big hero image on landing that is progressively loaded to be higher res and gives a sense of being on the property. This replaces the hero video and provides a better user experience, especially for mobile users. It has the same overall effect without the laginess. If a guest really wants to see that video, it's posted as a content divider lower down on the page.
 
@@ -82,5 +82,5 @@ Photos are curated to fit the color scheme as well as the content. There's also 
 
 The intent here was to focus on what really matters--content and clicking through to booking--while also having a cleaner appearance. I think I succeeded.
 
-[![The scores show it all](../blog/cuyama-oaks/scores.png)](https://pagespeed.web.dev/analysis/https-www-cuyamaoaksranch-com/wk3g172156?hl=en-US&form_factor=desktop)
+[![The scores show it all](images/cuyama-oaks/scores.png)](https://pagespeed.web.dev/analysis/https-www-cuyamaoaksranch-com/wk3g172156?hl=en-US&form_factor=desktop)
 

@@ -145,7 +145,7 @@ DEFMT_LOG = "debug"
 
 All this code does is make sure that the target is correct--thumbv6m-none-eabi for Cortex-M0/+--and that the runner gets the binary in the right format. Here it's going from [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) to [UF2](https://makecode.com/blog/one-chip-to-flash-them-all) in Rust via [elf2uf2-rs](https://github.com/JoNil/elf2uf2-rs). The -ds flag gives us automatic deployment to a mounted pico in addition to opening the pico as a serial device and printing serial output.
 
-![Pico internals](../blog/pico-internals.png "Pico internals")
+![Pico internals](images/pico-internals.png "Pico internals")
 
 The last thing to do is to hold down the button on the Pico when plugging it in via USB so that when we execute "cargo run" via the terminal all the code is cross compiled and loaded on to the Pico. It'll then run the code without an operating system and that's pretty sweet!
 
