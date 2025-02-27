@@ -1,7 +1,7 @@
 ---
 title: On restaurant websites
 date: "2024-11-19"
-og_image: "/blog/range-rider/old-sign.jpg"
+# og_image: "/blog/range-rider/old-sign.jpg"
 draft: true
 ---	
 

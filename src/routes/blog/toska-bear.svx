@@ -1,7 +1,7 @@
 ---
 title: Linktree+
 date: "2024-11-18"
-og_image: "/blog/toska-bear/toska-bear.png"
+# og_image: "/blog/toska-bear/toska-bear.png"
 ---	
 
 [![Toska Bear](images/toska-bear/toska-bear.png "toskabear.com")](https://www.toskabear.com)
