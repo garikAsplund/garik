@@ -12,5 +12,5 @@
 	<main class="flex w-full flex-col items-center">
 		{@render children()}
 	</main>
-	<Footer />
+	<!-- <Footer /> -->
 </div>

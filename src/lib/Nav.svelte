@@ -6,6 +6,7 @@
 	import NavItems from '$lib/NavItems.svelte';
 	import { isMenuOpen } from '$lib/isMenuOpen.svelte';
 	import DarkModeButton from './DarkModeButton.svelte';
+	import ProfileLinks from './ProfileLinks.svelte';
 
 	let lastScrollY = $state(0);
 	let isNavbarVisible = $state(true);
@@ -86,6 +87,7 @@
 	<!-- Nav bar -->
 	<nav class="hidden w-full items-center justify-end md:flex">
 		<NavItems />
+		<ProfileLinks />
 		<DarkModeButton />
 	</nav>
 

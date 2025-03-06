@@ -2,12 +2,8 @@
 	import GitHub from '$lib/SVGs/GitHub.svelte';
 	import LinkedIn from '$lib/SVGs/LinkedIn.svelte';
 </script>
-
-<footer
-	class="relative bottom-0 z-40 mt-auto flex w-full items-center justify-center space-x-4 py-8"
-	id="footer"
->
-	<a
+<div class="flex flex-col md:flex-row px-6 gap-6">
+<a
 		href="https://github.com/garikAsplund"
 		target="_blank"
 		rel="noopener noreferrer"
@@ -25,4 +21,4 @@
 	>
 		<LinkedIn />
 	</a>
-</footer>
+</div>
