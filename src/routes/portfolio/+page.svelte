@@ -20,6 +20,9 @@
 	import ecncDesktop from '$lib/portfolio/ecnc/desktop.png?enhanced';
 	import ecncMobile from '$lib/portfolio/ecnc/mobile.png?enhanced';
 	import ecncScores from '$lib/portfolio/ecnc/scores.png?enhanced';
+	import pier303Desktop from '$lib/portfolio/pier303/desktop.png?enhanced';
+	import pier303Mobile from '$lib/portfolio/pier303/mobile.png?enhanced';
+	import pier303Scores from '$lib/portfolio/pier303/scores.png?enhanced';
 	import OGCards from '$lib/OGCards.svelte';
 
 	type Project = {
@@ -35,6 +38,19 @@
 	};
 
 	const projects: Project[] = [
+		{
+			title: 'Pier 303 Seafood Market',
+			description:
+				'Small static site for a local seafood market in need of a web presence.',
+			siteUrl: 'https://www.pier303seafood.com',
+			images: {
+				desktop: pier303Desktop,
+				mobile: pier303Mobile,
+				performance: pier303Scores
+			},
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-www-pier303seafood-com/i587q2v8fl?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+		},
 		{
 			title: 'Eagle Cap Nordic Club',
 			description:
