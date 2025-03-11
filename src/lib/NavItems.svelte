@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
     import { isMenuOpen } from '$lib/isMenuOpen.svelte';
 
     function closeMenu() {
@@ -12,7 +12,7 @@
 		<a
 			href="/philosophy"
 			onclick={closeMenu}
-			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/philosophy'
+			class="hover:opacity-70 w-full block text-center {page.url.pathname === '/philosophy'
 				? 'underline underline-offset-8'
 				: ''}">Philosophy</a
 		>
@@ -21,7 +21,7 @@
 		<a
 			href="/portfolio"
 			onclick={closeMenu}
-			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/portfolio'
+			class="hover:opacity-70 w-full block text-center {page.url.pathname === '/portfolio'
 				? 'underline underline-offset-8'
 				: ''}">Portfolio</a
 		>
@@ -30,7 +30,7 @@
 		<a
 			href="/pricing"
 			onclick={closeMenu}
-			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/pricing'
+			class="hover:opacity-70 w-full block text-center {page.url.pathname === '/pricing'
 				? 'underline underline-offset-8'
 				: ''}">Pricing</a
 		>
@@ -39,7 +39,7 @@
 		<a
 			href="/blog"
 			onclick={closeMenu}
-			class="hover:opacity-70 w-full block text-center {$page.url.pathname.split('/')[1] === 'blog'
+			class="hover:opacity-70 w-full block text-center {page.url.pathname.split('/')[1] === 'blog'
 				? 'underline underline-offset-8'
 				: ''}">Blog</a
 		>
@@ -48,7 +48,7 @@
 		<a
 			href="/contact"
 			onclick={closeMenu}
-			class="hover:opacity-70 w-full block text-center {$page.url.pathname === '/contact'
+			class="hover:opacity-70 w-full block text-center {page.url.pathname === '/contact'
 				? 'underline underline-offset-8'
 				: ''}">Contact</a
 		>

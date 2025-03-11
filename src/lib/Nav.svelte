@@ -1,6 +1,6 @@
 <script lang="ts">
 	import GarikCodes from '$lib/SVGs/GarikCodes.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { ChevronDown, X } from 'lucide-svelte';
 	import NavItems from '$lib/NavItems.svelte';
@@ -12,9 +12,10 @@
 	let isNavbarVisible = $state(true);
 	let hasScrolled = $state(false);
 	let isNavigating = $state(false);
+	let menuNode: HTMLDivElement | undefined = $state();
 
 	$effect(() => {
-		$page.url.pathname;
+		page.url.pathname;
 		isNavbarVisible = true;
 		hasScrolled = false;
 		isNavigating = true;
@@ -22,8 +23,6 @@
 			isNavigating = false;
 		}, 0);
 	});
-
-	let scrollTimeout = $state(0);
 
 	function handleScroll() {
 		const currentScrollY = window.scrollY;
@@ -38,12 +37,6 @@
 		if (Math.abs(currentScrollY - lastScrollY) > 10) {
 			isNavbarVisible = currentScrollY < lastScrollY;
 			lastScrollY = currentScrollY;
-
-			if (scrollTimeout) clearTimeout(scrollTimeout);
-
-			scrollTimeout = setTimeout(() => {
-				isNavbarVisible = true;
-			}, 1000);
 		}
 	}
 
@@ -52,11 +45,21 @@
 	}
 
 	onMount(() => {
+		// Add click outside handler
+		const handleClickOutside = (event: MouseEvent) => {
+			if (isMenuOpen.button && menuNode && !menuNode.contains(event.target as Node)) {
+				isMenuOpen.button = false;
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+
 		window.addEventListener('scroll', handleScroll);
 
 		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+
 			window.removeEventListener('scroll', handleScroll);
-			if (scrollTimeout) clearTimeout(scrollTimeout);
 		};
 	});
 </script>
@@ -73,7 +76,7 @@
 	aria-label="Main navigation"
 >
 	<!-- Home link and logo -->
-	<div class="">
+	<div class="scale-80 md:scale-100">
 		<a
 			href="/"
 			class="hover:opacity-70"
@@ -85,7 +88,7 @@
 	</div>
 
 	<!-- Nav bar -->
-	<nav class="hidden w-full items-center justify-end md:flex">
+	<nav class="hidden w-full items-center justify-end pl-3 md:flex">
 		<NavItems />
 		<ProfileLinks />
 		<DarkModeButton />
@@ -116,6 +119,7 @@
 			id="mobile-menu"
 			role="navigation"
 			aria-label="Mobile menu"
+			bind:this={menuNode}
 		>
 			<NavItems />
 		</div>

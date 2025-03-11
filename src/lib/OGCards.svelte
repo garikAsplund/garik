@@ -1,6 +1,6 @@
 <script lang="ts">
   import { browser } from '$app/environment';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   interface Props {
     title?: string;
     description?: string;
@@ -14,18 +14,18 @@
     description = "Need a fresh website? I've got you :)",
     image = "https://media.licdn.com/dms/image/v2/D5616AQFDLZGPXiZ-QA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1687973966708?e=1736985600&v=beta&t=IOnuEVPLdtSOSenBSgW6z9ZkbtBcj5Bbj3k9xDz3DJY",
     type = "website",
-    subPage = $page.url.pathname.replace('/', '').charAt(0).toUpperCase() + $page.url.pathname.slice(2).split('/')[0]
-  } = $props<Props>();
+    subPage = page.url.pathname.replace('/', '').charAt(0).toUpperCase() + page.url.pathname.slice(2).split('/')[0]
+  } = $props();
   let url = $state('');
 
   let pageTitle = $derived(type === 'article' 
     ? `GAR1K.C0DES | ${title}`
-    : `${title}${$page.url.pathname === '/' ? '' :' | '}${subPage}`);
+    : `${title}${page.url.pathname === '/' ? '' :' | '}${subPage}`);
 
   $effect(() => {
     url = browser 
       ? window.location.href 
-      : `https://garik.codes${$page.url.pathname}`;
+      : `https://garik.codes${page.url.pathname}`;
   });
 </script>
 
