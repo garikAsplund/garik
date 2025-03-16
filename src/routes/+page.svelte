@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ContactForm from '$lib/ContactForm.svelte';
-	import HeroArt from '$lib/HeroArt.svelte';
 	import Blob from '$lib/Blob.svelte';
 	import OGCards from '$lib/OGCards.svelte';
 

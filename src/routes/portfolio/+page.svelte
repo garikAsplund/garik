@@ -23,6 +23,10 @@
 	import pier303Desktop from '$lib/portfolio/pier303/desktop.png?enhanced';
 	import pier303Mobile from '$lib/portfolio/pier303/mobile.png?enhanced';
 	import pier303Scores from '$lib/portfolio/pier303/scores.png?enhanced';
+	import heavensGateDesktop from '$lib/portfolio/heavens-gate/desktop.png?enhanced';
+	import heavensGateMobile from '$lib/portfolio/heavens-gate/mobile.png?enhanced';
+	import heavensGateScores from '$lib/portfolio/heavens-gate/scores.png?enhanced';
+
 	import OGCards from '$lib/OGCards.svelte';
 
 	type Project = {
@@ -38,6 +42,19 @@
 	};
 
 	const projects: Project[] = [
+		{
+			title: 'Heavens Gate 20M and 15K',
+			description:
+				'Redesign of a basic Blogger site. The low Lighthouse scores come from a Caltopo embed 🤷‍♂️',
+			siteUrl: 'https://heavens-gate.vercel.app',
+			images: {
+				desktop: heavensGateDesktop,
+				mobile: heavensGateMobile,
+				performance: heavensGateScores
+			},
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-heavens-gate-vercel-app/7mocz2l4pe?hl=en-US&form_factor=desktop'
+		},
 		{
 			title: 'Pier 303 Seafood Market',
 			description:
