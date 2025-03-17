@@ -53,7 +53,7 @@
 				performance: heavensGateScores
 			},
 			insightsUrl:
-				'https://pagespeed.web.dev/analysis/https-heavens-gate-vercel-app/7mocz2l4pe?hl=en-US&form_factor=desktop'
+				'https://pagespeed.web.dev/analysis/https-heavens-gate-vercel-app/4s4t37it28?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
 		{
 			title: 'Pier 303 Seafood Market',
