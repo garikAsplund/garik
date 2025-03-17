@@ -26,6 +26,9 @@
 	import heavensGateDesktop from '$lib/portfolio/heavens-gate/desktop.png?enhanced';
 	import heavensGateMobile from '$lib/portfolio/heavens-gate/mobile.png?enhanced';
 	import heavensGateScores from '$lib/portfolio/heavens-gate/scores.png?enhanced';
+	import wltDesktop from '$lib/portfolio/wlt/desktop.png?enhanced';
+	import wltMobile from '$lib/portfolio/wlt/mobile.png?enhanced';
+	import wltScores from '$lib/portfolio/wlt/scores.png?enhanced';
 
 	import OGCards from '$lib/OGCards.svelte';
 
@@ -43,6 +46,19 @@
 
 	const projects: Project[] = [
 		{
+			title: 'Wallowa Land Trust',
+			description:
+				'An updated version of the Wallowa Land Trust website focusing on ease of navigation and clarity of delivering important information.',
+			siteUrl: 'https://wlt-xi.vercel.app/',
+			images: {
+				desktop: wltDesktop,
+				mobile: wltMobile,
+				performance: wltScores
+			},
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-wlt-xi-vercel-app/nrn461uj5h?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+		},
+		{
 			title: 'Heavens Gate 20M and 15K',
 			description:
 				'Redesign of a basic Blogger site. The low Lighthouse scores come from a Caltopo embed 🤷‍♂️',
@@ -57,8 +73,7 @@
 		},
 		{
 			title: 'Pier 303 Seafood Market',
-			description:
-				'Small static site for a local seafood market in need of a web presence.',
+			description: 'Small static site for a local seafood market in need of a web presence.',
 			siteUrl: 'https://www.pier303seafood.com',
 			images: {
 				desktop: pier303Desktop,
@@ -130,7 +145,8 @@
 				mobile: rangeRiderMobile,
 				performance: rangeRiderScores
 			},
-			insightsUrl: 'https://pagespeed.web.dev/analysis/https-rangerider-netlify-app/nsw0f7do8w?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
+			insightsUrl:
+				'https://pagespeed.web.dev/analysis/https-rangerider-netlify-app/nsw0f7do8w?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext'
 		},
 		{
 			title: 'Redd Sauna',
