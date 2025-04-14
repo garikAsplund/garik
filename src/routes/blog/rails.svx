@@ -40,7 +40,7 @@ Last year I ghost wrote a few videos for the popular YouTube channel Let’s Get
 
 [![Let's Get Rusty](images/rails/LGR.png "Let's Get Rusty")](https://www.youtube.com/@letsgetrusty/featured)
 
-Well, I had previously given a [talk on database management](https://www.linkedin.com/posts/garik-asplund_datamanagement-surrealdb-datalake-activity-7039123639652274176-324c?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY), and in researching that talk stumbled across SurrealDB. Looking at its internals got me interested in Rust. I even went to a few Rust meetups in Seattle and Portland last spring. Another event [I attended was Open Source Summit](https://www.garik.codes/blog/oss) where I got to see the one and only [Linus Torvalds speak](https://www.youtube.com/watch?v=OM_8UOPFpqE) and share his doubts about AI and defend Rust in the kernel 🐧❤️🦀
+Well, I had previously given a [talk on database management](https://www.linkedin.com/posts/garik-asplund_datamanagement-surrealdb-datalake-activity-7039123639652274176-324c?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY), and in researching that talk stumbled across SurrealDB. Looking at its internals got me interested in Rust. I even went to a few Rust meetups in Seattle and Portland last spring. Another event [I attended was Open Source Summit](https://www.garik.codes/blog/oss) where I got to see the one and only [Linus Torvalds speak](https://www.youtube.com/watch?v=OM_8UOPFpqE) and share his doubts about AI and defend Rust in the kernel <span class="emoji">🐧❤️🦀</span>
 
 ## Going independent
 
