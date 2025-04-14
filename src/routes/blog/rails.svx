@@ -9,7 +9,7 @@ The other day I was scrolling on LinkedIn when I came across [DHH’s announceme
 
 [![Seeking juniors](images/rails/DHH.png "Seeking juniors")](https://www.linkedin.com/posts/david-heinemeier-hansson-374b18221_junior-rails-programmer-37signals-activity-7315314289219706881-Kv-w?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY)
 
-In the most senior market ever, a job posting about the importance of the *junior* developer? I knew I had to apply. Although I have an atypical background, I know I have the 
+In the most senior market ever, a job posting about the importance of the *junior* developer? I knew I had to apply. Although I have an atypical background, I know I possess the 
 
     - self-motivation
     - communication skills
