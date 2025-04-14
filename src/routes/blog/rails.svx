@@ -3,7 +3,7 @@ title: Applying to 37signals
 date: "2025-04-14"
 ---
 
-## Forget my resume, it’s [time to kill on this cover letter](https://signalvnoise.com/posts/1748-forget-the-resume-kill-on-the-cover-letter)
+## Forget my resume, it’s time to [kill on this cover letter](https://signalvnoise.com/posts/1748-forget-the-resume-kill-on-the-cover-letter)
 
 The other day I was scrolling on LinkedIn when I came across [DHH’s announcement](https://www.linkedin.com/posts/david-heinemeier-hansson-374b18221_junior-rails-programmer-37signals-activity-7315314289219706881-Kv-w?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY) about this role and I was floored. 
 
