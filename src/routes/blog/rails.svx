@@ -46,7 +46,11 @@ Well, I had previously given a [talk on database management](https://www.linkedi
 
 Owing to financial reasons, I had to take a break from coding and coding adjacent activities last summer, but was able to get back into it during the fall and winter. I started independently contracting for local non-profits doing IT support, and I also [began building websites for friends](https://www.garik.codes/blog/cuyama-oaks) and local businesses. [I was interested in SvelteKit](https://www.garik.codes/blog/why-svelte) as a meta-framework because I knew that it had great DX and was set to release a major update with Svelte 5. 
 
-So far I’m really happy with the decision to use SvelteKit as it keeps my code simple and declarative, I can use vanilla Javascript packages or React ones or Svelte ones, its bundles are super small, and all of my sites come with really good performance. Typically I just go from a thought directly to building because, as a solo developer, I don’t have the time or use for Figma–or [Photoshop from yesteryear](https://signalvnoise.com/posts/1061-why-we-skip-photoshop). You can see my portfolio, along with metrics, [here](https://www.garik.codes/portfolio)! 
+So far I’m really happy with the decision to use SvelteKit as it keeps my code simple and declarative, I can use vanilla Javascript packages or React ones or Svelte ones, its bundles are super small, and all of my sites come with really good performance. 
+
+![Lighthouse scores](images/rails/scores.png "Really good perf scores!")
+
+Typically I just go from a thought directly to building because, as a solo developer, I don’t have the time or use for Figma–or [Photoshop from yesteryear](https://signalvnoise.com/posts/1061-why-we-skip-photoshop). You can see my portfolio, along with metrics, [here](https://www.garik.codes/portfolio)! 
 
 Recently I’ve started contributing to the Svelte ecosystem, including making improvements in their [docs](https://github.com/sveltejs/svelte/pull/15526) and [CLI](https://github.com/sveltejs/cli/pull/494). Usually if I see a problem with something that I’m using, I’ll do my best to [post a bug report](https://github.com/SveltePress/sveltepress/issues/328) or [submit a PR](https://github.com/benallfree/mdsvex-enhanced-images/pull/8)–or [draft a website just for the fun of it](https://github.com/hyperlight-dev/hyperlight/issues/346). After all, that is the [spirit of open source](https://www.garik.codes/blog/on-open-source).
 
