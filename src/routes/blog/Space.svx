@@ -1,5 +1,5 @@
 ---
-title: Computers...in space! part 1
+title: Computers...in space!
 date: "2024-01-29"
 og_image: "https://hips.hearstapps.com/hmg-prod/images/pop-marshelicopter-labels-battery-1613514029.png"
 ---
@@ -110,5 +110,3 @@ So, here's a recap of the commercial off-the-shelf (COTS) approach:
 And it might just make exploring space a little more exciting.
 
 ![Did they find their unicorn?](https://melissagratias.com/wp-content/uploads/2020/05/GoodFastCheapImage_1.png "Did they find their unicorn?")
-
-In part 2 I'll look at private space companies and how they are using computers in space.
