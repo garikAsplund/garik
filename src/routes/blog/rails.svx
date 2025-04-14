@@ -56,7 +56,7 @@ Recently I’ve started contributing to the Svelte ecosystem, including making i
 
 [![Hyperlight draft](images/rails/hyperlight.png "Hyperlight draft website")](https://hyperlight-draft.vercel.app/)
 
-Currently I’m doing some pro-bono work for a startup in Ireland that is looking to strip potentially harmful metadata from websites. Already I’ve helped with frontend considerations, set up a self-hosted Jenkins CI/CD pipeline that builds from repos on Bitbucket, runs tests, and deploys to Cloudflare. Next I hope to streamline the backend so that it scales smoothly–this could be 
+Currently I’m doing some pro bono work for a startup in Ireland that is looking to strip potentially harmful metadata from websites. Already I’ve helped with frontend considerations, set up a self-hosted Jenkins CI/CD pipeline that builds from repos on Bitbucket, runs tests, and deploys to Cloudflare. Next I hope to streamline the backend so that it scales smoothly–this could be 
 
     - adding a service mesh layer like Linkerd
     - compiling the current Python scripts into Wasm to reduce workloads
