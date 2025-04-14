@@ -1,0 +1,76 @@
+---
+title: Applying to 37signals
+date: "2025-04-14"
+---
+
+## Forget my resume, it’s [time to kill on this cover letter](https://signalvnoise.com/posts/1748-forget-the-resume-kill-on-the-cover-letter).
+
+The other day I was scrolling on LinkedIn when I came across [DHH’s announcement](https://www.linkedin.com/posts/david-heinemeier-hansson-374b18221_junior-rails-programmer-37signals-activity-7315314289219706881-Kv-w?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY) about this role and I was floored. 
+
+[![Seeking juniors](images/rails/DHH.png "Seeking juniors")](https://www.linkedin.com/posts/david-heinemeier-hansson-374b18221_junior-rails-programmer-37signals-activity-7315314289219706881-Kv-w?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY)
+
+In the most senior market ever, a job posting about the importance of the *junior* developer? I knew I had to apply. Although I have an atypical background, I know I have the 
+
+    - self-motivation
+    - communication skills
+    - hunger to grow professionally
+
+that is needed to excel in this junior programmer position.
+
+## The struggle is real
+
+As [someone trying to tangentially break into software engineering](https://www.garik.codes/blog/remote-work), reading about the role–and 37signals as a whole–has been uplifting, refreshing even. Three years ago I had the idea–along with everyone else–to become a software engineer. The timing, however, has been brutal.
+
+[![The SWE market](images/rails/jobs.png "The job market since I decided this was a good idea")](https://www.businessinsider.com/jobs-software-engineers-coders-bad-market-ai-2025-3)
+
+I was in need of change, seeking financial stability, and wanting mental stimulation. Even though I live in a fantastic spot that allows me to ski and run with friends to my heart's content, I was tired of juggling jobs only to barely get by.
+
+## Humble beginnings
+
+Two years ago, after taking some intro JavaScript and Python courses, I helped my brother with a project he and his team of psychology researchers use. Here are some improvements I made:
+
+    - edited the frontend in Unity for better UX
+    - scripted logical updates in C# and Python
+    - implemented a CI/CD pipeline that deployed to Google Cloud after pushes to a private repo
+    - rewrote the Dockerfile for better layering and thus caching 
+    
+These improvements helped researchers get new experiments up and running faster with fewer errors. It also helped me, and other developers working on the project, streamline the testing and building phases. Oh, and I ignorantly thought it would be no big deal to update all of the Python packages. Oops! It should come as no surprise, then, that [I don’t really love Python](https://www.garik.codes/blog/why-not-python).
+
+Last year I ghost wrote a few videos for the popular YouTube channel Let’s Get Rusty. In one I covered how Rust is [taking over build tools](https://www.youtube.com/watch?v=IGxs5v26Teg), in another why Rust is a [good fit in mission critical applications](https://www.youtube.com/watch?v=-SFpWDYFe1Y), and another about the overall [history of the language](https://www.youtube.com/watch?v=8lMQfwreqRE). In my research I discovered that Rust’s beloved package manager, Cargo, took inspiration from RubyGems! But why was I writing about Rust anyway? 
+
+[![Let's Get Rusty](images/rails/LGR.png "Let's Get Rusty")](https://www.youtube.com/@letsgetrusty/featured)
+
+Well, I had previously given a [talk on database management](https://www.linkedin.com/posts/garik-asplund_datamanagement-surrealdb-datalake-activity-7039123639652274176-324c?utm_source=share&utm_medium=member_desktop&rcm=ACoAABiqd1sB_zUu3Gv5dgCBEOaPANZfSxQUEPY), and in researching that talk stumbled across SurrealDB. Looking at its internals got me interested in Rust. I even went to a few Rust meetups in Seattle and Portland last spring. Another event [I attended was Open Source Summit](https://www.garik.codes/blog/oss) where I got to see the one and only [Linus Torvalds speak](https://www.youtube.com/watch?v=OM_8UOPFpqE) and share his doubts about AI and defend Rust in the kernel 🐧❤️🦀
+
+## Going independent
+
+Owing to financial reasons, I had to take a break from coding and coding adjacent activities last summer, but was able to get back into it during the fall and winter. I started independently contracting for local non-profits doing IT support, and I also [began building websites for friends](https://www.garik.codes/blog/cuyama-oaks) and local businesses. [I was interested in SvelteKit](https://www.garik.codes/blog/why-svelte) as a meta-framework because I knew that it had great DX and was set to release a major update with Svelte 5. 
+
+So far I’m really happy with the decision to use SvelteKit as it keeps my code simple and declarative, I can use vanilla Javascript packages or React ones or Svelte ones, its bundles are super small, and all of my sites come with really good performance. Typically I just go from a thought directly to building because, as a solo developer, I don’t have the time or use for Figma–or [Photoshop from yesteryear](https://signalvnoise.com/posts/1061-why-we-skip-photoshop). You can see my portfolio, along with metrics, [here](https://www.garik.codes/portfolio)! 
+
+Recently I’ve started contributing to the Svelte ecosystem, including making improvements in their [docs](https://github.com/sveltejs/svelte/pull/15526#event-16792167068) and [CLI](https://github.com/sveltejs/cli/pull/494?notification_referrer_id=NT_kwDOBqTPp7UxNTQwNjI3MDA5ODoxMTE0NjQzNTk#event-16943504424). Usually if I see a problem with something that I’m using, I’ll do my best to [post a bug report](https://github.com/SveltePress/sveltepress/issues/328#event-16974776635) or [submit a PR](https://github.com/benallfree/mdsvex-enhanced-images/pull/8#event-16488772408)–or [draft a website just for the fun of it](https://github.com/hyperlight-dev/hyperlight/issues/346). After all, that is the [spirit of open source](https://www.garik.codes/blog/on-open-source).
+
+[![Hyperlight draft](images/rails/hyperlight.png "Hyperlight draft website")](https://hyperlight-draft.vercel.app/)
+
+Currently I’m doing some pro-bono work for a startup in Ireland that is looking to strip potentially harmful metadata from websites. Already I’ve helped with frontend considerations, set up a self-hosted Jenkins CI/CD pipeline that builds from repos on Bitbucket, runs tests, and deploys to Cloudflare. Next I hope to streamline the backend so that it scales smoothly–this could be 
+
+    - adding a service mesh layer like Linkerd
+    - compiling the current Python scripts into Wasm to reduce workloads
+    - switching from REST to gRPC for performance gains
+    - or something else entirely
+
+## Looking ahead
+
+Overall, I am extremely excited by the prospect of working for 37signals. I truly admire the clearly stated expectations, the principles that drive your work, and the communication style. Honestly, I was giddy when test driving Basecamp and saw that a photo in the example project uses the AVIF format. That’s so cool!! 
+
+![AVIF FTW](images/rails/avif.png "AVIF FTW")
+
+I’d consider myself very lucky–and very relieved–to work at a place that values trusting the process of going from junior to senior.
+
+Thank you for taking the time to read about me and my work. I look forward to talking with you more next month and can’t wait to [get hired twice](https://world.hey.com/jason/on-hiring-rehiring-and-one-question-to-answer-them-all-5db97bcb)!
+
+#### Garik--and Noodle
+
+![Me and Noodle](images/rails/garik_and_noodle.jpeg "Garik and Noodle out spring skiing")
+
+**PS** I, too, [geek out about space](https://www.garik.codes/blog/Space) :)
