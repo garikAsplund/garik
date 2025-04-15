@@ -46,7 +46,7 @@ Well, I had previously given a [talk on database management](https://www.linkedi
 
 Owing to financial reasons, I had to take a break from coding and coding adjacent activities last summer, but was able to get back into it during the fall and winter. I started independently contracting for local non-profits doing IT support, and I also [began building websites for friends](https://www.garik.codes/blog/cuyama-oaks) and local businesses. [I was interested in SvelteKit](https://www.garik.codes/blog/why-svelte) as a meta-framework because I knew that it had great DX and was set to release a major update with Svelte 5. 
 
-So far I’m really happy with the decision to use SvelteKit as it keeps my code simple and declarative, I can use vanilla Javascript packages or React ones or Svelte ones, its bundles are super small, and all of my sites come with really good performance. 
+So far I’m really happy with the decision to use SvelteKit as it keeps my code simple and declarative, I can use vanilla JavaScript packages or React ones or Svelte ones, its bundles are super small, and all of my sites come with really good performance. 
 
 ![Lighthouse scores](images/rails/scores.png "Really good perf scores!")
 
