@@ -60,7 +60,9 @@ That's fully a quarter the original size! And there's no real perceptible differ
 
 Anyway, I hope the team over there is able to make some improvements in this area. 
 
-I'm not gonna stop using or paying for CalTopo, but since they seem to be making changes and have an open process for requests I thought I'd bring some attention to this fundamental flaw.
+I'm not gonna stop using or paying for CalTopo, but since they seem to be making changes and have an open process for requests I thought I'd bring some attention to this fundamental flaw. 
+
+Fixing it would make customers happier and also probably save them a bunch of money.
 
 
 
