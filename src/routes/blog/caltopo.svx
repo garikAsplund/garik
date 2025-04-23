@@ -1,0 +1,66 @@
+---
+title: CalTopo, hear me out
+date: "2025-04-23"
+---
+
+## My go-to tool
+
+Last week I was on Instagram and saw a post by CalTopo about [some of their updates](https://blog.caltopo.com/2025/04/09/noticed-anything-new-recent-ui-updates/). 
+
+[![CalTopo updates](images/caltopo/insta.png "CalTopo updates")](https://www.instagram.com/p/DIgpDtJhs4p/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+
+Sadly this post didn't highlight a feature that I've secretly been desiring for a while: **nextgen image formats like AVIF or WebP for tiles**.
+
+I commented on the post, and they replied that there was a formal way to document feature requests, so [I added one of those](https://help.caltopo.com/hc/en-us/community/posts/36061319211931-Ship-nextgen-image-formats), too!
+
+[![Feature request](images/caltopo/feature.png "Feature request")](https://help.caltopo.com/hc/en-us/community/posts/36061319211931-Ship-nextgen-image-formats)
+
+## For pleasure
+
+I've been a fan of CalTopo for a long time--over a decade, now. Their free tier is very generous, sharing is easy, and stacking layers is super useful. 
+
+As a skier, I've always found the slope angle shading handy for assessing avy terrain. In addition, satellite imagery and fire history help scope out where the most open lines are.
+
+![Shading example](images/caltopo/shading.png "Shading example")
+
+## And for work
+
+When I was out in the field last summer doing weed surveys, we used CalTopo because it was easy to drop pins or polygons to mark where different weeds were located, keep tabs on our tracks using [GPX](https://en.wikipedia.org/wiki/GPS_Exchange_Format), and save maps for offline use since we'd be walking all day without cell service.
+
+![Weeds example](images/caltopo/weeds.png "Weeds example")
+
+Still, there are plenty of times when I *don't* have maps saved. I almost always regret that because service is either spotty at best in the backcountry or nonexistent. 
+
+Inevitably I end up with some weird half-loaded map that takes forever and a day to get to a useful state. Usually I just keep on walking, running, or skiing and vow to save more tiles next time.
+
+
+## The problem
+
+But it doesn't have to be that way!
+
+I took it upon myself to peel back the layers--see what I did there?--and get a better look at what was going on with network traffic.
+
+Here's a screenshot of using the website on a mobile device with a 3G-throttled network:
+
+![Network requests](images/caltopo/requests.png "Network requests")
+
+See that? It took over a minute to fully load. Yikes.
+
+It's kind of a bummer that CalTopo, which labels themselves as "the next generation of digital mapping tools", still use PNG images for serving their map layers. Perhaps a decade ago that'd fly, but not now.
+
+![Next generation?](images/caltopo/nextgen.png "Next generation?")
+
+## The fix
+
+Here's one tile I chose to convert to a modern format to see how much data could be saved, and it's a lot.
+
+![Better](images/caltopo/comparison.png "Better")
+
+That's fully a quarter the original size! And there's no real perceptible difference in quality--AVIF and WebP generally are lossless. So, for the above example, instead of about 4MB of data, it'd be 1MB. **On mobile that is such a huge difference!**
+
+Anyway, I hope the team over there is able to make some improvements in this area. 
+
+I'm not gonna stop using or paying for CalTopo, but since they seem to be making changes and have an open process for requests I thought I'd bring some attention to this fundamental flaw.
+
+
+
