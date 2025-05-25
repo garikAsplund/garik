@@ -35,7 +35,7 @@
 	aria-labelledby="contact-form-title"
 >
 	{#if !$message}
-		<h1 id="contact-form-title" class="mb-6 text-2xl font-semibold text-gray-800">Get in touch</h1>
+		<h3 id="contact-form-title" class="mb-6 text-2xl font-semibold text-gray-800">Get in touch</h3>
 
 		<!-- {#if dev}
 	  <SuperDebug data={$form} />

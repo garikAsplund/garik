@@ -1,0 +1,60 @@
+---
+title: Things I learned from Character Limit
+date: "2025-05-08"
+---
+
+TWITTER HISTORY
+    - from Odeo podcast
+    - weird firing of Dorsey, already obsessed by a Jobsian comeback
+    - infra problems and fail whale PIC
+    - another surprise firing of Ev
+    - Costolo takes it public
+    - Dorsey, resume padded by being struck by lightning twice with Square, comes back as CEO
+
+
+
+
+OneTeam 2020 conf tens of millions of dollars and held at Johnson Space Center outside of Houston, Texas.
+    - First ever profit since founded in 2006
+    - Flew a church choir from LA to sing Toto's "Africa" as a joke about Dorsey's newfound love for the continent
+    - Rented out Minute Maid Park for a fireworks show
+    - 15 minute meditation
+    - Salt drink
+    - Joke with Elon about running Twitter
+
+Turns out it was never a battle about free speech, it was--and *is*--a peacocking stunt about who controls speech. Before it was Twitter, now it's Elon.
+
+ > His father’s impact on his psyche would linger. He developed into a tough yet vulnerable man-child, prone to abrupt Jekyll-and-Hyde mood swings, with an exceedingly high tolerance for risk, a craving for drama, an epic sense of mission, and a maniacal intensity that was callous and at times destructive.
+
+PERSONALITY
+    - marrying his 2nd wife twice--yes, divorced her, married her again, and divorced her again
+    - at least 13 kids
+    - "great experiment in parenting" with X Æ A-Xii
+    - giving away Valkyrie name from Grimes kid to Neuralink gal likewut: https://futurism.com/the-byte/elon-musk-baby-name-grimes
+    - Obsession with X
+        - X son name
+        - Exa daughter
+        - X.com og, X now
+        - SpaceX
+        - xAI
+        - Tesla Model X
+
+backed out of Zuck fight bc:
+taking on a sumo wrestler at his 42nd birthday: https://www.isegoria.net/2024/05/musks-japanese-steampunk-themed-42nd-birthday-party-culminated-in-a-demonstration-of-sumo-wrestling/
+
+was flying in his private jet on Xmas eve, decided to turn around to SMF data center on a whim. Literally unplugged servers himself. Had undocumented laborers move servers at $20/hr and probably broke laws in the process
+https://medium.com/@noahkingdavis/the-unbelievable-tale-of-when-elon-musk-personally-removed-servers-from-a-sacramento-data-center-2892f21b12c3
+
+open sourced some code in March 2023, but left this gem visible: "author_is_elon"
+https://github.com/twitter/the-algorithm/issues/236
+
+BLUESKY
+    - originally a project within Twitter
+    - similar to [Mastodon](https://joinmastodon.org/), [Nostr](https://nostr.com/)
+    - weird timing
+    - first saw it when svelte posted it and other devs fled to it
+
+https://bsky.social/about/faq
+https://www.wired.com/story/big-interview-jay-graber-bluesky/
+
+
