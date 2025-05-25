@@ -1,6 +1,7 @@
 ---
 title: Things I learned from Character Limit
 date: "2025-05-08"
+draft: true
 ---
 
 TWITTER HISTORY
