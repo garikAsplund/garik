@@ -30,7 +30,7 @@
 
       return {
         id: heading.id,
-        text: heading.textContent || '',
+        text: heading.innerHTML || '',
         level: parseInt(heading.tagName.charAt(1))
       };
     });
@@ -116,7 +116,7 @@
                     ? 'border-gray-800 font-medium text-gray-800'
                     : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800'}"
                 >
-                  {item.text}
+                  {@html item.text}
                 </span>
               </button>
             {/each}
