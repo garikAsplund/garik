@@ -98,7 +98,7 @@
     </div>
 
     {#if tocItems.length > 0}
-      <aside class="sticky top-20 hidden h-fit w-96 xl:block pl-12">
+      <aside class="sticky top-20 hidden h-fit w-96 xl:block pl-12 opacity-75">
         <div class="max-h-[calc(100vh-8rem)] overflow-y-auto">
           <h3 class="mb-4 text-xs font-medium uppercase tracking-wider text-gray-500">
             On This Page
@@ -186,6 +186,6 @@
   .prose :global(h4),
   .prose :global(h5),
   .prose :global(h6) {
-    scroll-margin-top: 3.7rem;
+    scroll-margin-top: 3.5rem;
   }
 </style>

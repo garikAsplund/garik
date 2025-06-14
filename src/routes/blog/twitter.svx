@@ -10,7 +10,7 @@ Recently I was again applying to [Oxide Computer Company](https://oxide.computer
 
 Since Elon was still then in the middle of his DOGE stint, I decided it was my civic duty to get up to speed on who he is and how he operates. What I learned is that he is a wild and disgraceful human that should not be emulated. 
 
-But first, a little background info on Twitter, which has a fascinating history of its own. Strap in, this is a long one.
+But first, a little background info on Twitter, which has a fascinating history of its own. Strap in, this is a long and convoluted one.
 
 ![Strap in](https://y.yarn.co/80f9cbbc-88e2-42b9-97c7-4ee7ccd7455b_text.gif "Strap in")
 
@@ -50,13 +50,13 @@ Even if Twitter [couldn't deliver 99.99% uptime](https://veoci.com/blog/twitter-
 
 To outsiders, the young startup needed an adult in the room. That adult was Dick Costolo from FeedBurner and then Google. In keeping with the precedent of employees issuing ironically prophetic tweets, Costolo posted this soon after his hire as Chief Operating Officer:
 
-![It wasn't supposed to be the game plan, but it was](images/twitter/costolo.png "It wasn't supposed to be the game plan, but it was")
+[![It wasn't supposed to be the game plan, but it was](images/twitter/costolo.png "It wasn't supposed to be the game plan, but it was")](https://x.com/dickc/status/3962807808)
 
 And so it was. It took a little time, but Ev--another cofounder--did step down as CEO in 2010, and Costolo became the long sought grownup, bringing in advertisers and taking Twitter public in late 2013. 
 
 But after five years with Costolo at the helm, Twitter was somehow *still* struggling with growth, profitability, and policing harassment on the platform. 
 
-Cue Jack Dorsey's return. During his time away from Twitter, Dorsey created Square, thus padding his resume and quieting the doubters who previously said he didn't have the chops to run a big tech company. 
+Cue Jack Dorsey's return. During his time away from Twitter, Dorsey created the massively successful mobile payments platform Square, thus padding his resume and quieting the doubters who previously said he didn't have the chops to run a big tech company. 
 
 He was also on the front lines in his hometown of St. Louis during the protests at Ferguson in the summer of 2014, becoming a posterchild for freedom of expression, a key Twitter tenet.
 
@@ -74,15 +74,15 @@ Still, Costolo had plenty of ammo and anecdotes from his years at Google and Twi
 
 ![Costolo moderating a panel for the finale of 'Silicon Valley'](images/twitter/silicon-valley.webp "Costolo moderating a panel for the finale of 'Silicon Valley'")
 
-Costolo was also perfectly positioned in the middle of the epic battle for the heart of Silicon Valley that had been the wellspring of drama for decades. As creator of the show Mike Judge said,
+Costolo was also perfectly positioned in the middle of the epic struggle for the heart of Silicon Valley that had been the wellspring of drama for decades. As creator of the show Mike Judge said,
 
 > I think Silicon Valley is immersed in a titanic battle between the hippie value system of the Steve Jobs generation and the Ayn Randian libertarian values of the Peter Thiel generation.
 
 Twitter was created as an almost dadaist outlet when tech had yet to ossify into what it is now. For years it was nonsensical, playful, riotous, base, and altogether woefully unprofitable--the hippie side of things. Then Costolo stepped in to tighten belts, grow and professionalize the staff, and make some money--the capitalist urge made manifest.
 
-As Costolo was consulting for the show "Silicon Valley," the real Silicon Valley found itself in battles over free speech, freedom of reach, woke ideology and its inherent backlash. 
+As Costolo was consulting for the show "Silicon Valley," the real Silicon Valley found itself in fights over free speech, freedom of reach, woke ideology and its inherent backlash. 
 
-Twitter, and Silicon Valley with it, was transitioning away from Dorsey's idolization of Jobs and moving towards Musk's brand of a reactionary conservative populism.
+Twitter, and Silicon Valley with it, was transitioning away from Dorsey's [#StayWoke messaging](https://www.newsweek.com/elon-musk-mock-stay-woke-twitter-tshirt-viral-video-1761807) and moving towards Musk's brand of reactionary conservative populism.
 
 [![The beginning](images/twitter/how-much.jpg "The beginning")](https://www.msn.com/en-us/money/companies/elon-musk-floats-buying-msnbc-from-comcast-how-much-does-it-cost/ar-AA1uAgRJ)
 
@@ -100,6 +100,12 @@ At one point Dorsey joked about Elon running Twitter since it had yet to maintai
 
 ## Musk's mythmaking
 
+Despite being over 50 years old, Musk has a juvenile persona and routinely acts on whimsey simply because, as the world's richest person, he can. His purchase of Twitter exemplified this to a T.
+
+Walter Isaacson, [his biographer](https://www.simonandschuster.com/books/Elon-Musk/Walter-Isaacson/9781982181284), had this to say:
+
+ > He developed into a tough yet vulnerable man-child, prone to abrupt Jekyll-and-Hyde mood swings, with an exceedingly high tolerance for risk, a craving for drama, an epic sense of mission, and a maniacal intensity that was callous and at times destructive.
+
 Time and time again, Musk has sold big ideas and even bigger promises. 
 
 First it was to tech companies much larger than his own, like Compaq and eBay. Then his primary audience and financiers shifted to the US government via Tesla's generous loans and tax credits and SpaceX's well-timed contracts. 
@@ -108,15 +114,26 @@ His next victims have been the public at large who buy into his mythos via stock
 
 [![A biographer's take](images/twitter/bio.png "A biographer's take")](https://x.com/SethAbramson/status/1892989527246926228)
 
-At Elon's first company, Zip2--which he started while [he was an illegal immigrant](https://www.forbes.com/sites/antoniopequenoiv/2024/10/26/elon-musk-powerful-critic-of-illegal-immigrants-worked-illegally-in-us-at-start-of-career-report-says/)--his [hairball code](https://www.goodreads.com/quotes/9356850-they-took-one-look-at-zip2-s-code-and-began-rewriting) had to be rewritten and refactored when real software engineers came in. It was [alleged he stole the idea](https://infinityturbine.com/search/seamerlin/spacex-and-quest-203.html) for the company in the first place. Zip2 sold to Compaq for $307 million and was used by the AltaVista search engine.
+At Elon's first company, Zip2--which he started while [he was an illegal immigrant](https://www.forbes.com/sites/antoniopequenoiv/2024/10/26/elon-musk-powerful-critic-of-illegal-immigrants-worked-illegally-in-us-at-start-of-career-report-says/)--his [hairball code](https://www.goodreads.com/quotes/9356850-they-took-one-look-at-zip2-s-code-and-began-rewriting) had to be rewritten and refactored when real software engineers came in. It was also [alleged he stole the idea](https://infinityturbine.com/search/seamerlin/spacex-and-quest-203.html) for the company in the first place. Zip2 sold to Compaq for $307 million and was used by the AltaVista search engine.
 
 After that, Musk had an idea for online banking that "would change everything." X.com eventually merged with Confinity, a neighboring tenant at their office building and makers of PayPal. Before its merger, though, X.com failed to deliver the revolution in banking and [was so deeply flawed](https://proreader.io/search?url=https://www.nytimes.com/2000/01/28/business/security-flaw-discovered-at-online-bank.html) that it "permitted customers for almost a month to transfer funds from any other account in the nation's banking system."
+
+And while we're talking about X.com, we can't forget his juvenile fascination with X throughout the years:
+
+    - X.com, the first time round
+    - Xavier, a son, now Vivian
+    - X Æ A-Xii, a son
+    - Exa, a daughter
+    - SpaceX    
+    - Tesla Model X
+    - X Corp. and X rebranding of Twitter
+    - xAI
 
 ![X didn't give it to ya](images/twitter/paypal.webp "X didn't give it to ya")
 
 [In a tale that sounds like it belongs in a Tom Wolfe novel](https://x.com/ronakkadhi/status/1842937757444038789), Musk was driving Peter Thiel in his uninsured McLaren F1 on Sand Hill Road to a meeting with Sequoia Capital when Thiel asked Musk what his car could do. Musk replied, "Watch this," and proceeded to crash the car. Thiel hitchhiked to the meeting. 
 
- PayPal was acquired by eBay for $1.5 billion in 2002. 
+PayPal was acquired by eBay for $1.5 billion in 2002. 
 
 Flush with cash once more, he bought into Tesla Motors, and even purchased the right to be named founder. [He was not](https://www.investopedia.com/articles/personal-finance/061915/story-behind-teslas-success.asp).
 
@@ -142,9 +159,9 @@ There's so much craziness in the buyout alone that it fills the pages of [entire
 
 ## Gasoline on a dumpster fire
 
-Even before finalizing his takeover of Twitter, Musk acted like he owned it. His ["let that sink in" moment](https://x.com/elonmusk/status/1585341984679469056) was a day premature as far as the law was concerned.
+Even before finalizing his takeover of Twitter, Musk acted like he owned it, telling people what to do and [posting his goons](https://qz.com/elon-musk-twitter-1851650600/slides/2) at headquarters. His ["let that sink in" moment](https://x.com/elonmusk/status/1585341984679469056) was a day premature as far as the law was concerned.
 
-Very quickly he [stopped paying bills writ large](https://sfist.com/2022/11/22/elon-musk-now-stiffing-vendors-not-paying-bills-at-twitter/), [required loyalty oaths](https://www.resumemansion.com/article/the-loyalty-oath-by-elon-musk-causes-a-wave-of-resignation-and-twitter-offices-close/) from all workers with a 24-hour deadline that defaulted to "No", [froze code changes](https://www.bloomberg.com/news/articles/2022-11-14/twitter-implements-another-coding-freeze-for-engineers) for fear of a disgruntled employee sabotaging the service, and engaged in [multiple rounds of mass layoffs that cut 80% of staff](https://blog.getaura.ai/twitter-layoffs) in less than half a year. Oh yea, and he [made everyone print out their code](https://www.livemint.com/technology/tech-news/elon-musk-s-day-1-at-twitter-engineers-asked-to-print-out-their-code-for-review-11667033793158.html) so software engineers from Tesla could review it <span class="emoji">🤦‍♂️</span> 
+Very quickly he [stopped paying bills writ large](https://sfist.com/2022/11/22/elon-musk-now-stiffing-vendors-not-paying-bills-at-twitter/), [required loyalty oaths](https://www.resumemansion.com/article/the-loyalty-oath-by-elon-musk-causes-a-wave-of-resignation-and-twitter-offices-close/) from all workers with a 24-hour deadline that defaulted to "No", [froze code changes](https://www.bloomberg.com/news/articles/2022-11-14/twitter-implements-another-coding-freeze-for-engineers) for fear of disgruntled employees sabotaging the service, and engaged in [multiple rounds of mass layoffs that cut 80% of staff](https://blog.getaura.ai/twitter-layoffs) in less than half a year. Oh yea, and he [made everyone print out their code](https://www.livemint.com/technology/tech-news/elon-musk-s-day-1-at-twitter-engineers-asked-to-print-out-their-code-for-review-11667033793158.html) so software engineers from Tesla could review it <span class="emoji">🤦‍♂️</span> 
 
 Employees were [expected to drop everything else in their lives](https://www.businessinsider.com/elon-musk-twitter-staff-layoffs-long-hours-shifts-work-jobs-2022-11)--often with no notice--and come into the office on weekends and stay late into the night.
 
@@ -154,32 +171,27 @@ The San Francisco headquarters became known as Hotel Twitter after he had bedroo
 
 When Musk was flying in his private jet on Christmas Eve from the Bay Area to his Austin compound, he--out of nowhere--decided to turn around and head to Sacramento to visit one of Twitter's three data centers. When he arrived he started pulling plugs. Even though he thought nothing broke, [things definitely broke](https://www.datacenterdynamics.com/en/news/twitter-fails-for-hours-after-elon-musk-makes-server-alterations/). 
 
-Soon thereafter he hired undocumented laborers move servers at $20 an hour and flaunted privacy laws in the process. The [whole story](https://medium.com/@noahkingdavis/the-unbelievable-tale-of-when-elon-musk-personally-removed-servers-from-a-sacramento-data-center-2892f21b12c3) really is an incredible illustration of how he operates.
-
-## It's all a joke
-
-Despite being over 50 years old, Musk has a juvenile persona and routinely acts on whimsey simply because, as the world's richest person, he can. His purchase of Twitter exemplified this to a T.
-
-Walter Isaacson, his biographer, had this to say:
-
- > He developed into a tough yet vulnerable man-child, prone to abrupt Jekyll-and-Hyde mood swings, with an exceedingly high tolerance for risk, a craving for drama, an epic sense of mission, and a maniacal intensity that was callous and at times destructive.
-
-![Seth Meyers gets it](images/twitter/chat.png "Seth Meyers gets it")
-
-And we can't forget his odd obsession with X:
-    - X.com, the first time round
-    - X Æ A-Xii, a son
-    - Exa, a daughter
-    - SpaceX    
-    - Tesla Model X
-    - X, rebranding of Twitter
-    - xAI
+Soon thereafter he hired undocumented laborers to move servers at $20 an hour and flaunted privacy laws in the process. The [whole story](https://medium.com/@noahkingdavis/the-unbelievable-tale-of-when-elon-musk-personally-removed-servers-from-a-sacramento-data-center-2892f21b12c3) really is an incredible illustration of how he operates.
 
 ## Daddy issues
 
-He also leads an odd personal life, marrying his second wife twice--yes, Elon married Talulah Riley, divorced her, married her again, and divorced her again. 
+The apple never falls far from the tree, as the saying goes, so it's not much of a mystery how Elon would turn out to be so abusive, controlling, and [oddly obsessed with reproduction](https://www.vanityfair.com/news/story/elon-musks-children-ashley-st-clair). 
 
-While he and Grimes were expecting a child, agreed to be named Valkyrie, through a surrogate, Musk had twins with a higher up at his company Neuralink. The female twin's name? Valkyrie. [Oopsies](https://futurism.com/the-byte/elon-musk-baby-name-grimes).
+![Errol Musk](images/twitter/errol.jpg "Errol Musk")
+
+Errol Musk, his father, has a long history of misconduct, emotional manipulation, and even manslaughter--killing [three men with two bullets](https://www.themirror.com/news/us-news/elon-musks-dad-killed-3-1160974), though it was self-defense. In a [*Rolling Stone* interview](https://www.rollingstone.com/culture/culture-features/elon-musk-the-architect-of-tomorrow-120850/), Elon, tears streaming down his face, said of his dad: 
+
+> You have no idea about how bad. Almost every crime you can possibly think of, he has done. Almost every evil thing you could possibly think of, he has done.
+
+Surprise, then, that Errol has gone on the record to say [he isn't proud of Elon](https://www.theguardian.com/technology/2022/aug/01/elon-musk-father-interview-not-proud-errol-family), either, or "The only thing we are on Earth for is to reproduce."
+
+In a move that would make [Woody Allen](https://www.history.com/this-day-in-history/december-23/woody-allen-marries-soon-yi-previn) raise an eyebrow, Errol has [two children with his own step-daughter](https://www.independent.co.uk/news/world/americas/elon-errol-musk-children-stepdaughter-b2123744.html) who is 42 years his junior.
+
+## Baby fever
+
+Elon also leads an strange personal life, marrying his second wife twice--yes, Elon married Talulah Riley, divorced her, married her again, and divorced her again. 
+
+While he and Grimes were expecting a child, agreed to be named Valkyrie, through a surrogate, Musk secretly had twins with a higher up at his company Neuralink. The female twin's name? Valkyrie. [Oopsies](https://futurism.com/the-byte/elon-musk-baby-name-grimes).
 
 In all, Musk has at *minimum* 14 kids and is only a "father" to X Æ A-Xii, parading him around everywhere he goes in the limelight, despite that being forbade in [his and Grimes' custody agreement](https://www.businessinsider.com/grimes-elon-musk-custody-battle-complete-timeline-2023-12). 
 
@@ -199,7 +211,7 @@ But wait, [there's more](https://archive.ph/9MfG6).
 
 ## All bark, no bite
 
-Remember when Instagram released Threads as a direct affront to Twitter in the summer of 2023? It was as if Zuck tapped into the zeitgeist--clearly Musk was trashing Twitter and it was at its weakest, most vulnerable to attack. Zuck leapt at the opportunity. 
+Remember when [Instagram released Threads](https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/) as a direct affront to Twitter in the summer of 2023? It was as if Zuck tapped into the zeitgeist--clearly Musk was trashing Twitter and it was at its weakest, most vulnerable to attack. Zuck leapt at the opportunity. 
 
 Things escalated quickly from there, and soon there was a very real chance that Zuck and Musk, the top two titans of tech, were about to settle their beef in the octagon, or even the Roman Colosseum. It was a truly insane moment.
 
@@ -235,26 +247,23 @@ The similarities between Musk and Trump run deep. They each inherited great weal
 
 Musk and Trump are both hucksters and frauds and egomaniacs. I mean, what grown man [cheats at video games](https://newlinesmag.com/spotlight/elon-musk-wanted-gamers-respect-instead-he-got-a-scandal/)? Seriously.
 
-They crave the spotlight, blame others for their failures, can't maintain mature relationships, have a need to control the narrative, and are addicted to drama. They are not smart, they are not empathetic, they are not role models. They're cruel, crude, and crass human beings. Oh, and they both **suck at dancing**.
+They crave the spotlight, blame others for their failures, can't maintain mature relationships, have a need to control the narrative, give in to thorough paranoia, and are addicted to drama. They are not smart, they are not empathetic, they are not role models. They're cruel, crude, and crass human beings. 
+
+Oh, and they both **suck at dancing**.
 
 ![Musk dancing](https://i.chzbgr.com/full/9422388224/hBA4AC335/gif-elon-musk-dancing-forward-and-backward-on-stage-shanghai "Musk 'dancing'")
 ![Trump dancing](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2hkMng0cXE4NWtxYzRmYXN2aHRqMGIzejhlYWYydjVnczNvcGlocSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ze6OmgA0foBv8GuAxm/giphy.gif "Trump 'dancing'")
 
 ## The last laugh
 
-As much as Elon considers himself the savior and guardian of comedy, he can't take a joke, much less land one. Not like he hasn't tried--he's been on "The Simpsons", "South Park", "Rick and Morty", "The Big Bang Theory", "Young Sheldon", and even hosted Saturday Night Live. They all fall flat, with his SNL appearance coming in as the [second worst of all time](https://www.slashfilm.com/1875920/worst-saturday-night-live-guest-hosts-ranked/).
+As much as Elon considers himself the savior and guardian of comedy, he can't take a joke, much less land one. Not like he hasn't tried--he's been on *The Simpsons*, *South Park*, *Rick and Morty*, *The Big Bang Theory*, *Young Sheldon*, and even hosted *Saturday Night Live*. Each performance falls flat, with his *SNL* appearance coming in as the [second worst of all time](https://www.slashfilm.com/1875920/worst-saturday-night-live-guest-hosts-ranked/).
 
 ![Not funny, funny](images/twitter/musk-hbo.webp "Not funny, funny")
 
-He lacks the self-awareness and skilled self-deprecation that are so key to being able to oscillate between gracefully accepting being the punchline of a joke and dishing out original, thoughtful critiques with bite. No, Musk is trapped in weird memelord regurgitation cycles that are downright unfunny.
+He lacks the self-awareness and skilled self-deprecation that are so key to being able to oscillate between gracefully accepting being the punchline of a joke and dishing out original, thoughtful critiques with bite. 
+
+No, Musk is trapped in weird [memelord regurgitation cycles](https://www.tweetpeek.ai/post/25-times-elon-musk-proved-he-s-actually-the-internet-s-biggest-memelord) that are downright unfunny and [don't give credit where credit is due](https://www.nytimes.com/2021/05/07/style/elon-musk-memes.html).
 
 But, at least, in his delusional self-importance he can provide us with a little unintended comic relief as illustrated by this story from TJ Miller, which might be the funniest bit of all:
 
 ![Allegory at its finest](images/twitter/miller-musk.png "Allegory at its finest")
-
-### FINAL EDITS
-
- - reorg father bs--woody allen even raise an eyebrow--, isaacson quote
- - add link to 
- - x xavier
-
