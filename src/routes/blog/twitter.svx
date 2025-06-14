@@ -24,7 +24,7 @@ There was the emergence of flocking at [SXSW in Austin 2006](https://www.hbs.edu
 
 Early on, employees joked about their importance in oddly prophetic ways, like this tweet from VP of Product Jason Goldman:
 
-![A crystal ball](images/twitter/goldman.png "A crystal ball")
+[![A crystal ball](images/twitter/goldman.png "A crystal ball")](https://www.google.com/search?client=firefox-b-1-d&sa=X&sca_esv=5734fedee28d1695&sxsrf=AE3TifPcr7MMxQNfTOc7tHBC_CBoBpCjWQ:1749931578360&q=Twitter:+Breaking+the+Bird+episode+(season+1,+episode+1)&stick=H4sIAAAAAAAAAONgVuLVT9c3NKwwzcjNzkuq2MXEkV-WWlSWmVq-iNUipDyzpCS1yErBqSg1MTszL12hJCNVwSmzKEUhtSCzOD8lVUGjODWxOD9PwVAHLmSoCQAzQX8fVwAAAA&ved=2ahUKEwjD6O-Q2_GNAxVoJTQIHaBrKVgQm8wBKAF6BAgyEAI&biw=1710&bih=1069&dpr=2)
 
 At first, though, instead of giving refuge--along with huge audiences--to bots, conspiracy theorists, and madmen, Twitter enabled honest revolutions and showed great promise.
 
@@ -189,7 +189,7 @@ In a move that would make [Woody Allen](https://www.history.com/this-day-in-hist
 
 ## Baby fever
 
-Elon also leads an strange personal life, marrying his second wife twice--yes, Elon married Talulah Riley, divorced her, married her again, and divorced her again. 
+Elon also leads an strange personal life, marrying his second wife twice--yes, Elon married Talulah Riley, divorced her, married her again, filed for divorce again, withdrew the filing, and then followed through with the second divorce. 
 
 While he and Grimes were expecting a child, agreed to be named Valkyrie, through a surrogate, Musk secretly had twins with a higher up at his company Neuralink. The female twin's name? Valkyrie. [Oopsies](https://futurism.com/the-byte/elon-musk-baby-name-grimes).
 
