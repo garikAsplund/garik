@@ -6,7 +6,7 @@
 
 <OGCards />
 
-<section class="flex w-full flex-col items-center space-y-8 px-8 pt-12 md:px-16">
+<section class="flex w-full flex-col items-center space-y-8 px-8 pt-12 md:px-16 pb-12">
 	<h1 class="text-4xl font-semibold">Blog</h1>
 	<ul class="space-y-4 md:-translate-x-4">
 		{#each data.posts as post}
