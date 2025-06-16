@@ -1,0 +1,94 @@
+---
+title: "Tampermonkey for added usability"
+date: "2025-06-16"
+---
+[![Tampermonkey](images/tampermonkey/monkey.png "Tampermonkey")](https://www.tampermonkey.net/)
+
+## I didn't know
+
+For too long I just accepted the web as it is. You probably have, too.
+
+Then last year I started using [Arc](https://arc.net/), and they were pushing [Boosts](https://resources.arc.net/hc/en-us/articles/19212718608151-Boosts-Customize-Any-Website) hard. Sure, it was neat for a minute to play around with fonts or colors on any website. Plus you could zap different elements for a more streamlined look. 
+
+![Boosts in action](https://resources.arc.net/hc/article_attachments/25703394042263 "Boosts in action")
+
+But then there were the strange, and [deeply dumb](https://kibty.town/blog/arc/), [security issues](https://www.youtube.com/watch?v=d0PyfYpD4bw) with that feature. I kinda forgot about the custom web after that, honestly. I dropped Arc, like a lot of folks, because it was a [battery hog](https://www.reddit.com/r/ArcBrowser/search/?q=battery&cId=789298d1-63b9-41a5-9a5a-6e842fe3f5a8&iId=32d3013d-4c3b-4ed2-92f0-8ab5ef623d26) and it [lost active support](https://www.theverge.com/news/674603/arc-browser-development-stopped-dia-browser-company).
+
+A couple weeks ago I got word that I wasn't making it to the final interview round at 37signals. Naturally my critical eye went into overdrive with their email service, [HEY](https://www.hey.com/), that I've been test driving. If I'm to shell out $100 a year for what amounts to a Gmail wrapper, it better be flawless.
+
+Alas, while HEY has many great ideas, the execution leaves much to be desired.
+
+## My particular issue
+
+My biggest gripe--one among many--is that the cover over **Previously Seen** emails has no shortcut and there is not a proper toggle button to show/hide it. Yes, I love the clean look of having [Inbox Zero](https://blog.superhuman.com/inbox-zero-method/), but I don't love the clunky and unintuitive click the cover, move your cursor to the bottom of the screen and click on the arrow to cover it back up. Gross.
+
+![HEY with cover](images/tampermonkey/cover.png "HEY with cover")
+![HEY without cover](images/tampermonkey/no-cover.png "HEY without cover")
+
+Toggle buttons should allow the user to switch between states *from the same spot*. It's not a hard concept to grasp. That, or put a keyboard shortcut for one of the most-used features! C'mon.
+
+Looking under the hood a bit, I found that there was a toggle in the **box-cover__peek-toggle** class. Bingo.
+
+![Sleuthing](images/tampermonkey/html.png "Sleuthing")
+
+## The add-on to fix it
+
+Enter [Tampermonkey](https://www.tampermonkey.net/). Tampermonkey let's you add some code and run it on certain websites. You can match and exclude different paths, so it's very customizable as to where and when it executes.
+
+The actual code you run can do a bunch of things, too. In my case I just wanted to be able to add a hotkey that moved the cover on or off my old emails.
+
+## The script
+
+```js
+// ==UserScript==
+// @name         HEY – Toggle Cover (⇧C)
+// @namespace    garik
+// @version      1.2
+// @description  Show/hide the Cover tray with Shift+C
+// @match        https://app.hey.com/*
+// @grant        none
+// ==/UserScript==
+
+;(function () {
+  const BTN_SELECTOR = '.box-cover__peek-toggle'
+  const HOTKEY = 'c' // letter part of the shortcut
+
+  // Helper to check if an element is an input field
+  const isInputField = (element) => {
+    if (!element) return false
+    const tagName = element.tagName.toLowerCase()
+    return (
+      tagName === 'input' ||
+      tagName === 'textarea' ||
+      element.isContentEditable
+    )
+  }
+
+  const want = (e) =>
+    e.shiftKey &&
+    e.key.toLowerCase() === HOTKEY &&
+    !isInputField(document.activeElement)
+
+  document.addEventListener(
+    'keydown',
+    (e) => {
+      if (!want(e)) return
+      e.preventDefault()
+      // suppress HEY’s “c → compose”
+      e.stopImmediatePropagation() 
+
+      const btn = document.querySelector(BTN_SELECTOR)
+      if (btn) btn.click()
+    },
+    true // capture so we outrun HEY’s own handler
+  )
+})()
+```
+
+## Mission accomplished
+
+![Damn, it feels good to be a gangsta](https://media1.tenor.com/m/vbRXEXIqmLIAAAAC/ron-livingston-gangsta.gif "Damn, it feels good to be a gangsta")
+
+And that's the way you do it! Now I can toggle the cover easily with **Shift + c** and it doesn't collide with search or writing emails. Boom. Major improvement.
+
+Some product you love doesn't have exactly the functionality you want? No problem--**just add it yourself**.
