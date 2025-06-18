@@ -1,7 +1,7 @@
 ---
 title: "Tampermonkey for added usability"
 date: "2025-06-16"
-og_image: "/blog/images/tampermonkey/monkey.png" 
+og_image: "/og-images/monkey.png" 
 ---
 [![Tampermonkey](images/tampermonkey/monkey.png "Tampermonkey")](https://www.tampermonkey.net/)
 
