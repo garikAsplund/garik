@@ -1,6 +1,7 @@
 ---
 title: Twitter, Musk, and X
 date: "2025-06-09"
+og_image: "https://image.cnbcfm.com/api/v1/image/107275410-1690199071599-gettyimages-1549286524-arriens-elonmusk230723_np1Ax.jpeg?v=1707753410"
 ---
 ![Twitter, Musk, and X](images/twitter/title.jpeg "Twitter, Musk, and X")
 

@@ -1,7 +1,7 @@
 ---
 title: CalTopo, hear me out
 date: "2025-04-23"
-# og_image: "../images/caltopo/comparison.png"
+og_image: "https://interpretiveguides.org/wp-content/uploads/2023/02/Caltopo.png"
 ---
 
 ## My go-to tool
