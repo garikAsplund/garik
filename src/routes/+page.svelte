@@ -9,6 +9,9 @@
 <OGCards />
 
 <div class="relative flex min-h-screen w-full flex-col items-center overflow-hidden">
+	<h1 class="sr-only">
+		Garik Codes – Building simple, elegant websites for small businesses and non-profits
+	</h1>
 	<Blob />
 	<div class="relative z-20">
 		<div class="flex max-w-4xl flex-col justify-center space-y-4 px-8 pt-32 lg:space-y-8">
@@ -47,40 +50,39 @@
 
 <style>
 	.fancy {
-	  position: relative;
-	  width: auto;
-	  height: auto;
-	  margin: auto;
-	  cursor: pointer;
+		position: relative;
+		width: auto;
+		height: auto;
+		margin: auto;
+		cursor: pointer;
 	}
-  
+
 	.fancy::before,
 	.fancy::after {
-	  content: '';
-	  position: absolute;
-	  width: 20px;
-	  height: 20px;
-	  transition: 0.3s ease-in-out;
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		transition: 0.3s ease-in-out;
 	}
-  
+
 	.fancy::before {
-	  top: -15px;
-	  left: -22px;
-	  border-top: 2px solid #000;
-	  border-left: 2px solid #000;
+		top: -15px;
+		left: -22px;
+		border-top: 2px solid #000;
+		border-left: 2px solid #000;
 	}
-  
+
 	.fancy::after {
-	  right: -22px;
-	  bottom: -15px;
-	  border-bottom: 2px solid #000;
-	  border-right: 2px solid #000;
+		right: -22px;
+		bottom: -15px;
+		border-bottom: 2px solid #000;
+		border-right: 2px solid #000;
 	}
-  
+
 	.fancy:hover::before,
 	.fancy:hover::after {
-	  width: calc(100% + 44px);
-	  height: calc(100% + 28px);
+		width: calc(100% + 44px);
+		height: calc(100% + 28px);
 	}
-  </style>
-  
+</style>
