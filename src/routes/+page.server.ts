@@ -14,7 +14,9 @@ export const actions = {
 	default: async ({ request, fetch }) => {
 		const form = await superValidate(request, zod(schema));
 		console.log(form);
-
+		if (form.data.company?.trim()) {
+			return fail(400, { form, message: 'Bot detected 🤖' });
+		}
 		if (!form.valid) {
 			return fail(400, { form });
 		} else {
@@ -27,8 +29,11 @@ export const actions = {
 			});
 
 			if (response.ok) {
-				console.log("Success!!");
-				return message(form, `<strong>Thanks for your interest!</strong> <br /> <br /> I'll reply to you as soon as possible.`);
+				console.log('Success!!');
+				return message(
+					form,
+					`<strong>Thanks for your interest!</strong> <br /> <br /> I'll reply to you as soon as possible.`
+				);
 			} else {
 				const errorData = await response.json();
 				return message(form, `Error sending email: ${errorData.error}`);

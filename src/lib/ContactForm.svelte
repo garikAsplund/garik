@@ -5,30 +5,48 @@
 	import { dev } from '$app/environment';
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import FormInput from './FormInput.svelte';
-  
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const script = document.createElement('script');
+		script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+		script.async = true;
+		document.head.appendChild(script);
+	});
+
 	let { data } = $props();
 	let isSubmitting = $state(false);
-  
+
 	const { form, errors, enhance, reset, constraints, message, validateForm } = superForm(
-	  data.form,
-	  {
-		validators: zod(schema),
-		resetForm: false,
-		dataType: 'json',
-		taintedMessage: null,
-		onSubmit: () => {
-		  isSubmitting = true;
-		},
-		onResult: ({ result }) => {
-		  isSubmitting = false;
-		},
-		onError: ({ result }) => {
-		  isSubmitting = false;
-		  console.error('Form submission error:', result);
+		data.form,
+		{
+			validators: zod(schema),
+			resetForm: false,
+			dataType: 'json',
+			taintedMessage: null,
+			onSubmit: () => {
+				isSubmitting = true;
+			},
+			onResult: ({ result }) => {
+				isSubmitting = false;
+			},
+			onError: ({ result }) => {
+				isSubmitting = false;
+				console.error('Form submission error:', result);
+			}
 		}
-	  }
 	);
-  </script>
+
+	function onTurnstileSuccess(token) {
+		const form = document.querySelector('form');
+		const hidden = document.createElement('input');
+		hidden.type = 'hidden';
+		hidden.name = 'cf-turnstile-response';
+		hidden.value = token;
+		form?.appendChild(hidden);
+		form?.submit();
+	}
+</script>
 
 <section
 	class="relative flex w-full max-w-xl flex-col items-center rounded-lg bg-slate-50 p-4 py-8 shadow-lg dark:shadow-red-500/50"
@@ -62,6 +80,15 @@
 					constraints={$constraints.email}
 					autocomplete="email"
 				/>
+
+				<input type="text" name="company" bind:value={$form.company} style="display: none" />
+
+				<div
+					class="cf-challenge"
+					data-sitekey={data.turnstileSiteKey}
+					data-callback="onTurnstileSuccess"
+					data-size="invisible"
+				></div>
 			</div>
 
 			<!-- Textarea component -->

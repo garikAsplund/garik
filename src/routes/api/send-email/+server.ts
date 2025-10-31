@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { RESEND_USER, RESEND_PASSWORD } from '$env/static/private';
 
 export async function POST({ request }) {
 	const formData = await request.json();
@@ -7,8 +8,8 @@ export async function POST({ request }) {
 		port: 465,
 		secure: true,
 		auth: {
-			user: process.env.RESEND_USER,
-			pass: process.env.RESEND_PASSWORD,
+			user: RESEND_USER,
+			pass: RESEND_PASSWORD,
 		}
 	});
 
