@@ -47,7 +47,7 @@ export const actions = {
 			return fail(400, { form, message: 'Bot detected 🤖' });
 		}
 		const token = form.data['cf-turnstile-response'];
-		console.log({ token });
+		// console.log({ token });
 		if (!token) {
 			return setError(form, 'cf-turnstile-response', 'Missing Turnstile token.');
 		}
