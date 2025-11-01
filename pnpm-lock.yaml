@@ -36,6 +36,9 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1
     devDependencies:
+      '@svelte-put/cloudflare-turnstile':
+        specifier: ^1.2.0
+        version: 1.2.0(svelte@5.23.0)
       '@sveltejs/adapter-vercel':
         specifier: ^5.4.7
         version: 5.4.7(@sveltejs/kit@2.19.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.23.0)(vite@6.2.1(@types/node@24.9.2)(jiti@1.21.6)(yaml@2.6.0)))(svelte@5.23.0)(vite@6.2.1(@types/node@24.9.2)(jiti@1.21.6)(yaml@2.6.0)))
@@ -105,6 +108,9 @@ importers:
       svelte-check:
         specifier: ^4.0.0
         version: 4.0.7(picomatch@4.0.2)(svelte@5.23.0)(typescript@5.6.3)
+      svelte-turnstile:
+        specifier: ^0.11.0
+        version: 0.11.0(svelte@5.23.0)
       sveltekit-superforms:
         specifier: ^2.20.0
         version: 2.20.0(@sveltejs/kit@2.19.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.23.0)(vite@6.2.1(@types/node@24.9.2)(jiti@1.21.6)(yaml@2.6.0)))(svelte@5.23.0)(vite@6.2.1(@types/node@24.9.2)(jiti@1.21.6)(yaml@2.6.0)))(@types/json-schema@7.0.15)(svelte@5.23.0)(typescript@5.6.3)
@@ -806,6 +812,11 @@ packages:
 
   '@sinclair/typebox@0.32.35':
     resolution: {integrity: sha512-Ul3YyOTU++to8cgNkttakC0dWvpERr6RYoHO2W47DLbFvrwBDJUY31B1sImH6JZSYc4Kt4PyHtoPNu+vL2r2dA==}
+
+  '@svelte-put/cloudflare-turnstile@1.2.0':
+    resolution: {integrity: sha512-bm5zgKCBMbTrQCxX3u3rLiWaNFa6/B6juelE8Y8MriyaztxPg+ph5yS8WADMugEn3KmjN43QgcgsyHzPd2eCYg==}
+    peerDependencies:
+      svelte: ^5.1.0
 
   '@sveltejs/acorn-typescript@1.0.5':
     resolution: {integrity: sha512-IwQk4yfwLdibDlrXVE04jTZYlLnwsTT2PIOQQGNLWfjavGifnk1JD1LcZjZaBTRcxZu2FfPfNLOE04DSu9lqtQ==}
@@ -2524,6 +2535,11 @@ packages:
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.1
 
+  svelte-turnstile@0.11.0:
+    resolution: {integrity: sha512-2LFklx9JVsR3fJ7e3fGG1HEAWWEqRq1WfNaVrKgZJ+pzfY2NColiH+wH0kK2yX3DrcGLiJ9vBeTyiLFWotKpLA==}
+    peerDependencies:
+      svelte: ^3.58.0 || ^4.0.0 || ^5.0.0
+
   svelte@5.23.0:
     resolution: {integrity: sha512-v0lL3NuKontiCxholEiAXCB+BYbndlKbwlDMK0DS86WgGELMJSpyqCSbJeMEMBDwOglnS7Ar2Rq0wwa/z2L8Vg==}
     engines: {node: '>=18'}
@@ -2600,6 +2616,9 @@ packages:
 
   tslib@2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+
+  turnstile-types@1.2.3:
+    resolution: {integrity: sha512-EDjhDB9TDwda2JRbhzO/kButPio3JgrC3gXMVAMotxldybTCJQVMvPNJ89rcAiN9vIrCb2i1E+VNBCqB8wue0A==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -3318,6 +3337,10 @@ snapshots:
 
   '@sinclair/typebox@0.32.35':
     optional: true
+
+  '@svelte-put/cloudflare-turnstile@1.2.0(svelte@5.23.0)':
+    dependencies:
+      svelte: 5.23.0
 
   '@sveltejs/acorn-typescript@1.0.5(acorn@8.14.1)':
     dependencies:
@@ -5273,6 +5296,11 @@ snapshots:
     dependencies:
       svelte: 5.23.0
 
+  svelte-turnstile@0.11.0(svelte@5.23.0):
+    dependencies:
+      svelte: 5.23.0
+      turnstile-types: 1.2.3
+
   svelte@5.23.0:
     dependencies:
       '@ampproject/remapping': 2.3.0
@@ -5405,6 +5433,8 @@ snapshots:
 
   tslib@2.4.0:
     optional: true
+
+  turnstile-types@1.2.3: {}
 
   type-check@0.4.0:
     dependencies:

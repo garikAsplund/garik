@@ -6,46 +6,42 @@
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import FormInput from './FormInput.svelte';
 	import { onMount } from 'svelte';
+	import { PUBLIC_CF_SITE_KEY } from '$env/static/public';
+	// import { Turnstile } from 'svelte-turnstile';
+	import { turnstile } from '@svelte-put/cloudflare-turnstile';
 
-	onMount(() => {
-		const script = document.createElement('script');
-		script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-		script.async = true;
-		document.head.appendChild(script);
-	});
+	// onMount(() => {
+	// 	const script = document.createElement('script');
+	// 	script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+	// 	script.async = true;
+	// 	document.head.appendChild(script);
+	// });
 
 	let { data } = $props();
 	let isSubmitting = $state(false);
+	let reset = $state<() => void>();
+	let token = $state('');
+	$inspect(token);
 
-	const { form, errors, enhance, reset, constraints, message, validateForm } = superForm(
-		data.form,
-		{
-			validators: zod(schema),
-			resetForm: false,
-			dataType: 'json',
-			taintedMessage: null,
-			onSubmit: () => {
-				isSubmitting = true;
-			},
-			onResult: ({ result }) => {
-				isSubmitting = false;
-			},
-			onError: ({ result }) => {
-				isSubmitting = false;
-				console.error('Form submission error:', result);
-			}
+	const { form, errors, enhance, constraints, message, validateForm } = superForm(data.form, {
+		validators: zod(schema),
+		dataType: 'json',
+		taintedMessage: null,
+		onSubmit: () => {
+			isSubmitting = true;
+		},
+		onResult: ({ result }) => {
+			isSubmitting = false;
+		},
+		onError: ({ result }) => {
+			isSubmitting = false;
+			console.error('Form submission error:', result);
+		},
+		onUpdated() {
+			// When the form is updated, we reset the turnstile
+			reset?.();
 		}
-	);
-
-	function onTurnstileSuccess(token) {
-		const form = document.querySelector('form');
-		const hidden = document.createElement('input');
-		hidden.type = 'hidden';
-		hidden.name = 'cf-turnstile-response';
-		hidden.value = token;
-		form?.appendChild(hidden);
-		form?.submit();
-	}
+	});
 </script>
 
 <section
@@ -61,6 +57,8 @@
 
 		<form method="POST" class="w-full space-y-6" use:enhance novalidate>
 			<div class="grid grid-cols-1 gap-6">
+				<input type="text" name="company" bind:value={$form.company} style="display: none" />
+
 				<FormInput
 					label="Name"
 					id="name"
@@ -81,13 +79,21 @@
 					autocomplete="email"
 				/>
 
-				<input type="text" name="company" bind:value={$form.company} style="display: none" />
-
+				<!-- <Turnstile
+					siteKey={PUBLIC_CF_SITE_KEY}
+					size="normal"
+					theme="auto"
+					on:callback={(e) => ($form['cf-turnstile-response'] = e.detail)}
+					bind:reset
+				/> -->
+				<!-- <input type="hidden" name="cf-turnstile-response" value={$form['cf-turnstile-response']} /> -->
 				<div
-					class="cf-challenge"
-					data-sitekey={data.turnstileSiteKey}
-					data-callback="onTurnstileSuccess"
-					data-size="invisible"
+					use:turnstile
+					turnstile-sitekey={PUBLIC_CF_SITE_KEY}
+					turnstile-theme="auto"
+					turnstile-response-field-name="cf-turnstile-response"
+					turnstile-response-field
+					onturnstile={(e) => ($form['cf-turnstile-response'] = e.detail.token)}
 				></div>
 			</div>
 

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const schema = z.object({
+	company: z.string().optional(), // honeypot
 	name: z
 		.string()
 		.min(1, 'Name is required')
@@ -16,5 +17,5 @@ export const schema = z.object({
 		.min(1, 'A message is required')
 		.max(5000, 'Additional comments must be 5000 characters or less')
 		.default(''),
-	company: z.string().optional() // honeypot
+	'cf-turnstile-response': z.string().nonempty('Please complete turnstile')
 });
