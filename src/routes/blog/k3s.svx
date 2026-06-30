@@ -1,0 +1,81 @@
+---
+title: Setting Up My First Cluster
+date: "2026-06-30"
+og_image: ""
+---
+## It all starts with an idea
+After spending a little time at work wondering if I could convince my boss to get some clusters going so that our paltry few services were robust, I caved. I knew the answer--it was no. My boss is resistant to change or tinkering, unless it's 3D printing some personal things. 
+
+So K8s, huh? That would be a tough, tough sell. It is the classic YAGNI poster child, especially for an operation like ours that has maybe--*maybe*--4 small, internal websites running.
+
+Still, our library server goes down frequently enough that I wanted a fun distraction and educational side project. That's when I took matters into my own hands and borrowed 3 decade-old NUCs with some hardware upgrades so that I could at least take them on a test drive, as it were.
+
+![This, but also in therapy at the same time!](images/k3s/therapy.png)
+## The hardware
+Each [Next Unit of Computing](https://en.wikipedia.org/wiki/Next_Unit_of_Computing)--yes, that's their real name!--came with 2 GB of RAM and 128 GB SSD storage. I wanted to give them all the same makeover, but owing to parts and availability, they each ended up slightly different. And it was much more of a headache than I thought it would be!
+
+My first problem was I didn't read the fine print on the RAM sticks, in multiple ways :( When I grabbed the DDR3 off the shelf, I thought I reached for the 16 GB sticks. Instead I got 1 GB ones. So that was silly. Then after getting 8 GB ones slotted in, the machine wouldn't boot up because they weren't low voltage. Also silly.
+
+After that, I assumed the other 2 machines would be the same. They weren't. They were actually the next model that came out, so they used DDR4. One more trip back and forth to the office to get the right gear, and that was that.
+
+Here's where they each ended up:
+
+- 1 TB SSD + 32 GB RAM + Intel Celeron J4005 CPU @ 2.00GHz
+- 500 GB SSD + 8 GB RAM + Intel Celeron J4005 CPU @ 2.00GHz
+- 1 TB SSD + 8 GB RAM + Intel Celeron J4005 CPU @ 2.00GHz
+
+![My mini cluster at home](images/k3s/bb.png)
+
+The internet at my place is Wi-Fi 6, and it works great, traveling through 2 or 3 walls to my studio apartment. It's nice that these machines have Wi-Fi built-in as it makes experimenting that much easier. Sure, hardwired in is better, but I didn't want to drill holes in the wall just to run cable off my landlord's router!
+## Installing Ubuntu Server
+Well, if it were baseball, my batting average would look pretty good. A 0.333 average is second best this year! But alas, I was just installing Ubuntu Server 26.04 LTS, and 1 out of 3 there is actually pretty bad.
+
+![A 0.333 batting average for comparison](images/k3s/avg.png)
+
+Two NUCs kept failing and failing during boot, so I pivoted and tried installing the stripped down version. I figured this was good enough because they were just going to be worker nodes in my k3s cluster anyhow. My server node ended up having Ubuntu Server 26.04 LTS on it and then the two worker nodes got [Minimal Ubuntu](https://wiki.ubuntu.com/Minimal), which is billed as a good cloud build since it's smaller, boots faster, and has fewer packages out of the box--about 527 versus 727.
+
+![Installing minimal Ubuntu on a NUC](images/k3s/installing.png)
+
+That process was kind of was annoying, yet it was also a good learning moment and is all but be par for the course when doing these things. Best get used to it. Later on, when I needed to edit config files to get the internet turned on, I wasn't prepared with the right packages! Mentally, however, I was ready--just another bump in the road. Turns out these installs are so minimal they didn't have vim or nano. I ran `sudo apt update && sudo apt install vim` to get me back up and running.
+## AI, both helpful and hurtful
+Admittedly, it was nice having AI as a sidekick during this setup process. Engaging in an ongoing conversation about what to do at each step I was on helped guide me along. Still, I'd reference the docs and try to practice commands to get familiar with things. Running 3 separate machines made that necessary, even.
+
+But, doing a bunch of copy/pasta inevitably led to some slop. When I was installing k3s, I had Claude help put tokens into my commands. Somewhere along the line, AI gave me an IP of 192.168.1.118 for my k3s server, though I didn't notice it among the slew of text and gibberish. Only after it kept failing to connect did I look closer.
+
+![Thanks, chat](images/k3s/claude.png)
+
+My default gateway, in fact, is 192.168.50.1 and so the network all my machines are on is 192.168.50.0/24. Fortunately that was the sole mess-up from AI this go round. But that wasn't the only issue with IP addresses :)
+## Colliding IPs
+Because I wanted to access the router and its settings for managing DHCP reservations, I asked my landlord to share the password for our ASUS account. The thing was, though, that she didn't have it. We were locked out. That meant we had to factory reset the router, set up a new account, and go from there.
+
+When I was setting up the NUCs, I got cheeky and assigned one a static address--mostly because I couldn't access the DHCP settings, if you can believe it. Then I learned the hard way why you don't do that! As mentioned before, the internal network is a /24, so it has room for 254 devices. What are the odds that in a household of 3 people the static address I chose would also be in use? Fairly small. But also **non-zero**!!
+
+Wouldn't you know it, there was an 'espressif' smart device--probably a vacuum 👀--already inhabiting my hardcoded address. Back I went into the config to switch off of the static address and turn back on DHCP, assign a lease in the web portal of the router, and try again.
+
+![Revenge of the robot vacuums](images/k3s/robot.png)
+## Beware SSIDs
+During the factory reboot of the router, my landlord also made a typo in the network name. She was in a rush to go off to Spain to see Bad Bunny in Barcelona, so who could blame her? Instead of `Mos Eisley Cantina` like we had before, she typed `Mos Eisely Cantina` which meant that all my network configs were broken. It also meant that all my smart outlets needed to be paired to a new network. Luckily there were only 9 or so of those.
+
+![Mos Eisley Cantina](images/k3s/cantina.png)
+
+This situation repeated itself in reverse upon her return because she couldn't live with a misspelled network name. Same run through all the config files, same setup on each outlet to get it back on the new SSID. 
+## Login settings
+After a few days, perhaps even weeks, of just sitting on my desk and fridge, I thought I'd tidy up my space and check in on my little cluster. I unplugged all 3 computers and put them far in back in my closet. When I tried SSHing in, lo and behold I was not able to! They were on, but not accessible. So back out came the cables to hook them up, one by one, to my monitor and keyboard to see what was going on.
+
+This might be the most egregious error of the already error prone set up process, but I literally used the wrong username to sign in. I kept trying `garik@hostname` instead of my actual username of `kirag@hostname`. It took me shuffling things around to also jog my memory. Woopsie!
+
+![I should probably alias eza to ls?](images/k3s/ssh.png)
+
+Honestly, it was for the best as I needed to set up proper login via SSH with keys and disable password login altogether. Once that was in place it felt like I was good to go! Almost, but not quite.
+## Reboot settings
+There was a planned power outage that was supposed to last 6 hours, and it ended up being 9. Not that that mattered--I didn't have any UPS installed, so my system was offline for an extended period of time. When the lights came back on, my NUCs did not. That's because I didn't alter the reboot settings during any of my previous work sessions. 
+
+So, I made sure to get back into each machine's BIOS and make the right changes so that they always came back on! Yes, that meant taking them out of the closet and placing them on my workstation so I could actually see what was going on. So much back and forth.
+
+![BIOS settings were off. Literally.](images/k3s/bios.png)
+## Up and running
+Now these fine repurposed pieces of machinery are purring away quietly in the back of my closet, close to the Wi-Fi router, and properly ventilated. I intend to do a number of homelab projects on them this summer, and with any luck do a complete rebuild with Talos Linux on them come the fall.
+
+Overall this was a great learning experience. True, it also was a lot of work with not much to show for it yet, but I'm well on my way to feeling strong and powerful.
+
+![Empowered](images/k3s/power.png)
